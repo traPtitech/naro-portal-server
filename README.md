@@ -1,2 +1,2 @@
-# naro-portal
-Webエンジニアになろう講習会課題のポータルリポジトリ
+# atodeyomu-server
+あとで読む的なやつ
