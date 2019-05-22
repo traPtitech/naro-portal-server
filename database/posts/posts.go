@@ -11,7 +11,7 @@ type PostDB struct {
 }
 
 type Post struct {
-	ID          int64     `json:"id,omitempty"  db:"id"`
+	ID          uint64    `json:"id,omitempty"  db:"id"`
 	Content     string    `json:"content"  db:"content"`
 	Desc        string    `json:"desc"  db:"desc"`
 	CreatedUser string    `json:"created_user"  db:"created_user"`
