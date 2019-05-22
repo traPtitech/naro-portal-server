@@ -13,5 +13,5 @@ func main() {
 		return c.String(http.StatusOK, "Hello, World.\n")
 	})
 
-	e.Start(":4000") // ここを前述の通り自分のポートにすること
+	e.Start(":8000") // ここを前述の通り自分のポートにすること
 }
