@@ -8,6 +8,8 @@ import (
 	"github.com/srinathgs/mysqlstore"
 )
 
+const storeName = "session"
+
 var store *mysqlstore.MySQLStore
 
 type SessionDB struct {
@@ -17,7 +19,7 @@ type SessionDB struct {
 func CreateStore(db *sqlx.DB) *mysqlstore.MySQLStore {
 	_store, err := mysqlstore.NewMySQLStoreFromConnection(
 		db.DB,
-		"sessions",
+		storeName,
 		"/",
 		60*60*24*14,
 		[]byte("secret-token"),
@@ -32,7 +34,7 @@ func CreateStore(db *sqlx.DB) *mysqlstore.MySQLStore {
 
 func CreateSessionDB() *SessionDB {
 	return &SessionDB{
-		storeName: "sessions",
+		storeName: storeName,
 	}
 }
 

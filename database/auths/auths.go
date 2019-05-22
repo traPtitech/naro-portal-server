@@ -10,8 +10,8 @@ type AuthDB struct {
 }
 
 type AuthUser struct {
-	ID         string `json:"id,omitempty"  db:"Id"`
-	HashedPass string `json:"hashed_pass,omitempty"  db:"HashedPass"`
+	ID         string `json:"id"  db:"id"`
+	HashedPass string `json:"hashed_pass"  db:"hashed_pass"`
 }
 
 func CreateAuthDB(db *sqlx.DB) *AuthDB {
@@ -42,6 +42,14 @@ func (a *AuthDB) AddUser(id string, hashedPass []byte) (err error) {
 		`INSERT INTO `+a.tableName+` (Id, HashedPass) VALUES (?, ?)`,
 		id,
 		hashedPass,
+	)
+	return
+}
+
+func (a *AuthDB) DeleteUser(id string) (err error) {
+	_, err = a.db.Exec(
+		`DELETE FROM `+a.tableName+` WHERE Id = ?`,
+		id,
 	)
 	return
 }
