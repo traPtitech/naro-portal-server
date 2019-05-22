@@ -1,13 +1,13 @@
 package router
 
 import (
-	"log"
-	"github.com/sapphi-red/webengineer_naro-_7_server/database/users"
 	"errors"
 	"github.com/labstack/echo"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/auths"
+	"github.com/sapphi-red/webengineer_naro-_7_server/database/users"
 	"golang.org/x/crypto/bcrypt"
+	"log"
 	"net/http"
 )
 
@@ -85,7 +85,7 @@ func signUpHandler(c echo.Context) error {
 		return return500(c, "UserAddingError", err)
 	}
 	err = database.Users.AddUser(&users.User{
-		ID: req.ID,
+		ID:   req.ID,
 		Name: req.ID,
 	})
 	if err != nil {

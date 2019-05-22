@@ -10,8 +10,8 @@ type UserDB struct {
 }
 
 type User struct {
-	ID        string `json:"id,omitempty"  db:"Id"`
-	Name      string `json:"name,omitempty"  db:"Name"`
+	ID   string `json:"id,omitempty"  db:"Id"`
+	Name string `json:"name,omitempty"  db:"Name"`
 }
 
 func CreateUserDB(db *sqlx.DB) *UserDB {

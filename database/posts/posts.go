@@ -43,6 +43,14 @@ func (p *PostDB) GetPost(id string, post *Post) (err error) {
 	return
 }
 
+func (p *PostDB) GetPosts(posts []Post) (err error) {
+	err = p.db.Select(
+		&posts,
+		`SELECT * FROM `+p.tableName,
+	)
+	return
+}
+
 func (p *PostDB) AddPost(post *Post) (err error) {
 	_, err = p.db.NamedExec(
 		`INSERT INTO `+p.tableName+` (Content, Desc, CreatedUser, CreatedDate) VALUES (:Content, :Desc, :CreatedUser, CreatedDate)`,

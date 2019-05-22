@@ -9,4 +9,8 @@ func CreateRoutes(e *echo.Echo) {
 	g.Use(checkLogin)
 
 	g.GET("/whoami", getWhoAmIHandler)
+
+	g.GET("/users/:id", getUserHandler)
+
+	g.GET("/posts", getPostsHandler)
 }
