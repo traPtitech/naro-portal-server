@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/labstack/echo"
-	_ "github.com/lib/pq"
+	// _ "github.com/lib/pq"
 )
 
 func main() {
@@ -18,8 +18,7 @@ func main() {
 	})
 
 	e.GET("/db", func(c echo.Context) error {
-		connStr := "postgres://ssadsyncjczxby:8f647d3f6a031c4cb2d6fd97106053e259982e97c1205a6a2deff50e989e85e1@ec2-54-221-212-126.compute-1.amazonaws.com:5432/dcbbm7iv8usrv4"
-		db, err := sql.Open("postgres", connStr)
+		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 		if err != nil {
 			log.Fatal(err)
 		}
