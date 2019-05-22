@@ -10,8 +10,8 @@ type AuthDB struct {
 }
 
 type AuthUser struct {
-	ID         string `json:"id,omitempty"  db:"Id"`
-	HashedPass string `json:"hashed_pass,omitempty"  db:"HashedPass"`
+	ID         string `json:"id"  db:"id"`
+	HashedPass string `json:"hashed_pass"  db:"hashed_pass"`
 }
 
 func CreateAuthDB(db *sqlx.DB) *AuthDB {
