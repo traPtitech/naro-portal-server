@@ -12,12 +12,14 @@ import (
 	"os"
 )
 
-var db *sqlx.DB
-var SessionStore *mysqlstore.MySQLStore
-var Sessions *sessions.SessionDB
-var Auths *auths.AuthDB
-var Users *users.UserDB
-var Posts *posts.PostDB
+var (
+	db *sqlx.DB
+	SessionStore *mysqlstore.MySQLStore
+	Sessions *sessions.SessionDB
+	Auths *auths.AuthDB
+	Users *users.UserDB
+	Posts *posts.PostDB
+)
 
 func ConnectDB() {
 	_db, err := sqlx.Connect("mysql", fmt.Sprintf(

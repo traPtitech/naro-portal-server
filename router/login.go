@@ -104,7 +104,7 @@ func loginHandler(c echo.Context) error {
 	user := auths.AuthUser{}
 	err := database.Auths.GetUser(req.ID, &user)
 	if err != nil {
-		return return500(c, "UserGettingError", err)
+		log.Println("UserGettingError", err)
 	}
 
 	isMismatch, err := comparePass(user.HashedPass, req.Password)
