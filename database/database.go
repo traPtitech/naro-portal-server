@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/auths"
+	"github.com/sapphi-red/webengineer_naro-_7_server/database/posts"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/sessions"
+	"github.com/sapphi-red/webengineer_naro-_7_server/database/users"
 	"github.com/srinathgs/mysqlstore"
 	"log"
 	"os"
@@ -14,6 +16,8 @@ var db *sqlx.DB
 var SessionStore *mysqlstore.MySQLStore
 var Sessions *sessions.SessionDB
 var Auths *auths.AuthDB
+var Users *users.UserDB
+var Posts *posts.PostDB
 
 func ConnectDB() {
 	_db, err := sqlx.Connect("mysql", fmt.Sprintf(
@@ -34,6 +38,8 @@ func ConnectDB() {
 
 func initialize() {
 	SessionStore = sessions.CreateStore(db)
-	Auths = auths.CreateAuthDB(db)
 	Sessions = sessions.CreateSessionDB()
+	Auths = auths.CreateAuthDB(db)
+	Users = users.CreateUserDB(db)
+	Posts = posts.CreatePostDB(db)
 }
