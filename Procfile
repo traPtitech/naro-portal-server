@@ -1,1 +1,1 @@
-web: bin/phan-sns
+web: phan-sns
