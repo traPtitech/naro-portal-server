@@ -1,1 +1,1 @@
-web: phan-sns
+web: go run main.go
