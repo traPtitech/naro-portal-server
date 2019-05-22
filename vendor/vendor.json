@@ -93,9 +93,5 @@
 			"revisionTime": "2018-12-15T17:52:45Z"
 		}
 	],
-	"rootPath": "github.com/oribe1115/phan-sns-server",
-	"heroku": {
-		"install" : ["./..."],
-		"goVersion" : "go1.12.5"
-	}
+	"rootPath": "github.com/oribe1115/phan-sns-server"
 }
