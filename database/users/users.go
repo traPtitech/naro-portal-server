@@ -17,7 +17,7 @@ type User struct {
 func CreateUserDB(db *sqlx.DB) *UserDB {
 	return &UserDB{
 		db:        db,
-		tableName: "auth",
+		tableName: "user",
 	}
 }
 
