@@ -18,11 +18,13 @@ func main() {
 	})
 
 	e.GET("/db", func(c echo.Context) error {
-		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+		connStr := "postgres://ssadsyncjczxby:8f647d3f6a031c4cb2d6fd97106053e259982e97c1205a6a2deff50e989e85e1@ec2-54-221-212-126.compute-1.amazonaws.com:5432/dcbbm7iv8usrv4"
+		db, err := sql.Open("postgres", connStr)
 		if err != nil {
 			log.Fatal(err)
 		}
-		return c.JSON(http.StatusOK, db)
+		data, _ := db.Query("SELECT * FROM user_status;")
+		return c.JSON(http.StatusOK, data)
 	})
 
 	port := os.Getenv("PORT")
