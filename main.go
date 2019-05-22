@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/labstack/echo"
 )
@@ -13,5 +14,7 @@ func main() {
 		return c.String(http.StatusOK, "Hello, World.\n")
 	})
 
-	e.Start(":8000") // ここを前述の通り自分のポートにすること
+	port := os.Getenv("PORT")
+
+	e.Start(":" + port) // ここを前述の通り自分のポートにすること
 }
