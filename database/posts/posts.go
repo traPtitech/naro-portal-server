@@ -45,7 +45,7 @@ func (p *PostDB) GetPost(id string, post *Post) (err error) {
 
 func (p *PostDB) AddPost(post *Post) (err error) {
 	_, err = p.db.NamedExec(
-		`INSERT INTO `+p.tableName+` (CreatedUser, FavedUsers, RepostedUsers, ParentPosts) VALUES (:CreatedUser, :FavedUsers, :RepostedUsers, :ParentPosts)`,
+		`INSERT INTO `+p.tableName+` (Content, Desc, CreatedUser, CreatedDate) VALUES (:Content, :Desc, :CreatedUser, CreatedDate)`,
 		post,
 	)
 	return

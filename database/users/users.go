@@ -12,7 +12,6 @@ type UserDB struct {
 type User struct {
 	ID        string `json:"id,omitempty"  db:"Id"`
 	Name      string `json:"name,omitempty"  db:"Name"`
-	Following string `json:"following,omitempty"  db:"Following"`
 }
 
 func CreateUserDB(db *sqlx.DB) *UserDB {
