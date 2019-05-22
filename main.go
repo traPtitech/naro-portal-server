@@ -15,6 +15,9 @@ func main() {
 	})
 
 	port := os.Getenv("PORT")
+	if port == "" {
+		port = "4000"
+	}
 
 	e.Start(":" + port) // ここを前述の通り自分のポートにすること
 }
