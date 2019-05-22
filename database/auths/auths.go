@@ -45,3 +45,11 @@ func (a *AuthDB) AddUser(id string, hashedPass []byte) (err error) {
 	)
 	return
 }
+
+func (a *AuthDB) deleteUser(id string) (err error) {
+	_, err = a.db.Exec(
+		`DELETE FROM `+a.tableName+` WHERE Id = ?`,
+		id,
+	)
+	return
+}
