@@ -12,13 +12,21 @@ type PostDB struct {
 
 type Post struct {
 	ID          uint64    `json:"id,omitempty"  db:"id"`
-	Content     string    `json:"content"  db:"content"`
+	Content     uint64    `json:"content"  db:"content"`
 	Desc        string    `json:"desc"  db:"desc"`
 	CreatedUser string    `json:"created_user"  db:"created_user"`
 	CreatedDate time.Time `json:"created_date,omitempty"  db:"created_date"`
 }
 
-func CreatePost(content string, desc string, createdUser string) *Post {
+func CreatePost(desc string, createdUser string) *Post {
+	return &Post{
+		Desc:        desc,
+		CreatedUser: createdUser,
+		CreatedDate: time.Now(),
+	}
+}
+
+func CreatePostWithContent(desc string, createdUser string, content uint64) *Post {
 	return &Post{
 		Content:     content,
 		Desc:        desc,
