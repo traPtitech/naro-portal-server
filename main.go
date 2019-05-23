@@ -13,7 +13,7 @@ import (
 func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
-	e.GET("/ping",router.pong)
+	e.GET("/ping",router.Pong)
 
 	e.Start(":12500")
 }
