@@ -13,12 +13,12 @@ import (
 )
 
 var (
-	db *sqlx.DB
+	db           *sqlx.DB
 	SessionStore *mysqlstore.MySQLStore
-	Sessions *sessions.SessionDB
-	Auths *auths.AuthDB
-	Users *users.UserDB
-	Posts *posts.PostDB
+	Sessions     *sessions.SessionDB
+	Auths        *auths.AuthDB
+	Users        *users.UserDB
+	Posts        *posts.PostDB
 )
 
 func ConnectDB() {
