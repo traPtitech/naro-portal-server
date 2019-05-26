@@ -19,7 +19,7 @@ var (
 	db *sqlx.DB
 )
 
-//PostAddFavoHandler Post /FavoAdd Favo追加
+//PostAddFavoHandler Post /favoAdd Favo追加
 func PostAddFavoHandler(c echo.Context) error {
 	favo := Favorite{}
 	c.Bind(&favo)
@@ -38,7 +38,7 @@ func PostAddFavoHandler(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-//PostDeleteFavoHandler Post /Favo_Delete Favo消去
+//PostDeleteFavoHandler Post /favoDelete Favo消去
 func PostDeleteFavoHandler(c echo.Context) error {
 	favo := Favorite{}
 	c.Bind(&favo)
