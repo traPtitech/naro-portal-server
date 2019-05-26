@@ -2,39 +2,51 @@ package favo
 
 import (
 	"net/http"
+	"time"
 
+	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
 	"github.com/pborman/uuid"
-	"github.com/jmoiron/sqlx"
 )
 
-type Favorite struct{				//Favoriteの構造体
-	UserID				uuid.UUID
-	MessageID			uuid.UUID
+//Favorite Favoriteの構造体
+type Favorite struct {
+	UserID  string `json:"userID,omitempty"  db:"user_ID"`
+	TweetID string `json:"tweetID,omitempty"  db:"tweet_ID"`
 }
 
 var (
 	db *sqlx.DB
 )
 
-func postFavoHandler(c echo.Context) error{
-	favo:=Favorite{}
+//PostAddFavoHandler Post /FavoAdd Favo追加
+func PostAddFavoHandler(c echo.Context) error {
+	favo := Favorite{}
 	c.Bind(&favo)
 
 	var userID uuid.UUID
-	db.Get(&userID,"SELECT user_ID FROM favorite WHERE user_ID=? AND message_ID=?",uuid.String(favo.UserID),uuid.String(favo.MessageID))
-	if userID!=nil{
+	db.Get(&userID, "SELECT user_ID FROM Favorite WHERE user_ID=? AND tweet_ID=?", favo.UserID, favo.TweetID)
+	if userID != nil {
 		return c.NoContent(http.StatusBadRequest)
 	}
 
-	db.Exec("INSERT INTO favorite (user_ID,message_ID) VALUES (?,?)",uuid.String(favo.UserID),uuid.String(favo.MessageID))
+	var FavoNum int
+	db.Get(&FavoNum, "SELECT favo_num FROM Tweet WHERE tweet_ID=?", favo.TweetID)
+	db.Exec("UPDATE Tweet SET favo_num=? WHERE tweet_ID=?", FavoNum+1, favo.TweetID)
+
+	db.Exec("INSERT INTO Favorite (user_ID,tweet_ID,created_at) VALUES (?,?)", favo.UserID, favo.TweetID, time.Now())
 	return c.NoContent(http.StatusOK)
 }
 
-func deleteFavoHandler(c echo.Context) error{
-	favo:=Favorite{}
+//PostDeleteFavoHandler Post /Favo_Delete Favo消去
+func PostDeleteFavoHandler(c echo.Context) error {
+	favo := Favorite{}
 	c.Bind(&favo)
 
-	db.Exec("DELETE FROM favorite WHERE user_ID=? AND message_ID=?",uuid.String(favo.UserID),uuid.String(favo.MessageID))
+	var FavoNum int
+	db.Get(&FavoNum, "SELECT favo_num FROM Tweet WHERE tweet_ID=?", favo.TweetID)
+	db.Exec("UPDATE Tweet SET favo_num=? WHERE tweet_ID=?", FavoNum-1, favo.TweetID)
+
+	db.Exec("DELETE FROM favorite WHERE user_ID=? AND tweet_ID=?", favo.UserID, favo.TweetID)
 	return c.NoContent(http.StatusOK)
 }

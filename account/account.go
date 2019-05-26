@@ -5,33 +5,29 @@ import (
 	"net/http"
 	"unicode/utf8"
 
+	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo-contrib/session"
 	"golang.org/x/crypto/bcrypt"
-	"github.com/pborman/uuid"
-	"github.com/jmoiron/sqlx"
 )
 
 var (
 	db *sqlx.DB
 )
 
-type LoginRequestBody struct {
-	UserName string
-	UserPassword string
+//User Userの構造体
+type User struct {
+	UserName     string `json:"userName,omitempty"  db:"name"`
+	UserPassword string `json:"userPassword,omitempty"  db:"password"`
 }
 
-type User struct{
-	UserName			string	``
-	UserPassword		string
-}
-
-func postLoginHandler(c echo.Context) error {
-	req := LoginRequestBody{}
+//PostLoginHandler POST /login ログイン
+func PostLoginHandler(c echo.Context) error {
+	req := User{}
 	c.Bind(&req)
 
 	user := User{}
-	err := db.Get(&user, "SELECT (user_name,user_password) FROM user WHERE user_name=?", req.UserName)
+	err := db.Get(&user, "SELECT (name,password) FROM user WHERE name=?", req.UserName)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -40,9 +36,8 @@ func postLoginHandler(c echo.Context) error {
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
 			return c.NoContent(http.StatusForbidden)
-		} else {
-			return c.NoContent(http.StatusInternalServerError)
 		}
+		return c.NoContent(http.StatusInternalServerError)
 	}
 
 	sess, err := session.Get("sessions", c)
@@ -50,13 +45,14 @@ func postLoginHandler(c echo.Context) error {
 		fmt.Println(err)
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
-	sess.Values["userName"] = req.UserName
+	sess.Values["UserName"] = req.UserName
 	sess.Save(c.Request(), c.Response())
 
 	return c.NoContent(http.StatusOK)
 }
 
-func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
+//CheckLogin ログイン確認
+func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		sess, err := session.Get("sessions", c)
 		if err != nil {
@@ -64,26 +60,27 @@ func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
 
-		if sess.Values["userName"] == nil {
+		if sess.Values["UserName"] == nil {
 			return c.String(http.StatusForbidden, "please login")
 		}
-		c.Set("userName", sess.Values["userName"].(string))
+		c.Set("UserName", sess.Values["UserName"].(string))
 
 		return next(c)
 	}
 }
 
-func postSignUpHandler(c echo.Context) error {
-	req := LoginRequestBody{}
+//PostSignUpHandler Post /signup サインアップ
+func PostSignUpHandler(c echo.Context) error {
+	req := User{}
 	c.Bind(&req)
 
-	var userID uuid.UUID
-	db.Get(&userID,"SELECT user_ID FROM user WHERE user_Name=?",req.UserName)
-	if userID!=nil {
+	var userID string
+	db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	if userID != "" {
 		return c.String(http.StatusBadRequest, "ユーザーが既に存在しています")
 	}
 
-	if utf8.RuneCountInString(req.UserPassword)<8{
+	if utf8.RuneCountInString(req.UserPassword) < 8 {
 		return c.String(http.StatusBadRequest, "パスワードは8文字以上です")
 	}
 
@@ -92,7 +89,7 @@ func postSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("bcrypt generate error: %v", err))
 	}
 
-	_, err = db.Exec("INSERT INTO user (Username, HashedPass) VALUES (?, ?)", req.UserName, hashedPass)
+	_, err = db.Exec("INSERT INTO user (name, password) VALUES (?, ?)", req.UserName, hashedPass)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}

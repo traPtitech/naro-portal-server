@@ -3,25 +3,27 @@ package pin
 import (
 	"net/http"
 
+	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
 	"github.com/pborman/uuid"
-	"github.com/jmoiron/sqlx"
 )
 
 var (
 	db *sqlx.DB
 )
 
-type Pin struct{					//Pinの構造体
-	PinID				uuid.UUID
-	UserID				uuid.UUID
-	MessageID			uuid.UUID
+//Pin Pinの構造体
+type Pin struct {
+	PinID   string `json:"pinID,omitempty"`
+	UserID  string `json:"userID,omitempty"`
+	TweetID string `json:"tweetID,omitempty"`
 }
 
-func postPinHandler(c echo.Context) error{
-	pin:=Pin{}
+//PostPinHandler Post /pin ピン
+func PostPinHandler(c echo.Context) error {
+	pin := Pin{}
 	c.Bind(&pin)
 
-	db.Exec("INSERT INTO ? (PinID, UserID,MessageID) VALUES (?, ?,?)","Pin",uuid.New() ,pin.UserID,pin.MessageID)
+	db.Exec("INSERT INTO ? (pin_ID, user_ID,tweet_ID) VALUES (?, ?,?)", "Pin", uuid.New(), pin.UserID, pin.TweetID)
 	return c.NoContent(http.StatusOK)
 }
