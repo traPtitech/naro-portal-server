@@ -1,14 +1,22 @@
 package main
 
 import (
-	"database/sql"
 	"log"
 	"net/http"
 	"os"
+	"time"
 
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/labstack/echo"
-	// _ "github.com/lib/pq"
 )
+
+type UserStatus struct {
+	// date形式はどうすればいい？
+	username string
+	// 聞いたまま書いただけ　あとで確認
+	now_date time.Date
+}
 
 func main() {
 	e := echo.New()
@@ -18,11 +26,15 @@ func main() {
 	})
 
 	e.GET("/db", func(c echo.Context) error {
-		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+		databaseURL := os.Getenv("DATABASE_URL")
+		db, err := gorm.Open("postgres", databaseURL)
 		if err != nil {
 			log.Fatal(err)
 		}
-		data, _ := db.Query("SELECT * FROM user_status;")
+		data := UserStatus{}
+		db.First(&data)
+		// data, _ := db.Query("SELECT * FROM user_status;")
+		defer db.Close()
 		return c.JSON(http.StatusOK, data)
 	})
 
