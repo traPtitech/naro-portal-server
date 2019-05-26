@@ -15,7 +15,7 @@ type UserStatus struct {
 	// date形式はどうすればいい？
 	username string
 	// 聞いたまま書いただけ　あとで確認
-	now_date time.Date
+	now_date time.Time
 }
 
 func main() {
