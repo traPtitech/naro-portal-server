@@ -44,11 +44,11 @@ func main() {
 
 	withLogin := e.Group("")
 	withLogin.Use(account.CheckLogin)
-	withLogin.POST("/tweet",tweet.PostTweetHandler)
-	withLogin.POST("/pin",pin.PostPinHandler)
-	withLogin.GET("/timeline/:userName",timeline.GetTimeLineHandler)
-	withLogin.POST("/favoAdd",favo.PostAddFavoHandler)
-	withLogin.POST("/favoDelete",favo.PostDeleteFavoHandler)
+	withLogin.POST("/tweet", tweet.PostTweetHandler)
+	withLogin.POST("/pin", pin.PostPinHandler)
+	withLogin.GET("/timeline/:userName", timeline.GetTimeLineHandler)
+	withLogin.POST("/favoAdd", favo.PostAddFavoHandler)
+	withLogin.POST("/favoDelete", favo.PostDeleteFavoHandler)
 
 	e.Start(":11401")
 }
