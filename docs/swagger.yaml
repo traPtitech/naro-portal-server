@@ -34,9 +34,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/parameters/AuthUser'
-            example:
-              id: userid
-              password: password
       responses:
         200:
           description: ログインに成功しました
@@ -83,7 +80,7 @@ paths:
             type: string
       responses:
         200:
-          description: ユーザー情報
+          description: ユーザー情報を正常に取得しました
           content:
             application/json:
               schema:
@@ -95,7 +92,7 @@ paths:
       description: 投稿一覧を取得する
       responses:
         200:
-          description: 投稿の配列
+          description: 投稿一覧を正常に取得しました
           content:
             application/json:
               schema:
