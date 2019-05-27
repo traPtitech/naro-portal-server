@@ -1,7 +1,25 @@
 {
 	"comment": "",
+	"heroku": {
+		"goVersion": "go1.12.5",
+		"install": [
+			"./..."
+		]
+	},
 	"ignore": "test",
 	"package": [
+		{
+			"checksumSHA1": "7PNL0WPSWAV0RgtXDVnMtu3uMjo=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "b7156195f7f3415f97c20abbd6aff894b847fee8",
+			"revisionTime": "2019-05-08T07:12:19Z"
+		},
+		{
+			"checksumSHA1": "0Pry12nZ6UQBd1iXEtszySSfFpI=",
+			"path": "github.com/jinzhu/gorm/dialects/postgres",
+			"revision": "b7156195f7f3415f97c20abbd6aff894b847fee8",
+			"revisionTime": "2019-05-08T07:12:19Z"
+		},
 		{
 			"checksumSHA1": "gDodyH3v8l8En7mcJVBwjPiIhXM=",
 			"path": "github.com/labstack/echo",
@@ -93,9 +111,5 @@
 			"revisionTime": "2018-12-15T17:52:45Z"
 		}
 	],
-	"rootPath": "github.com/oribe1115/phan-sns-server",
-	"heroku": {
-		"install" : ["./..."],
-		"goVersion" : "go1.12.5"
-	}
+	"rootPath": "github.com/oribe1115/phan-sns-server"
 }
