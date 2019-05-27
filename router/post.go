@@ -20,7 +20,26 @@ func createPostsHandler(c echo.Context) error {
 	post := new(posts.Post)
 	err := c.Bind(post)
 	if err != nil {
-		return return500(c, "createPostsError", err)
+		return return500(c, "createPostsParseError", err)
 	}
+
+	sess, err := database.Sessions.Get(c)
+	if err != nil {
+		return return500(c, "checkSessionDBError", err)
+	}
+	id := sess.Values["id"]
+	if id == nil {
+		return c.NoContent(http.StatusForbidden)
+	}
+
+	if post.CreatedUser != id {
+		return c.NoContent(http.StatusForbidden)
+	}
+
+	err = database.Posts.AddPost(post)
+	if err != nil {
+		return c.NoContent(http.StatusForbidden)
+	}
+
 	return c.NoContent(http.StatusOK)
 }
