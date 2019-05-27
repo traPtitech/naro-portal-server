@@ -6,6 +6,7 @@ import (
 	"github.com/labstack/echo/middleware"
 	//"github.com/WistreHosshii/naro-portal-server/model"
 	"github.com/WistreHosshii/naro-portal-server/router"
+	
 
 	//"net/http"
 )
@@ -14,6 +15,7 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.GET("/ping",router.Pong)
+	e.POST("/signup",router.PostSignUpHandler)
 
 	e.Start(":12500")
 }
