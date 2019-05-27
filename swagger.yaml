@@ -122,6 +122,8 @@ paths:
       responses:
         200:
           description: 投稿を完了しました
+        403:
+          description: 不正なIDです
 components:
   schemas:
     AuthUser:

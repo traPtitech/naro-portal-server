@@ -38,7 +38,7 @@ func createPostsHandler(c echo.Context) error {
 
 	err = database.Posts.AddPost(post)
 	if err != nil {
-		return c.NoContent(http.StatusForbidden)
+		return return500(c, "createPostsError", err)
 	}
 
 	return c.NoContent(http.StatusOK)
