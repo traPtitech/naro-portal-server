@@ -7,9 +7,10 @@ import (
 	"github.com/motoki317/naro-portal-server/router"
 
 	"github.com/labstack/echo-contrib/session"
-
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
