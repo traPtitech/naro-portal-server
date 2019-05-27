@@ -102,6 +102,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/parameters/Post'
+    post:
+      tags:
+        - posts
+      description: 投稿を追加する
+      requestBody:
+        description: 投稿内容
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/Post'
+      responses:
+        200:
+          description: 投稿を完了しました
 components:
   parameters:
     AuthUser:
@@ -133,11 +146,8 @@ components:
     Post:
       type: object
       required:
-        - id
-        - content
         - desc
         - created_user
-        - created_date
       properties:
         id:
           type: integer
