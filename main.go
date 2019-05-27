@@ -13,6 +13,7 @@ func main() {
 	database.ConnectDB()
 
 	e := echo.New()
+    e.Use(middleware.CORS())
 	e.Use(middleware.Logger())
 	e.Use(session.Middleware(database.SessionStore))
 
