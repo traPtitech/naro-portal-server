@@ -1,0 +1,21 @@
+swagger: "2.0"
+info:
+  description: "phan-sns-serverのAPI"
+  version: "1.0.0"
+  title: "phan-sns-server API"
+  termsOfService: "http://swagger.io/terms/"
+
+paths:
+  /newuser:
+    post:
+      summary: "新規ユーザーを作成する"
+      description: "username, passwordを受け取り、諸々をuser_listに追加。followの更新も行う。"
+  /post/{userid}:
+    post:
+      summary: "新規投稿を追加"
+  /show:
+    get:
+      summary: "全ての投稿を返す"
+  /show/{userid}:
+    get:
+      summary: "そのユーザーのタイムライン上の投稿を返す"
