@@ -7,6 +7,8 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/labstack/echo"
+
+	"github.com/oribe1115/phan-sns-server/handler"
 )
 
 var (
@@ -27,6 +29,8 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World.\n")
 	})
+
+	e.GET("/create", handler.CreateUserStatusHandler)
 
 	port := os.Getenv("PORT")
 	if port == "" {
