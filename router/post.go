@@ -13,5 +13,5 @@ func getPostsHandler(c echo.Context) error {
 	if err != nil {
 		return return500(c, "getPostsError", err)
 	}
-	return c.JSON(http.StatusAccepted, posts)
+	return c.JSON(http.StatusOK, posts)
 }
