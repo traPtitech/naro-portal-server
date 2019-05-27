@@ -21,6 +21,12 @@
 			"revisionTime": "2019-05-08T07:12:19Z"
 		},
 		{
+			"checksumSHA1": "4eelJOSLZoDzLuaJvgilOBVNovU=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
+		},
+		{
 			"checksumSHA1": "gDodyH3v8l8En7mcJVBwjPiIhXM=",
 			"path": "github.com/labstack/echo",
 			"revision": "e2671fe96385cac1e87b55c7572bb2fcf4ba00a3",
@@ -37,6 +43,18 @@
 			"path": "github.com/labstack/gommon/log",
 			"revision": "82ef680aef5189b68682876cf70d09daa4ac0f51",
 			"revisionTime": "2019-01-25T18:56:10Z"
+		},
+		{
+			"checksumSHA1": "F6mCaMfANCOCP8pLnk94HmRyVpg=",
+			"path": "github.com/lib/pq",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
+		},
+		{
+			"checksumSHA1": "EnMmNGgpDa5sNw0Zs5RhvNDcP2g=",
+			"path": "github.com/lib/pq/hstore",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
 		},
 		{
 			"checksumSHA1": "jRou8frV+eGk0Cj6benPsxoEDAc=",
