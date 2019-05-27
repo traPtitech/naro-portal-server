@@ -1,0 +1,167 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: rettiwt
+  description: yet another twitter
+
+paths:
+  /signup:
+    post:
+      tags:
+        - auths
+      description: ユーザーの登録をします
+      requestBody:
+        description: 登録するユーザー情報
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/AuthUser'
+      responses:
+        201:
+          description: 正常にユーザー登録が完了しました
+        400:
+          description: 不正なIDまたはパスワードです
+        409:
+          description: ユーザーが既に存在しています
+  /login:
+    post:
+      tags:
+        - auths
+      description: ユーザーのログインをします
+      requestBody:
+        description: 登録するユーザー情報
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/AuthUser'
+            example:
+              id: userid
+              password: password
+      responses:
+        200:
+          description: ログインに成功しました
+        403:
+          description: ユーザーIDまたはパスワードが間違っています
+  /logout:
+    post:
+      tags:
+        - auths
+      description: ユーザーのログアウトをします
+      responses:
+        200:
+          description: ログアウトに成功しました
+  /whoami:
+    get:
+      tags:
+        - auths
+      description: ユーザーのログイン状態を確認します
+      responses:
+        200:
+          description: ログインしています
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                example:
+                  id: userid
+        403:
+          description: ログインしていません
+  /users/{id}:
+    get:
+      tags:
+        - users
+      description: 指定したIDのユーザーの情報を取得する
+      parameters:
+        - name: id
+          in: paths
+          description: ユーザーID
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: ユーザー情報
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/parameters/User'
+  /posts:
+    get:
+      tags:
+        - posts
+      description: 投稿一覧を取得する
+      responses:
+        200:
+          description: 投稿の配列
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/parameters/Post'
+components:
+  parameters:
+    AuthUser:
+      type: object
+      required:
+        - id
+        - password
+      properties:
+        id:
+          type: string
+        password:
+          type: string
+      example:
+        id: userid
+        password: password
+    User:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+      example:
+        id: userid
+        name: username
+    Post:
+      type: object
+      required:
+        - id
+        - content
+        - desc
+        - created_user
+        - created_date
+      properties:
+        id:
+          type: integer
+          format: uint64
+        content:
+          type: integer
+          format: uint64
+        desc:
+          type: string
+        created_user:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+      example:
+        id: 10000
+        content: 3000
+        desc: description
+        created_user: userid
+        created_date: 2019-04-01T00:00:00+00:00
+tags:
+  - name: auths
+    description: ログイン関連
+  - name: users
+    description: ユーザー関連
+  - name: posts
+    description: 投稿関連
