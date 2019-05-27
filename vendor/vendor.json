@@ -57,6 +57,18 @@
 			"revisionTime": "2019-05-07T19:18:18Z"
 		},
 		{
+			"checksumSHA1": "ATnwV0POluBNQEMjPdylodz0oK0=",
+			"path": "github.com/lib/pq/oid",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
+		},
+		{
+			"checksumSHA1": "ywel3wHXnu1eLhyT1/FolporeAc=",
+			"path": "github.com/lib/pq/scram",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
+		},
+		{
 			"checksumSHA1": "jRou8frV+eGk0Cj6benPsxoEDAc=",
 			"path": "github.com/mattn/go-colorable",
 			"revision": "3a70a971f94a22f2fa562ffcc7a0eb45f5daf045",
