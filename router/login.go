@@ -25,13 +25,7 @@ type User struct {
 func SetupLoginRoutes(e *echo.Echo, db *sqlx.DB) {
 	e.POST("/login", makePostLoginHandler(db))
 	e.POST("/signup", makePostSignUpHandler(db))
-}
-
-// SetupWithLoginRoutes ログインが必要なルート達を置きます
-func SetupWithLoginRoutes(e *echo.Echo, db *sqlx.DB) {
-	withLogin := e.Group("")
-	withLogin.Use(checkLogin)
-	withLogin.POST("/logout", makePostLogoutHandler(db))
+	e.POST("/logout", makePostLogoutHandler(db), CheckLogin)
 }
 
 func makePostLoginHandler(db *sqlx.DB) func(c echo.Context) error {
@@ -119,7 +113,7 @@ func makePostLogoutHandler(db *sqlx.DB) func(c echo.Context) error {
 	}
 }
 
-func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
+func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		sess, err := session.Get("sessions", c)
 		if err != nil {

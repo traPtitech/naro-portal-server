@@ -22,7 +22,7 @@ func main() {
 	e.Use(session.Middleware(store))
 
 	router.SetupLoginRoutes(e, db)
-	router.SetupWithLoginRoutes(e, db)
+	router.SetupTweetRoutes(e, db)
 
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Server successfully started!")
