@@ -1,14 +1,5 @@
 package model
 
-import (
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/postgres"
-)
-
-var (
-	db *gorm.DB
-)
-
 type DateInGame struct {
 	// ゲーム内日時
 
