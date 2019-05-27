@@ -13,5 +13,14 @@ func getPostsHandler(c echo.Context) error {
 	if err != nil {
 		return return500(c, "getPostsError", err)
 	}
-	return c.JSON(http.StatusAccepted, posts)
+	return c.JSON(http.StatusOK, posts)
+}
+
+func createPostsHandler(c echo.Context) error {
+	post := new(posts.Post)
+	err := c.Bind(post)
+	if err != nil {
+		return return500(c, "createPostsError", err)
+	}
+	return c.NoContent(http.StatusOK)
 }

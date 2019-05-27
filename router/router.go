@@ -13,4 +13,5 @@ func CreateRoutes(e *echo.Echo) {
 	g.GET("/users/:id", getUserHandler)
 
 	g.GET("/posts", getPostsHandler)
+	g.POST("/posts", createPostsHandler)
 }

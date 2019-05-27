@@ -14,5 +14,5 @@ func getUserHandler(c echo.Context) error {
 	if err != nil {
 		return return500(c, "getPostsError", err)
 	}
-	return c.JSON(http.StatusAccepted, user)
+	return c.JSON(http.StatusOK, user)
 }

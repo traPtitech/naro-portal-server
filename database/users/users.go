@@ -24,7 +24,8 @@ func CreateUserDB(db *sqlx.DB) *UserDB {
 func (u *UserDB) GetUser(id string, user *User) (err error) {
 	err = u.db.Get(
 		&user,
-		`SELECT * FROM `+u.tableName+` WHERE Id = ?`,
+		`SELECT * FROM ? WHERE Id = ?`,
+		u.tableName,
 		id,
 	)
 	return
