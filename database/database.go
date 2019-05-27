@@ -15,7 +15,7 @@ func LoadDatabase() *sqlx.DB {
 	if err != nil {
 		log.Fatalf("Cannot Connect to Database: %s", err)
 	}
-	fmt.Println("Connected!")
+	fmt.Println("Connected to Database!")
 
 	return db
 }

@@ -21,10 +21,17 @@ type User struct {
 	HashedPass string `json:"-"  db:"HashedPass"`
 }
 
-// SetUpLoginRoutes /login と /signup ルートを置きます
-func SetUpLoginRoutes(e *echo.Echo, db *sqlx.DB) {
+// SetupLoginRoutes /login, /signup ルートを置きます
+func SetupLoginRoutes(e *echo.Echo, db *sqlx.DB) {
 	e.POST("/login", makePostLoginHandler(db))
 	e.POST("/signup", makePostSignUpHandler(db))
+}
+
+// SetupWithLoginRoutes ログインが必要なルート達を置きます
+func SetupWithLoginRoutes(e *echo.Echo, db *sqlx.DB) {
+	withLogin := e.Group("")
+	withLogin.Use(checkLogin)
+	withLogin.POST("/logout", makePostLogoutHandler(db))
 }
 
 func makePostLoginHandler(db *sqlx.DB) func(c echo.Context) error {
@@ -92,16 +99,36 @@ func makePostSignUpHandler(db *sqlx.DB) func(c echo.Context) error {
 	}
 }
 
-func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
+func makePostLogoutHandler(db *sqlx.DB) func(c echo.Context) error {
+	return func(c echo.Context) error {
+		sess, err := session.Get("sessions", c)
+
+		if err != nil {
+			fmt.Println(err)
+			return c.String(http.StatusInternalServerError, "Something went wrong while processing your session...")
+		}
+
+		_, err = db.Exec("DELETE FROM sessions WHERE id=?", sess.ID)
+
+		if err != nil {
+			fmt.Println(err)
+			return c.String(http.StatusInternalServerError, "Something went wrong while processing your session...")
+		}
+
+		return c.NoContent(http.StatusNoContent)
+	}
+}
+
+func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		sess, err := session.Get("sessions", c)
 		if err != nil {
 			fmt.Println(err)
-			return c.String(http.StatusInternalServerError, "something wrong in getting session")
+			return c.String(http.StatusInternalServerError, "Something went wrong while processing your session...")
 		}
 
 		if sess.Values["userName"] == nil {
-			return c.String(http.StatusForbidden, "please login")
+			return c.String(http.StatusForbidden, "You are not logged in.")
 		}
 		c.Set("userName", sess.Values["userName"].(string))
 
