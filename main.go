@@ -1,41 +1,31 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"os"
-	"time"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/labstack/echo"
 )
 
-type UserStatus struct {
-	// date形式はどうすればいい？
-	username string
-	// 聞いたまま書いただけ　あとで確認
-	now_date time.Time
-}
+var (
+	db *gorm.DB
+)
 
 func main() {
+	databaseURL := os.Getenv("DATABASE_URL")
+	_db, err := gorm.Open("postgres", databaseURL)
+	if err != nil {
+		panic("failed to connect database")
+	}
+	db = _db
+	defer db.Close()
+
 	e := echo.New()
 
-	e.GET("/hello", func(c echo.Context) error {
+	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World.\n")
-	})
-
-	e.GET("/db", func(c echo.Context) error {
-		databaseURL := os.Getenv("DATABASE_URL")
-		db, err := gorm.Open("postgres", databaseURL)
-		if err != nil {
-			log.Fatal(err)
-		}
-		data := UserStatus{}
-		db.First(&data)
-		// data, _ := db.Query("SELECT * FROM user_status;")
-		defer db.Close()
-		return c.JSON(http.StatusOK, data)
 	})
 
 	port := os.Getenv("PORT")
