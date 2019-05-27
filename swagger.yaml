@@ -4,18 +4,22 @@ info:
   title: rettiwt
   description: yet another twitter
 
+servers:
+  - url: http://150.95.157.67:12100/
+
 paths:
   /signup:
     post:
       tags:
         - auths
       description: ユーザーの登録をします
+      operationId: signup
       requestBody:
         description: 登録するユーザー情報
         content:
           application/json:
             schema:
-              $ref: '#/components/parameters/AuthUser'
+              $ref: '#/components/schemas/AuthUser'
       responses:
         201:
           description: 正常にユーザー登録が完了しました
@@ -28,12 +32,13 @@ paths:
       tags:
         - auths
       description: ユーザーのログインをします
+      operationId: login
       requestBody:
         description: 登録するユーザー情報
         content:
           application/json:
             schema:
-              $ref: '#/components/parameters/AuthUser'
+              $ref: '#/components/schemas/AuthUser'
       responses:
         200:
           description: ログインに成功しました
@@ -44,6 +49,7 @@ paths:
       tags:
         - auths
       description: ユーザーのログアウトをします
+      operationId: logout
       responses:
         200:
           description: ログアウトに成功しました
@@ -52,6 +58,7 @@ paths:
       tags:
         - auths
       description: ユーザーのログイン状態を確認します
+      operationId: whoami
       responses:
         200:
           description: ログインしています
@@ -71,9 +78,10 @@ paths:
       tags:
         - users
       description: 指定したIDのユーザーの情報を取得する
+      operationId: getUser
       parameters:
         - name: id
-          in: paths
+          in: path
           description: ユーザーID
           required: true
           schema:
@@ -84,12 +92,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/parameters/User'
+                $ref: '#/components/schemas/User'
   /posts:
     get:
       tags:
         - posts
       description: 投稿一覧を取得する
+      operationId: getPosts
       responses:
         200:
           description: 投稿一覧を正常に取得しました
@@ -98,22 +107,23 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/parameters/Post'
+                  $ref: '#/components/schemas/Post'
     post:
       tags:
         - posts
       description: 投稿を追加する
+      operationId: createPost
       requestBody:
         description: 投稿内容
         content:
           application/json:
             schema:
-              $ref: '#/components/parameters/Post'
+              $ref: '#/components/schemas/Post'
       responses:
         200:
           description: 投稿を完了しました
 components:
-  parameters:
+  schemas:
     AuthUser:
       type: object
       required:
