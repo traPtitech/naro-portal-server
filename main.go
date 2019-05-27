@@ -3,6 +3,9 @@ package main
 import (
 	"net/http"
 
+	"github.com/motoki317/naro-portal-server/database"
+	"github.com/motoki317/naro-portal-server/router"
+
 	"github.com/labstack/echo-contrib/session"
 
 	"github.com/labstack/echo/v4"
@@ -17,8 +20,8 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(session.Middleware(store))
 
-	login.SetupLoginRoutes(db)
-	login.SetupWithLoginRoutes(db)
+	router.SetupLoginRoutes(e, db)
+	router.SetupWithLoginRoutes(e, db)
 
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Server successfully started!")

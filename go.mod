@@ -1,8 +1,7 @@
-module github.com/motoki317/github-webhook
+module github.com/motoki317/naro-portal-server
 
 require (
 	github.com/jmoiron/sqlx v1.2.0
-	github.com/labstack/echo v3.3.10+incompatible
 	github.com/labstack/echo-contrib v0.0.0-20190220224852-7fa08ffe9442
 	github.com/labstack/echo/v4 v4.0.0
 	github.com/mattn/go-colorable v0.1.1 // indirect
