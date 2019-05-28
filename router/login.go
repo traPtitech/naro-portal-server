@@ -94,6 +94,11 @@ func signUpHandler(c echo.Context) error {
 		return return500(c, "UserAddingError", err)
 	}
 
+	err = database.Sessions.SetID(c, req.ID)
+	if err != nil {
+		return return500(c, "signupSessionDBError", err)
+	}
+
 	return c.NoContent(http.StatusCreated)
 }
 
