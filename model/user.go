@@ -26,17 +26,22 @@ type UserStatus struct {
 	CoopStatus
 }
 
-type DataForSignUpAndSignIn struct {
+type DataForSignUp struct {
 	UserName  string `json:"user_name"`
 	Password  string `json:"password"`
 	UserImage string `json:"user_image"`
+}
+
+type LoginRequestBody struct {
+	UserName string `json:"user_name"`
+	Password string `json:"password"`
 }
 
 func CreateUserStatusTable() {
 	db.CreateTable(&UserStatus{})
 }
 
-func AddNewUserStatus(userData DataForSignUpAndSignIn) {
+func AddNewUserStatus(userData DataForSignUp) {
 	userStatus := UserStatus{}
 	userStatus.UserName = userData.UserName
 	userStatus.UserImage = userData.UserImage
@@ -55,4 +60,23 @@ func AddNewUserStatus(userData DataForSignUpAndSignIn) {
 	userStatus.UserID = u.String()
 
 	db.Create(&userStatus)
+}
+
+func Login(loginData LoginRequestBody) {
+	userStatus := LoginRequestBody{}
+	errDB := db.Table("user_statuses").Select("user_name, passeord").Where("user_name = ?", loginData.UserName).Find(&userStatus)
+	if errDB.Error != nil {
+		panic("failed to serch")
+	}
+
+	err := bcrypt.CompareHashAndPassword([]byte(userStatus.Password), []byte(loginData.Password))
+	if err != nil {
+		if err == bcrypt.ErrMismatchedHashAndPassword {
+			// 後で
+		} else {
+			// 後で
+		}
+	}
+
+	// session周りは後で追加
 }

@@ -14,9 +14,12 @@ func CreateUserStatusHandler(c echo.Context) error {
 }
 
 func SignUpHandler(c echo.Context) error {
-	userData := model.DataForSignUpAndSignIn{}
+	userData := model.DataForSignUp{}
 	c.Bind(&userData)
 	model.AddNewUserStatus(userData)
 
 	return c.String(http.StatusOK, "Succeded")
+}
+func LoginHandler(c echo.Context) error {
+
 }
