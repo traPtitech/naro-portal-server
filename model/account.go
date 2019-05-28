@@ -1,18 +1,17 @@
-package account
+package model
 
 import (
 	"fmt"
+	"log"
+	"os"
 	"net/http"
 	"unicode/utf8"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo-contrib/session"
+	"github.com/pborman/uuid"
 	"golang.org/x/crypto/bcrypt"
-)
-
-var (
-	db *sqlx.DB
 )
 
 //User Userの構造体
@@ -27,7 +26,7 @@ func PostLoginHandler(c echo.Context) error {
 	c.Bind(&req)
 
 	user := User{}
-	err := db.Get(&user, "SELECT (name,password) FROM user WHERE name=?", req.UserName)
+	err := Db.Get(&user, "SELECT name,password FROM user WHERE name=?", req.UserName)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -46,6 +45,9 @@ func PostLoginHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
 	sess.Values["UserName"] = req.UserName
+	var userID string
+	Db.Get(&userID,"SELECT ID FROM user WHERE name=?",req.UserName)
+	sess.Values["UserID"]=userID
 	sess.Save(c.Request(), c.Response())
 
 	return c.NoContent(http.StatusOK)
@@ -71,11 +73,17 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 
 //PostSignUpHandler Post /signup サインアップ
 func PostSignUpHandler(c echo.Context) error {
+	_db, err := sqlx.Connect("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", os.Getenv("DB_USERNAME"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOSTNAME"), os.Getenv("DB_PORT"), os.Getenv("DB_DATABASE")))
+	if err != nil {
+		log.Fatalf("Cannot Connect to Database: %s", err)
+	}
+	Db = _db
+
 	req := User{}
 	c.Bind(&req)
 
 	var userID string
-	db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
 	if userID != "" {
 		return c.String(http.StatusBadRequest, "ユーザーが既に存在しています")
 	}
@@ -89,7 +97,7 @@ func PostSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("bcrypt generate error: %v", err))
 	}
 
-	_, err = db.Exec("INSERT INTO user (name, password) VALUES (?, ?)", req.UserName, hashedPass)
+	_, err = Db.Exec("INSERT INTO (user name,ID,password) VALUES (?, ?,?)", req.UserName, uuid.New(), hashedPass)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}

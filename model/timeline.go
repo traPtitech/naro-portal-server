@@ -1,10 +1,9 @@
-package timeline
+package model
 
 import (
 	"net/http"
 	"time"
 
-	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
 )
 
@@ -17,17 +16,13 @@ type Tweet struct {
 	FavoNum   int       `json:"favoNum,omitempty"  db:"favo_num"`
 }
 
-var (
-	db *sqlx.DB
-)
-
 //GetTimeLineHandler Get /timeline/:userName タイムライン
 func GetTimeLineHandler(c echo.Context) error {
 	userName := c.Param("userName")
 
 	tweets := []Tweet{}
 	var userID string
-	db.Get(&userID, "SELECT ID FROM User WHERE name=?", userName)
-	db.Select(&tweets, "SELECT * FROM Tweet WHERE user_ID=?", userID)
+	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", userName)
+	Db.Select(&tweets, "SELECT * FROM tweet WHERE user_ID=?", userID)
 	return c.JSON(http.StatusOK, tweets)
 }
