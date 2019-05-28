@@ -61,7 +61,7 @@ func (p *PostDB) GetPosts(posts []Post) (err error) {
 
 func (p *PostDB) AddPost(post *Post) (err error) {
 	_, err = p.db.NamedExec(
-		`INSERT INTO `+p.tableName+` (content, desc, created_user, created_date) VALUES (:Content, :Desc, :CreatedUser, CreatedDate)`,
+		`INSERT INTO `+p.tableName+` (content, desc, created_user, created_date) VALUES (:content, :desc, :created_user, created_date)`,
 		post,
 	)
 	return

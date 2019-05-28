@@ -32,7 +32,7 @@ func (u *UserDB) GetUser(id string, user *User) (err error) {
 
 func (u *UserDB) AddUser(user *User) (err error) {
 	_, err = u.db.NamedExec(
-		`INSERT INTO `+u.tableName+` (id, name) VALUES (:Id, :Name)`,
+		`INSERT INTO `+u.tableName+` (id, name) VALUES (:id, :name)`,
 		user,
 	)
 	return
