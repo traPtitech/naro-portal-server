@@ -13,7 +13,10 @@ func main() {
 	database.ConnectDB()
 
 	e := echo.New()
-	e.Use(middleware.CORS())
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:8080"},
+		AllowCredentials: true,
+	  }))
 	e.Use(middleware.Logger())
 	e.Use(session.Middleware(database.SessionStore))
 
