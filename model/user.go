@@ -47,7 +47,7 @@ var (
 	ErrWrongPass = errors.New("Forbidden")
 )
 
-func AddNewUserStatus(userData DataForSignUp) {
+func AddNewUserStatus(userData DataForSignUp) error {
 	userStatus := UserStatus{}
 	userStatus.UserName = userData.UserName
 	userStatus.UserImage = userData.UserImage
@@ -55,17 +55,19 @@ func AddNewUserStatus(userData DataForSignUp) {
 
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(userData.Password), bcrypt.DefaultCost)
 	if err != nil {
-		panic("failed to hash password")
+		return errors.New("failed to hash password")
 	}
 	userStatus.Password = hashedPassword
 
 	u, err := uuid.NewRandom()
 	if err != nil {
-		panic("failed to make uuid")
+		return errors.New("failed to make uuid")
 	}
 	userStatus.UserID = u.String()
 
 	db.Create(&userStatus)
+
+	return nil
 }
 
 func Login(loginData LoginRequestBody) (string, error) {

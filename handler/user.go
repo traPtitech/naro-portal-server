@@ -18,7 +18,11 @@ func CreateUserStatusHandler(c echo.Context) error {
 func SignUpHandler(c echo.Context) error {
 	userData := model.DataForSignUp{}
 	c.Bind(&userData)
-	model.AddNewUserStatus(userData)
+	err := model.AddNewUserStatus(userData)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusOK, "Faild to Sign Up")
+	}
 
 	return c.String(http.StatusOK, "Succeded")
 }
