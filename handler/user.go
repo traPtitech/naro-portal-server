@@ -21,5 +21,9 @@ func SignUpHandler(c echo.Context) error {
 	return c.String(http.StatusOK, "Succeded")
 }
 func LoginHandler(c echo.Context) error {
+	loginData := model.LoginRequestBody{}
+	c.Bind(&loginData)
+	model.Login(loginData)
 
+	return c.String(http.StatusOK, "Login Succeded")
 }

@@ -77,6 +77,4 @@ func Login(loginData LoginRequestBody) {
 			// 後で
 		}
 	}
-
-	// session周りは後で追加
 }
