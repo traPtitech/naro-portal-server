@@ -24,6 +24,5 @@ func LoginHandler(c echo.Context) error {
 	loginData := model.LoginRequestBody{}
 	c.Bind(&loginData)
 	model.Login(loginData)
-
 	return c.String(http.StatusOK, "Login Succeded")
 }
