@@ -20,7 +20,7 @@ func main() {
 		return c.String(http.StatusOK, "Hello, World.\n")
 	})
 
-	e.GET("/create", handler.CreateUserStatusHandler)
+	e.GET("/create/tabele/userstatus", handler.CreateUserStatusHandler)
 
 	port := os.Getenv("PORT")
 	if port == "" {
