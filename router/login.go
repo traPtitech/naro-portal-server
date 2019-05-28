@@ -1,13 +1,14 @@
 package router
 
 import (
+	"database/sql"
+	"fmt"
 	"errors"
 	"github.com/labstack/echo"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/auths"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/users"
 	"golang.org/x/crypto/bcrypt"
-	"log"
 	"net/http"
 )
 
@@ -47,7 +48,9 @@ func comparePass(hashedPass string, pass string) (isMismatch bool, err error) {
 	err = bcrypt.CompareHashAndPassword([]byte(hashedPass), []byte(pass))
 	if err != nil {
 		isMismatch = (bcrypt.ErrMismatchedHashAndPassword == err)
-		err = nil
+		if isMismatch {
+			err = nil
+		}
 	}
 	return
 }
@@ -82,16 +85,23 @@ func signUpHandler(c echo.Context) error {
 
 	err = database.Auths.AddUser(req.ID, hashedPass)
 	if err != nil {
-		return return500(c, "UserAddingError", err)
+		return return500(c, "UserAuthAddingError", err)
 	}
 	err = database.Users.AddUser(&users.User{
 		ID:   req.ID,
 		Name: req.ID,
 	})
 	if err != nil {
-		err = database.Auths.DeleteUser(req.ID)
-		log.Println("UserAddingError", err)
+		err2 := database.Auths.DeleteUser(req.ID)
+		if err2 != nil {
+			return return500(c, "UserAddingError", fmt.Errorf("%v\n%v", err, err2))
+		}
 		return return500(c, "UserAddingError", err)
+	}
+
+	err = database.Sessions.SetID(c, req.ID)
+	if err != nil {
+		return return500(c, "signupSessionDBError", err)
 	}
 
 	return c.NoContent(http.StatusCreated)
@@ -101,18 +111,23 @@ func loginHandler(c echo.Context) error {
 	req := LoginRequestBody{}
 	c.Bind(&req)
 
+	isNoExsist := false
 	user := auths.AuthUser{}
 	err := database.Auths.GetUser(req.ID, &user)
 	if err != nil {
-		log.Println("UserGettingError", err)
+		if err == sql.ErrNoRows {
+			isNoExsist = true
+		} else {
+			return return500(c, "UserLoginGettingError", err)
+		}
 	}
 
 	isMismatch, err := comparePass(user.HashedPass, req.Password)
-	if isMismatch {
+	if isMismatch || isNoExsist {
 		return c.NoContent(http.StatusForbidden)
 	}
 	if err != nil {
-		return c.NoContent(http.StatusInternalServerError)
+		return return500(c, "userLoginCheckingError", err)
 	}
 
 	err = database.Sessions.SetID(c, req.ID)

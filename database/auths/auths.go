@@ -23,9 +23,8 @@ func CreateAuthDB(db *sqlx.DB) *AuthDB {
 
 func (a *AuthDB) GetUser(id string, user *AuthUser) (err error) {
 	err = a.db.Get(
-		&user,
-		`SELECT * FROM ? WHERE Id = ?`,
-		a.tableName,
+		user,
+		`SELECT * FROM `+a.tableName+` WHERE id = ?`,
 		id,
 	)
 	return
@@ -33,16 +32,14 @@ func (a *AuthDB) GetUser(id string, user *AuthUser) (err error) {
 
 func (a *AuthDB) GetUserExistance(id string) (res bool, err error) {
 	var count int
-	err = a.db.Get(&count, `SELECT COUNT(*) FROM ? WHERE Id = ?`,
-		a.tableName, id)
+	err = a.db.Get(&count, `SELECT COUNT(*) FROM `+a.tableName+` WHERE id = ?`, id)
 	res = count > 0
 	return
 }
 
 func (a *AuthDB) AddUser(id string, hashedPass []byte) (err error) {
 	_, err = a.db.Exec(
-		`INSERT INTO ? (Id, HashedPass) VALUES (?, ?)`,
-		a.tableName,
+		`INSERT INTO `+a.tableName+` (id, hashed_pass) VALUES (?, ?)`,
 		id,
 		hashedPass,
 	)
@@ -51,8 +48,7 @@ func (a *AuthDB) AddUser(id string, hashedPass []byte) (err error) {
 
 func (a *AuthDB) DeleteUser(id string) (err error) {
 	_, err = a.db.Exec(
-		`DELETE FROM ? WHERE Id = ?`,
-		a.tableName,
+		`DELETE FROM `+a.tableName+` WHERE id = ?`,
 		id,
 	)
 	return
