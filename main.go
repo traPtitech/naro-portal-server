@@ -31,18 +31,18 @@ type User struct {
 	HashedPass string `json:"-"  db:"HashedPass"`
 }
 
-type Reviews struct {
-	Id		 int	`json:"id" form:"id" db:"Id"`
-	Title	 string `json:"title,omitempty" form:"Title" db:"Title"`
-	Contents string `json:"contents,omitempty" form:"Contents" db:"Contents"`
-	Username string `json:"username,omitempty" form:"Username" db:"Username"`
-	FavCount int    `json:"favcount" form:"FavCount" db:"FavCount"`
+type Review struct {
+	ID		 int	`json:"id" form:"id" db:"id"`
+	Title	 string `json:"title,omitempty" form:"title" db:"title"`
+	Contents string `json:"contents,omitempty" form:"Contents" db:"contents"`
+	Username string `json:"username,omitempty" form:"username" db:"username"`
+	FavCount int    `json:"fav_count" form:"fav_count" db:"fav_count"`
 }
 
 type Fav struct {
-	FavId	 int	`json:"favid" form:"favid" db:"favid"`
+	FavID	 int	`json:"fav_id" form:"fav_id" db:"fav_id"`
 	ReviewID string `json:"review_id,omitempty" form:"review_id" db:"review_id"`
-	FavUser  string `json:"favuser,omitempty" form:"FavUser" db:"FavUser"`
+	FavUser  string `json:"fav_user,omitempty" form:"fav_user" db:"fav_user"`
 }
 
 type Follow struct {
@@ -82,6 +82,7 @@ func main() {
 	withLogin.POST("/api/givefav", giveFavHandler)
 	withLogin.POST("/api/follow", giveFollowHandler)
 	withLogin.GET("/api/myfav", getFavInfoHandler)
+	withLogin.GET("/api/mytimeline", getTimeLineHandler)
 	withLogin.GET("/api/titles/:titleName", getTitleInfoHandler)
 	withLogin.GET("/api/users/:userName", getUserInfoHandler)
 
@@ -180,7 +181,7 @@ func getWhoAmIHandler(c echo.Context) error {
 }
 
 func postReviewHandler(c echo.Context) error {
-	req := Reviews{}
+	req := Review{}
 	c.Bind(&req)
 
 	sess, err := session.Get("sessions", c)
@@ -201,17 +202,17 @@ func postReviewHandler(c echo.Context) error {
 		return c.String(http.StatusBadRequest, "レビューが空です")
 	}
 
-	db.Exec("INSERT INTO reviews (Title, Contents, Username, FavCount) VALUES (?,?,?,?);", req.Title, req.Contents, username, 0)
+	db.Exec("INSERT INTO reviews (title, contents, username, fav_count) VALUES (?,?,?,?);", req.Title, req.Contents, username, 0)
 	return c.NoContent(http.StatusCreated)
 }
 
 func getAllReviewHandler(c echo.Context) error {
 
-	review := []Reviews{}
-	db.Select(&review, "SELECT Username,Title,Contents,FavCount FROM reviews;")
-	fmt.Println(review)
+	reviews := []Review{}
+	db.Select(&reviews, "SELECT id,username,title,contents,fav_count FROM reviews;")
+	fmt.Println(reviews)
 	
-	return c.JSON(http.StatusOK, review)
+	return c.JSON(http.StatusOK, reviews)
 }
 
 func getMyReviewHandler(c echo.Context) error {
@@ -230,33 +231,33 @@ func getMyReviewHandler(c echo.Context) error {
 	var username = sess.Values["userName"]
 	fmt.Println(username)
 
-	review := []Reviews{}
-	db.Select(&review, "SELECT Id,Username,Title,Contents,FavCount FROM reviews WHERE Username=?;", username)
-	fmt.Println(review)
+	reviews := []Review{}
+	db.Select(&reviews, "SELECT id,username,title,contents,fav_count FROM reviews WHERE username=?;", username)
+	fmt.Println(reviews)
 	
-	return c.JSON(http.StatusOK, review)
+	return c.JSON(http.StatusOK, reviews)
 }
 
 func getTitleInfoHandler(c echo.Context) error {
 	titleName := c.Param("titleName")
 	fmt.Println(titleName)
 	strings.Replace(titleName,"%20","Replaced",' ')
-	review := []Reviews{}
-	db.Select(&review, "SELECT Username, Contents,FavCount FROM reviews WHERE Title=?;", titleName)
-	fmt.Println(review)
+	reviews := []Review{}
+	db.Select(&reviews, "SELECT id,username, contents,fav_count FROM reviews WHERE title=?;", titleName)
+	fmt.Println(reviews)
 
-	return c.JSON(http.StatusOK, review)
+	return c.JSON(http.StatusOK, reviews)
 }
 
 func getUserInfoHandler(c echo.Context) error {
 	userName := c.Param("userName")
 	fmt.Println(userName)
 	strings.Replace(userName,"%20","Replaced",' ')
-	review := []Reviews{}
-	db.Select(&review, "SELECT Title, Contents,FavCount FROM reviews WHERE Username=?;", userName)
-	fmt.Println(review)
+	reviews := []Review{}
+	db.Select(&reviews, "SELECT id,title, contents,fav_count FROM reviews WHERE username=?;", userName)
+	fmt.Println(reviews)
 
-	return c.JSON(http.StatusOK, review)
+	return c.JSON(http.StatusOK, reviews)
 }
 
 func giveFavHandler(c echo.Context) error {
@@ -273,11 +274,11 @@ func giveFavHandler(c echo.Context) error {
 
 	var username = sess.Values["userName"]//操作者のユーザー名の取得
 
-	req := Reviews{}
+	req := Review{}
 	c.Bind(&req)
 	fmt.Println(req)
 
-	db.Exec("INSERT INTO Fav (review_id, FavUser) VALUES (?,?);",req.Id,username)
+	db.Exec("INSERT INTO Fav (review_id, fav_user) VALUES (?,?);",req.ID,username)
 
 	return c.NoContent(http.StatusCreated)
 }
@@ -296,11 +297,11 @@ func giveFollowHandler(c echo.Context) error {
 
 	var username = sess.Values["userName"]//操作者のユーザー名の取得
 
-	req := Reviews{}
+	req := Review{}
 	c.Bind(&req)
 	fmt.Println(req)
 
-	db.Exec("INSERT INTO Fav (review_id, FavUser) VALUES (?,?);",req.Username,username)
+	db.Exec("INSERT INTO follow (follow_user, followed_user) VALUES (?,?);",username,req.Username)
 
 	return c.NoContent(http.StatusCreated)
 }
@@ -320,9 +321,32 @@ func getFavInfoHandler(c echo.Context) error {
 
 	var username = sess.Values["userName"]//操作者のユーザー名の取得
 
-	review := []Reviews{}
-	db.Select(&review, "SELECT Id, Title, Contents, Username FROM reviews JOIN Fav ON Id = review_id WHERE Fav.FavUser=?;", username)
-	fmt.Println(review)
+	reviews := []Review{}
+	db.Select(&reviews, "SELECT id, title, contents, username FROM reviews JOIN Fav ON id = review_id WHERE Fav.fav_user=?;", username)
+	fmt.Println(reviews)
 
-	return c.JSON(http.StatusOK, review)
+	return c.JSON(http.StatusOK, reviews)
 }
+
+func getTimeLineHandler(c echo.Context) error {
+
+	sess, err := session.Get("sessions", c)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusInternalServerError, "something wrong in getting session")
+	}
+
+	if sess.Values["userName"] == nil {
+		return c.String(http.StatusForbidden, "please login")
+	}
+	c.Set("userName", sess.Values["userName"].(string))
+
+	var username = sess.Values["userName"]//操作者のユーザー名の取得
+
+	reviews := []Review{}
+	db.Select(&reviews, "SELECT id, title, contents, username FROM reviews JOIN follow ON username = followed_user WHERE follow_user=?;", username)
+	fmt.Println(reviews)
+
+	return c.JSON(http.StatusOK, reviews)
+}
+
