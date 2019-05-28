@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"os"
 
@@ -12,7 +13,10 @@ import (
 )
 
 func main() {
-	model.EstablishConecction()
+	db, err := model.EstablishConecction()
+	if err != nil {
+		log.Fatalf("Cannot Connect to Database: %s", err)
+	}
 
 	e := echo.New()
 

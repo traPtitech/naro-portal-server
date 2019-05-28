@@ -9,6 +9,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "tDbe+G+O98EMcogvq2BD8+GhdzY=",
+			"path": "github.com/antonlindstrom/pgstore",
+			"revision": "a407030ba6d0efd9a1aad3d0cfc18a9b13d2f2e7",
+			"revisionTime": "2017-06-04T07:21:16Z"
+		},
+		{
 			"checksumSHA1": "s5tdcjh84+tiKS3oSq77mzjB970=",
 			"path": "github.com/google/uuid",
 			"revision": "c2e93f3ae59f2904160ceaab466009f965df46d6",
