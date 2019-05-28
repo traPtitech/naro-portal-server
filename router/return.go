@@ -16,7 +16,7 @@ func return400(c echo.Context, err error) error {
 }
 
 func return500(c echo.Context, name string, err error) error {
-	fmt.Println(name+": %v\n", err)
+	fmt.Printf("%s: %v\n", name, err)
 	return c.NoContent(http.StatusInternalServerError)
 }
 
