@@ -51,6 +51,12 @@
 			"revisionTime": "2019-02-20T22:48:52Z"
 		},
 		{
+			"checksumSHA1": "Y8jVBYonQCm2QXsiSWg9Kzc04uo=",
+			"path": "github.com/labstack/echo/middleware",
+			"revision": "e2671fe96385cac1e87b55c7572bb2fcf4ba00a3",
+			"revisionTime": "2019-05-17T14:45:49Z"
+		},
+		{
 			"checksumSHA1": "R6DzcBLEP0BONPpsyr+11N7xh5w=",
 			"path": "github.com/labstack/gommon/color",
 			"revision": "82ef680aef5189b68682876cf70d09daa4ac0f51",
