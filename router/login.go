@@ -1,6 +1,7 @@
 package router
 
 import (
+	"fmt"
 	"errors"
 	"github.com/labstack/echo"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database"
@@ -82,15 +83,17 @@ func signUpHandler(c echo.Context) error {
 
 	err = database.Auths.AddUser(req.ID, hashedPass)
 	if err != nil {
-		return return500(c, "UserAddingError", err)
+		return return500(c, "UserAuthAddingError", err)
 	}
 	err = database.Users.AddUser(&users.User{
 		ID:   req.ID,
 		Name: req.ID,
 	})
 	if err != nil {
-		err = database.Auths.DeleteUser(req.ID)
-		log.Println("UserAddingError", err)
+		err2 := database.Auths.DeleteUser(req.ID)
+		if err2 != nil {
+			return return500(c, "UserAddingError", fmt.Errorf("%v\n%v", err, err2))
+		}
 		return return500(c, "UserAddingError", err)
 	}
 
