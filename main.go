@@ -36,6 +36,7 @@ func main() {
 
 	e.GET("/create/tabele/userstatus", handler.CreateUserStatusHandler)
 	e.POST("/signup", handler.SignUpHandler)
+	e.POST("/login", handler.LoginHandler)
 
 	withLogin := e.Group("")
 	withLogin.Use(handler.CheckLogin)
