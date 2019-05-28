@@ -45,8 +45,7 @@ func CreatePostDB(db *sqlx.DB) *PostDB {
 func (p *PostDB) GetPost(id string, post *Post) (err error) {
 	err = p.db.Get(
 		&post,
-		`SELECT * FROM ? WHERE Id = ?`,
-		p.tableName,
+		`SELECT * FROM `+p.tableName+` WHERE id = ?`,
 		id,
 	)
 	return
@@ -55,15 +54,14 @@ func (p *PostDB) GetPost(id string, post *Post) (err error) {
 func (p *PostDB) GetPosts(posts []Post) (err error) {
 	err = p.db.Select(
 		&posts,
-		`SELECT * FROM ?`,
-		p.tableName,
+		`SELECT * FROM `+p.tableName,
 	)
 	return
 }
 
 func (p *PostDB) AddPost(post *Post) (err error) {
 	_, err = p.db.NamedExec(
-		`INSERT INTO `+p.tableName+` (Content, Desc, CreatedUser, CreatedDate) VALUES (:Content, :Desc, :CreatedUser, CreatedDate)`,
+		`INSERT INTO `+p.tableName+` (content, desc, created_user, created_date) VALUES (:Content, :Desc, :CreatedUser, CreatedDate)`,
 		post,
 	)
 	return

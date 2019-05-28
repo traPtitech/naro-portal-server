@@ -24,8 +24,7 @@ func CreateUserDB(db *sqlx.DB) *UserDB {
 func (u *UserDB) GetUser(id string, user *User) (err error) {
 	err = u.db.Get(
 		&user,
-		`SELECT * FROM ? WHERE Id = ?`,
-		u.tableName,
+		`SELECT * FROM `+u.tableName+` WHERE id = ?`,
 		id,
 	)
 	return
@@ -33,7 +32,7 @@ func (u *UserDB) GetUser(id string, user *User) (err error) {
 
 func (u *UserDB) AddUser(user *User) (err error) {
 	_, err = u.db.NamedExec(
-		`INSERT INTO `+u.tableName+` (Id, Name) VALUES (:Id, :Name)`,
+		`INSERT INTO `+u.tableName+` (id, name) VALUES (:Id, :Name)`,
 		user,
 	)
 	return
