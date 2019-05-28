@@ -59,10 +59,10 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
 
-		if sess.Values["userName"] == nil {
+		if sess.Values["userID"] == nil {
 			return c.String(http.StatusForbidden, "please login")
 		}
-		c.Set("userName", sess.Values["userName"].(string))
+		c.Set("userID", sess.Values["userID"].(string))
 
 		return next(c)
 
