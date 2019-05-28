@@ -23,7 +23,7 @@ func CreateAuthDB(db *sqlx.DB) *AuthDB {
 
 func (a *AuthDB) GetUser(id string, user *AuthUser) (err error) {
 	err = a.db.Get(
-		&user,
+		user,
 		`SELECT * FROM `+a.tableName+` WHERE id = ?`,
 		id,
 	)

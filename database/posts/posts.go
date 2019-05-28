@@ -44,7 +44,7 @@ func CreatePostDB(db *sqlx.DB) *PostDB {
 
 func (p *PostDB) GetPost(id string, post *Post) (err error) {
 	err = p.db.Get(
-		&post,
+		post,
 		`SELECT * FROM `+p.tableName+` WHERE id = ?`,
 		id,
 	)
