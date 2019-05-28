@@ -25,13 +25,24 @@ func SignUpHandler(c echo.Context) error {
 func LoginHandler(c echo.Context) error {
 	loginData := model.LoginRequestBody{}
 	c.Bind(&loginData)
-	model.Login(loginData)
+	userID, err := model.Login(loginData)
+	if err != nil {
+		fmt.Println(err)
+		if err == "Forbbiten" {
+			return c.NoContent(http.StatusForbidden)
+		} else {
+			return c.NoContent(http.StatusInternalServerError)
+		}
+	}
 
 	sess, err := session.Get("sessions", c)
 	if err != nil {
 		fmt.Println(err)
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
+
+	sess.Values["userID"] = userID
+	sess.Save(c.Request(), c.Response())
 
 	return c.String(http.StatusOK, "Login Succeded")
 }

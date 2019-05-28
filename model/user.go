@@ -1,6 +1,8 @@
 package model
 
 import (
+	"errors"
+
 	"github.com/google/uuid"
 	"golang.org/x/crypto/bcrypt"
 )
@@ -62,19 +64,21 @@ func AddNewUserStatus(userData DataForSignUp) {
 	db.Create(&userStatus)
 }
 
-func Login(loginData LoginRequestBody) {
-	userStatus := LoginRequestBody{}
-	errDB := db.Table("user_statuses").Select("user_name, passeord").Where("user_name = ?", loginData.UserName).Find(&userStatus)
+func Login(loginData LoginRequestBody) (string, error) {
+	userStatus := UserStatus{}
+	errDB := db.Table("user_statuses").Select("*").Where("user_name = ?", loginData.UserName).Find(&userStatus)
 	if errDB.Error != nil {
-		panic("failed to serch")
+		return "", errDB.Error
 	}
 
 	err := bcrypt.CompareHashAndPassword([]byte(userStatus.Password), []byte(loginData.Password))
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
-			// 後で
+			return "", errors.New("Forbidden")
 		} else {
-			// 後で
+			return "", errors.New("Internal Server Error")
 		}
 	}
+
+	return userStatus.UserID, nil
 }
