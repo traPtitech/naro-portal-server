@@ -46,3 +46,21 @@ func LoginHandler(c echo.Context) error {
 
 	return c.String(http.StatusOK, "Login Succeded")
 }
+
+func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
+	return func(c echo.Context) error {
+		sess, err := session.Get("session", c)
+		if err != nil {
+			fmt.Plintln(err)
+			return c.String(http.StatusInternalServerError, "something wrong in getting session")
+		}
+
+		if sess.Values["userName"] == nil {
+			return c.String(http.StatusForbidden, "please login")
+		}
+		c.Set("userName", sess.Values["userName"].(string))
+
+		return next(c)
+
+	}
+}

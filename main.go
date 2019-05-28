@@ -37,6 +37,9 @@ func main() {
 	e.GET("/create/tabele/userstatus", handler.CreateUserStatusHandler)
 	e.POST("/signup", handler.SignUpHandler)
 
+	withLogin := e.Group("")
+	withLogin.Use(handler.CheckLogin)
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "4000"
