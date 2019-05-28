@@ -12,3 +12,11 @@ func CreateUserStatusHandler(c echo.Context) error {
 	model.CreateUserStatusTable()
 	return c.String(http.StatusOK, "user_status table crated!\n")
 }
+
+func SignUpHandler(c echo.Context) error {
+	userData := model.DataForSignUpAndSignIn{}
+	c.Bind(&userData)
+	model.AddNewUserStatus(userData)
+
+	return c.String(http.StatusOK, "Succeded")
+}
