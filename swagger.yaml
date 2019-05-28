@@ -134,8 +134,10 @@ components:
       properties:
         id:
           type: string
+          maxLength: 30
         password:
           type: string
+          maxLength: 72
       example:
         id: userid
         password: password
