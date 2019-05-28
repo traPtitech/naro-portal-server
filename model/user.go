@@ -43,6 +43,10 @@ func CreateUserStatusTable() {
 	db.CreateTable(&UserStatus{})
 }
 
+var (
+	ErrWrongPass = errors.New("Forbidden")
+)
+
 func AddNewUserStatus(userData DataForSignUp) {
 	userStatus := UserStatus{}
 	userStatus.UserName = userData.UserName
@@ -74,7 +78,7 @@ func Login(loginData LoginRequestBody) (string, error) {
 	err := bcrypt.CompareHashAndPassword([]byte(userStatus.Password), []byte(loginData.Password))
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
-			return "", errors.New("Forbidden")
+			return "", ErrWrongPass
 		} else {
 			return "", errors.New("Internal Server Error")
 		}

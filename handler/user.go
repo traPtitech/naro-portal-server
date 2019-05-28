@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/labstack/echo"
 	"github.com/labstack/echo-contrib/session"
+	"github.com/labstack/echo/v4"
 
 	"github.com/oribe1115/phan-sns-server/model"
 )
@@ -28,7 +28,7 @@ func LoginHandler(c echo.Context) error {
 	userID, err := model.Login(loginData)
 	if err != nil {
 		fmt.Println(err)
-		if err == "Forbbiten" {
+		if err == model.ErrWrongPass {
 			return c.NoContent(http.StatusForbidden)
 		} else {
 			return c.NoContent(http.StatusInternalServerError)
@@ -51,7 +51,7 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		sess, err := session.Get("session", c)
 		if err != nil {
-			fmt.Plintln(err)
+			fmt.Println(err)
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
 
