@@ -3,8 +3,8 @@ package model
 import (
 	"fmt"
 	"log"
-	"os"
 	"net/http"
+	"os"
 	"unicode/utf8"
 
 	"github.com/jmoiron/sqlx"
@@ -46,8 +46,8 @@ func PostLoginHandler(c echo.Context) error {
 	}
 	sess.Values["UserName"] = req.UserName
 	var userID string
-	Db.Get(&userID,"SELECT ID FROM user WHERE name=?",req.UserName)
-	sess.Values["UserID"]=userID
+	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	sess.Values["UserID"] = userID
 	sess.Save(c.Request(), c.Response())
 
 	return c.NoContent(http.StatusOK)

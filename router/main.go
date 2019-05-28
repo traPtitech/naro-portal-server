@@ -28,9 +28,12 @@ func main() {
 	withLogin.Use(model.CheckLogin)
 	withLogin.POST("/tweet", model.PostTweetHandler)
 	withLogin.POST("/pin", model.PostPinHandler)
+	withLogin.POST("/pinDelete",model.PostDeletePinHandler)
 	withLogin.GET("/timeline/:userName", model.GetTimeLineHandler)
+	withLogin.GET("/pin/:userName", model.GetPinHandler)
 	withLogin.POST("/favoAdd", model.PostAddFavoHandler)
 	withLogin.POST("/favoDelete", model.PostDeleteFavoHandler)
+	withLogin.POST("/isFavo",model.GetIsFavoHandler)
 
 	e.Start(":11401")
 }

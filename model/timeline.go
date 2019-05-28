@@ -16,6 +16,11 @@ type Tweet struct {
 	FavoNum   int       `json:"favoNum,omitempty"  db:"favo_num"`
 }
 
+//TweetIDOfPin Pin止めされたTweetの構造体
+type TweetIDOfPin struct{
+	TweetID string `json:"tweetID,omitempty" db:"tweet_ID"`
+}
+
 //GetTimeLineHandler Get /timeline/:userName タイムライン
 func GetTimeLineHandler(c echo.Context) error {
 	userName := c.Param("userName")
@@ -25,4 +30,21 @@ func GetTimeLineHandler(c echo.Context) error {
 	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", userName)
 	Db.Select(&tweets, "SELECT * FROM tweet WHERE user_ID=?", userID)
 	return c.JSON(http.StatusOK, tweets)
+}
+
+//GetPinHandler Get /pin/:userName タイムラインのピン
+func GetPinHandler(c echo.Context) error {
+	userName := c.Param("userName")
+
+	dbPins := []TweetIDOfPin{}
+	var userID string
+	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", userName)
+	Db.Select(&dbPins, "SELECT tweet_ID FROM pin WHERE user_ID=?", userID)
+
+	pins:=[]Tweet{}
+	for i,v:=range dbPins{
+		Db.Get(&pins[i],"SELECT * FROM tweet WHERE tweet_ID=?",v.TweetID)
+	} 
+
+	return c.JSON(http.StatusOK, pins)
 }
