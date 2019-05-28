@@ -37,8 +37,8 @@ func main() {
 	e.POST("/signup", handler.SignUpHandler)
 	e.POST("/login", handler.LoginHandler)
 
-	withLogin := e.Group("")
-	withLogin.Use(handler.CheckLogin)
+	// withLogin := e.Group("")
+	// withLogin.Use(handler.CheckLogin)
 
 	port := os.Getenv("PORT")
 	if port == "" {
