@@ -1,6 +1,7 @@
 package router
 
 import (
+	"database/sql"
 	"fmt"
 	"errors"
 	"github.com/labstack/echo"
@@ -8,7 +9,6 @@ import (
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/auths"
 	"github.com/sapphi-red/webengineer_naro-_7_server/database/users"
 	"golang.org/x/crypto/bcrypt"
-	"log"
 	"net/http"
 )
 
@@ -48,7 +48,9 @@ func comparePass(hashedPass string, pass string) (isMismatch bool, err error) {
 	err = bcrypt.CompareHashAndPassword([]byte(hashedPass), []byte(pass))
 	if err != nil {
 		isMismatch = (bcrypt.ErrMismatchedHashAndPassword == err)
-		err = nil
+		if isMismatch {
+			err = nil
+		}
 	}
 	return
 }
@@ -109,18 +111,23 @@ func loginHandler(c echo.Context) error {
 	req := LoginRequestBody{}
 	c.Bind(&req)
 
+	isNoExsist := false
 	user := auths.AuthUser{}
 	err := database.Auths.GetUser(req.ID, &user)
 	if err != nil {
-		log.Println("UserGettingError", err)
+		if err == sql.ErrNoRows {
+			isNoExsist = true
+		} else {
+			return return500(c, "UserLoginGettingError", err)
+		}
 	}
 
 	isMismatch, err := comparePass(user.HashedPass, req.Password)
-	if isMismatch {
+	if isMismatch || isNoExsist {
 		return c.NoContent(http.StatusForbidden)
 	}
 	if err != nil {
-		return c.NoContent(http.StatusInternalServerError)
+		return return500(c, "userLoginCheckingError", err)
 	}
 
 	err = database.Sessions.SetID(c, req.ID)
