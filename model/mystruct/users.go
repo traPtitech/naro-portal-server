@@ -1,4 +1,4 @@
-package users
+package mystruct
 
 type User struct {
 	UserName   string `json:"username,omitempty" db:user_name`

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/labstack/gommon/log"
 	"github.com/labstack/echo"
 	//"github.com/labstack/echo-contrib/session"
 	"github.com/labstack/echo/middleware"
@@ -13,7 +14,10 @@ import (
 )
 
 func main() {
-	model.EstablishConnection()
+	err := model.EstablishConnection()
+	if err != nil {
+		log.Fatalf("Cannot Connect to Database: %s", err)
+	}
 	
 	e := echo.New()
 	e.Use(middleware.Logger())

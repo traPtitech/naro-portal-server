@@ -2,15 +2,18 @@ package router
 
 //ハンドラ
 import (
-	"github.com/jmoiron/sqlx"
+	"github.com/oklog/ulid"
+	"github.com/labstack/echo-contrib/session"
+	"github.com/gorilla/sessions"
+	"github.com/WistreHosshii/naro-portal-server/model"
 	"fmt"
 	"math/rand"
 	"net/http"
-	"strconv"
+	//"strconv"
 	"time"
 
 	//"github.com/WistreHosshii/naro-portal-server/model"
-	"github.com/WistreHosshii/naro-portal-server/model/users"
+	"github.com/WistreHosshii/naro-portal-server/model/mystruct"
 
 
 	_ "github.com/go-sql-driver/mysql"
@@ -19,9 +22,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-var (
-	Db *sqlx.DB
-)
+
 
 func Pong(c echo.Context) error {
 	fmt.Println(c)
@@ -29,7 +30,7 @@ func Pong(c echo.Context) error {
 }
 
 func PostSignUpHandler(c echo.Context) error {
-	req := users.LoginReqestBody{}
+	req := mystruct.LoginReqestBody{}
 	c.Bind(&req)
 
 	if req.Password == "" || req.UserName == "" { //パスワードとか名前が空？
@@ -48,10 +49,20 @@ func PostSignUpHandler(c echo.Context) error {
 	}
 
 	//同じユーザー名が何人いるか調べる
-	var count int 
-	var id string
+	var count int
+	count, err = model.GetUserCount(req.UserName)
+	
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+	}
+
+	if count > 0 {
+		return c.String(http.StatusConflict, "ユーザーが既に存在しています")
+	}
+
+	id := ExampleULID
 	//idの生成。idが被った場合5回まで作り直す
-	for i := 0; i < 5; i++ {
+	/*for i := 0; i < 5; i++ {
 		id = generateID(req.UserName)
 		err = Db.Get(&count, "SELECT COUNT(*) FROM users WHERE id=?", id)
 		if err != nil {
@@ -67,11 +78,61 @@ func PostSignUpHandler(c echo.Context) error {
 		}
 	}
 	return c.String(http.StatusInternalServerError, "idが生成できません")
+	*/
+	model.ExecUserInfo(req.UserName,hashedPass,id)
+	return c.NoContent(http.StatusCreated)
 }
 
-func generateID(UserName string) string {
+/*func generateID(UserName string) string {
 	rand.Seed(time.Now().UnixNano())
 	var r = int(rand.Float64() * 1000000000)
 	var id = UserName + strconv.Itoa(r)
 	return id
+}
+*/
+func ExampleULID() ulid.ULID{
+	t := time.Unix(1000000, 0)
+	entropy := ulid.Monotonic(rand.New(rand.NewSource(t.UnixNano())), 0)
+	//fmt.Println(ulid.MustNew(ulid.Timestamp(t), entropy))
+	// Output: 0000XSNJG0MQJHBF4QX1EFD6Y3
+	_id := ulid.MustNew(ulid.Timestamp(t),entropy)
+	return _id
+	
+}
+
+func postLoginHandler (c echo.Context) error {
+	req := mystruct.LoginReqestBody{}
+	c.Bind(&req)
+
+	//user := users.User{}
+	//err := Db.Get(&user, "SELECT FROM users WHERE user_name=?",req.UserName)
+	user,err := model.GetUserName(req.UserName)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+	}
+
+	err = bcrypt.CompareHashAndPassword([]byte(user.HashadPass),[]byte(req.Password))
+	if err != nil {
+		if err == bcrypt.ErrMismatchedHashAndPassword {
+			return c.NoContent(http.StatusForbidden)
+		} else {
+			return c.NoContent(http.StatusInternalServerError)
+		}
+	}
+	
+	sess, err := session.Get("sessions", c)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusInternalServerError, "something wrong in getting session")
+	}
+	
+	sess.Options = &sessions.Options{
+		Path:     "/",
+		MaxAge:   86400 * 7,
+		HttpOnly: true,
+	  }
+	sess.Values["userName"] = req.UserName
+	sess.Save(c.Request(), c.Response())
+
+	return c.NoContent(http.StatusOK)
 }
