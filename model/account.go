@@ -20,6 +20,11 @@ type User struct {
 	UserPassword string `json:"userPassword,omitempty"  db:"password"`
 }
 
+//Me GetWhoAmIHandlerの構造体
+type Me struct {
+	Username string `json:"userName,omitempty"  db:"username"`
+}
+
 //PostLoginHandler POST /login ログイン
 func PostLoginHandler(c echo.Context) error {
 	req := User{}
@@ -50,7 +55,7 @@ func PostLoginHandler(c echo.Context) error {
 	sess.Values["UserID"] = userID
 	sess.Save(c.Request(), c.Response())
 
-	return c.NoContent(http.StatusOK)
+	return c.String(http.StatusOK, "OK")
 }
 
 //CheckLogin ログイン確認
@@ -102,4 +107,11 @@ func PostSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
 	return c.NoContent(http.StatusCreated)
+}
+
+//GetWhoAmIHandler Get /whoAmI
+func GetWhoAmIHandler(c echo.Context) error {
+	return c.JSON(http.StatusOK, Me{
+		Username: c.Get("userName").(string),
+	})
 }
