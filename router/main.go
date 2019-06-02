@@ -33,7 +33,7 @@ func main() {
 	withLogin.GET("/pin/:userName", model.GetPinHandler)
 	withLogin.POST("/favoAdd", model.PostAddFavoHandler)
 	withLogin.POST("/favoDelete", model.PostDeleteFavoHandler)
-	withLogin.POST("/isFavo", model.GetIsFavoHandler)
+	withLogin.POST("/isFavo", model.PostIsFavoHandler)
 	withLogin.GET("/whoAmI", model.GetWhoAmIHandler)
 
 	e.Start(":11400")

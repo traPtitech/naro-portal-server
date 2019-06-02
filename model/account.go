@@ -22,7 +22,7 @@ type User struct {
 
 //Me GetWhoAmIHandlerの構造体
 type Me struct {
-	Username string `json:"userName,omitempty"  db:"username"`
+	UserName string `json:"userName,omitempty" db:"name"`
 }
 
 //PostLoginHandler POST /login ログイン
@@ -112,6 +112,6 @@ func PostSignUpHandler(c echo.Context) error {
 //GetWhoAmIHandler Get /whoAmI
 func GetWhoAmIHandler(c echo.Context) error {
 	return c.JSON(http.StatusOK, Me{
-		Username: c.Get("userName").(string),
+		UserName: c.Get("UserName").(string),
 	})
 }
