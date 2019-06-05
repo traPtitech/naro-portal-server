@@ -1,16 +1,12 @@
 package model
 
 import (
-	"github.com/oklog/ulid"
 	"os"
 	//"github.com/labstack/gommon/log"
-	"github.com/jmoiron/sqlx"
 	"github.com/WistreHosshii/naro-portal-server/model/mystruct"
-
-	
+	"github.com/jmoiron/sqlx"
 
 	"fmt"
-
 )
 
 var (
@@ -24,20 +20,20 @@ func EstablishConnection() error {
 	return err
 }
 
-func GetUserCount(userName string) (int ,error) {
-	var count int 
+func GetUserCount(userName string) (int, error) {
+	var count int
 	var err error
 	err = db.Get(&count, "SELECT COUNT(*) FROM users WHERE user_name=?", userName)
-	return count,err
+	return count, err
 }
 
 func GetUserName(userName string) (mystruct.User, error) {
 	user := mystruct.User{}
-	err := db.Get(&user, "SELECT FROM users WHERE user_name=?",userName)
-	return user,err
+	err := db.Get(&user, "SELECT FROM users WHERE user_name=?", userName)
+	return user, err
 }
 
-func ExecUserInfo(userName string, hashedPass []byte, id ulid.ULID) error {
+func ExecUserInfo(userName string, hashedPass []byte, id string) error {
 	_, err := db.Exec("INSERT INTO users (user_name, hashed_pass, id) VALUES (?, ?, ?)", userName, hashedPass, id)
 	return err
 }

@@ -2,27 +2,26 @@ package router
 
 //ハンドラ
 import (
-	"github.com/oklog/ulid"
-	"github.com/labstack/echo-contrib/session"
-	"github.com/gorilla/sessions"
-	"github.com/WistreHosshii/naro-portal-server/model"
 	"fmt"
 	"math/rand"
 	"net/http"
-	//"strconv"
 	"time"
+
+	"github.com/WistreHosshii/naro-portal-server/model"
+	"github.com/gorilla/sessions"
+	"github.com/labstack/echo-contrib/session"
+	"github.com/oklog/ulid"
+
+	//"strconv"
 
 	//"github.com/WistreHosshii/naro-portal-server/model"
 	"github.com/WistreHosshii/naro-portal-server/model/mystruct"
 
-
 	_ "github.com/go-sql-driver/mysql"
-	
+
 	"github.com/labstack/echo"
 	"golang.org/x/crypto/bcrypt"
 )
-
-
 
 func Pong(c echo.Context) error {
 	fmt.Println(c)
@@ -51,7 +50,7 @@ func PostSignUpHandler(c echo.Context) error {
 	//同じユーザー名が何人いるか調べる
 	var count int
 	count, err = model.GetUserCount(req.UserName)
-	
+
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -61,6 +60,7 @@ func PostSignUpHandler(c echo.Context) error {
 	}
 
 	id := ExampleULID
+
 	//idの生成。idが被った場合5回まで作り直す
 	/*for i := 0; i < 5; i++ {
 		id = generateID(req.UserName)
@@ -79,7 +79,7 @@ func PostSignUpHandler(c echo.Context) error {
 	}
 	return c.String(http.StatusInternalServerError, "idが生成できません")
 	*/
-	model.ExecUserInfo(req.UserName,hashedPass,id)
+	model.ExecUserInfo(req.UserName, hashedPass, id)
 	return c.NoContent(http.StatusCreated)
 }
 
@@ -90,28 +90,28 @@ func PostSignUpHandler(c echo.Context) error {
 	return id
 }
 */
-func ExampleULID() ulid.ULID{
+func ExampleULID() func() string {
 	t := time.Unix(1000000, 0)
 	entropy := ulid.Monotonic(rand.New(rand.NewSource(t.UnixNano())), 0)
 	//fmt.Println(ulid.MustNew(ulid.Timestamp(t), entropy))
 	// Output: 0000XSNJG0MQJHBF4QX1EFD6Y3
-	_id := ulid.MustNew(ulid.Timestamp(t),entropy)
+	_id := ulid.MustNew(ulid.Timestamp(t), entropy).String
 	return _id
-	
+
 }
 
-func postLoginHandler (c echo.Context) error {
+func PostLoginHandler(c echo.Context) error {
 	req := mystruct.LoginReqestBody{}
 	c.Bind(&req)
 
 	//user := users.User{}
 	//err := Db.Get(&user, "SELECT FROM users WHERE user_name=?",req.UserName)
-	user,err := model.GetUserName(req.UserName)
+	user, err := model.GetUserName(req.UserName)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
 
-	err = bcrypt.CompareHashAndPassword([]byte(user.HashadPass),[]byte(req.Password))
+	err = bcrypt.CompareHashAndPassword([]byte(user.HashedPass), []byte(req.Password))
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
 			return c.NoContent(http.StatusForbidden)
@@ -119,18 +119,18 @@ func postLoginHandler (c echo.Context) error {
 			return c.NoContent(http.StatusInternalServerError)
 		}
 	}
-	
+
 	sess, err := session.Get("sessions", c)
 	if err != nil {
 		fmt.Println(err)
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
-	
+
 	sess.Options = &sessions.Options{
 		Path:     "/",
 		MaxAge:   86400 * 7,
 		HttpOnly: true,
-	  }
+	}
 	sess.Values["userName"] = req.UserName
 	sess.Save(c.Request(), c.Response())
 

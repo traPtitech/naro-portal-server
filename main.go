@@ -1,16 +1,12 @@
 package main
 
 import (
-	"github.com/labstack/gommon/log"
 	"github.com/labstack/echo"
-	//"github.com/labstack/echo-contrib/session"
-	"github.com/labstack/echo/middleware"
-	//"github.com/WistreHosshii/naro-portal-server/model"
-	"github.com/WistreHosshii/naro-portal-server/router"
-	"github.com/WistreHosshii/naro-portal-server/model"
-	
+	"github.com/labstack/gommon/log"
 
-	//"net/http"
+	"github.com/WistreHosshii/naro-portal-server/model"
+	"github.com/WistreHosshii/naro-portal-server/router"
+	"github.com/labstack/echo/middleware"
 )
 
 func main() {
@@ -18,11 +14,12 @@ func main() {
 	if err != nil {
 		log.Fatalf("Cannot Connect to Database: %s", err)
 	}
-	
+
 	e := echo.New()
 	e.Use(middleware.Logger())
-	e.GET("/ping",router.Pong)
-	e.POST("/signup",router.PostSignUpHandler)
+	e.GET("/ping", router.Pong)
+	e.POST("/signup", router.PostSignUpHandler)
+	e.POST("/login", PostLoginHandler)
 
 	e.Start(":12500")
 }
