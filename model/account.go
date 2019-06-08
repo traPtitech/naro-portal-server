@@ -58,6 +58,22 @@ func PostLoginHandler(c echo.Context) error {
 	return c.String(http.StatusOK, "OK")
 }
 
+//PostLogoutHandler Post /logout ログアウト
+func PostLogoutHandler(c echo.Context) error{
+	sess, err := session.Get("sessions", c)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusInternalServerError, "something wrong in getting session")
+	}
+
+    sess.Values["UserName"]=nil
+	err=sess.Save(c.Request(), c.Response())
+	if err!=nil{
+        return c.NoContent(http.StatusInternalServerError)
+    }
+    return c.NoContent(http.StatusOK)
+}
+
 //CheckLogin ログイン確認
 func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
@@ -100,6 +116,9 @@ func PostSignUpHandler(c echo.Context) error {
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
+
+	PostLoginHandler(c)
+
 	return c.NoContent(http.StatusCreated)
 }
 
