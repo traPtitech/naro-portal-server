@@ -2,7 +2,6 @@ package model
 
 import (
 	"fmt"
-
 	"net/http"
 
 	"github.com/labstack/echo"
@@ -36,8 +35,8 @@ func PostPinHandler(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-//PostDeletePinHandler Post /pinDelete Pin消去
-func PostDeletePinHandler(c echo.Context) error {
+//DeletePinHandler Delete /pin Pin消去
+func DeletePinHandler(c echo.Context) error {
 	sess, err := session.Get("sessions", c)
 	if err != nil {
 		fmt.Println(err)

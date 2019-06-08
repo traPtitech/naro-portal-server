@@ -2,12 +2,10 @@ package model
 
 import (
 	"fmt"
-	"log"
+	"time"
 	"net/http"
-	"os"
 	"unicode/utf8"
 
-	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo-contrib/session"
 	"github.com/pborman/uuid"
@@ -33,7 +31,7 @@ func PostLoginHandler(c echo.Context) error {
 	user := User{}
 	err := Db.Get(&user, "SELECT name,password FROM user WHERE name=?", req.UserName)
 	if err != nil {
-		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.String(http.StatusInternalServerError, "username is wrong or something wrong in getting user`s information")
 	}
 
 	err = bcrypt.CompareHashAndPassword([]byte(user.UserPassword), []byte(req.UserPassword))
@@ -53,6 +51,8 @@ func PostLoginHandler(c echo.Context) error {
 	var userID string
 	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
 	sess.Values["UserID"] = userID
+	sess.Values["ClientID"]=uuid.New()
+	sess.Values["LastReloadTime"]=time.Now()
 	sess.Save(c.Request(), c.Response())
 
 	return c.String(http.StatusOK, "OK")
@@ -78,12 +78,6 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 
 //PostSignUpHandler Post /signup サインアップ
 func PostSignUpHandler(c echo.Context) error {
-	_db, err := sqlx.Connect("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", os.Getenv("DB_USERNAME"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOSTNAME"), os.Getenv("DB_PORT"), os.Getenv("DB_DATABASE")))
-	if err != nil {
-		log.Fatalf("Cannot Connect to Database: %s", err)
-	}
-	Db = _db
-
 	req := User{}
 	c.Bind(&req)
 
@@ -102,7 +96,7 @@ func PostSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("bcrypt generate error: %v", err))
 	}
 
-	_, err = Db.Exec("INSERT INTO (user name,ID,password) VALUES (?, ?,?)", req.UserName, uuid.New(), hashedPass)
+	_, err = Db.Exec("INSERT INTO user (name,ID,password) VALUES (?, ?,?)", req.UserName, uuid.New(), hashedPass)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}

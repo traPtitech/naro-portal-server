@@ -21,8 +21,8 @@ type TweetIDOfPin struct{
 	TweetID string `json:"tweetID,omitempty" db:"tweet_ID"`
 }
 
-//GetTimeLineHandler Get /timeline/:userName タイムライン
-func GetTimeLineHandler(c echo.Context) error {
+//GetTimelineHandler Get /timeline/:userName タイムライン
+func GetTimelineHandler(c echo.Context) error {
 	userName := c.Param("userName")
 
 	tweets := []Tweet{}

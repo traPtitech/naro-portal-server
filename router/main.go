@@ -10,7 +10,10 @@ import (
 )
 
 func main() {
-	model.Establish()
+	err:=model.Establish()
+	if err != nil {
+		panic(err)
+	}
 
 	store, err := mysqlstore.NewMySQLStoreFromConnection(model.Db.DB, "sessions", "/", 60*60*24*14, []byte("secret-token"))
 	if err != nil {
@@ -28,13 +31,14 @@ func main() {
 	withLogin.Use(model.CheckLogin)
 	withLogin.POST("/tweet", model.PostTweetHandler)
 	withLogin.POST("/pin", model.PostPinHandler)
-	withLogin.POST("/pinDelete", model.PostDeletePinHandler)
-	withLogin.GET("/timeline/:userName", model.GetTimeLineHandler)
-	withLogin.GET("/pin/:userName", model.GetPinHandler)
-	withLogin.POST("/favoAdd", model.PostAddFavoHandler)
-	withLogin.POST("/favoDelete", model.PostDeleteFavoHandler)
-	withLogin.POST("/isFavo", model.PostIsFavoHandler)
+	withLogin.DELETE("/pin", model.DeletePinHandler)
+	withLogin.GET("/timeline/:userName", model.GetTimelineHandler)
+	withLogin.GET("/timelinePin/:userName", model.GetPinHandler)
+	withLogin.POST("/favo", model.PostFavoHandler)
+	withLogin.DELETE("/favo", model.DeleteFavoHandler)
+	withLogin.GET("/isFavo/:tweetID", model.GetIsFavoHandler)
 	withLogin.GET("/whoAmI", model.GetWhoAmIHandler)
+	withLogin.GET("/reloadTimeline/:userName",model.GetIsReloadTimelineHandler)
 
 	e.Start(":11400")
 }

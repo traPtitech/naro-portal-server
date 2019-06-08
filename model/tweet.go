@@ -27,6 +27,6 @@ func PostTweetHandler(c echo.Context) error {
 	tweet := AddTweet{}
 	c.Bind(&tweet)
 
-	Db.Exec("INSERT INTO tweet (tweet_ID,user_ID,tweet,created_at,favo_num) VALUES (?,?,?,?,?)", uuid.New(), sess.Values["UserID"], tweet.Tweet, time.Now(), 1)
+	Db.Exec("INSERT INTO tweet (tweet_ID,user_ID,tweet,created_at,favo_num) VALUES (?,?,?,?,?)", uuid.New(), sess.Values["UserID"], tweet.Tweet, time.Now(), 0)
 	return c.NoContent(http.StatusOK)
 }
