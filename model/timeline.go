@@ -1,10 +1,12 @@
 package model
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 
 	"github.com/labstack/echo"
+	"github.com/labstack/echo-contrib/session"
 )
 
 //Tweet Tweetの構造体
@@ -23,12 +25,19 @@ type TweetIDOfPin struct{
 
 //GetTimelineHandler Get /timeline/:userName タイムライン
 func GetTimelineHandler(c echo.Context) error {
+	sess, err := session.Get("sessions", c)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusInternalServerError, "something wrong in getting session")
+	}
+
 	userName := c.Param("userName")
 
 	tweets := []Tweet{}
 	var userID string
 	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", userName)
 	Db.Select(&tweets, "SELECT * FROM tweet WHERE user_ID=?", userID)
+	sess.Values["LastReloadTime"]=time.Now()
 	return c.JSON(http.StatusOK, tweets)
 }
 

@@ -22,11 +22,10 @@ func GetIsReloadTimelineHandler(c echo.Context) error{
 
 	var newestMessage time.Time
 	var userID string
-	Db.Get(&userID,"SELECT ID FROM user WHERE user_name=?",userName)
-	Db.Get(&newestMessage,"SELECT created_at FROM tweet ORDER BY created_at DESC LIMIT 1 WHERE user_ID=?",userID)
-	sess.Values["LastReloadTime"]=time.Now()
-	
-	if lastReloadTime.Before(newestMessage){
+	Db.Get(&userID,"SELECT ID FROM user WHERE name=?",userName)
+	Db.Get(&newestMessage,"SELECT created_at FROM tweet WHERE user_ID=? ORDER BY created_at DESC LIMIT 1",userID)
+
+	if lastReloadTime.Before(newestMessage) {
 		return c.String(http.StatusOK,"new message exist")
 	}
 	return c.NoContent(http.StatusOK)
