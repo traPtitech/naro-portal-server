@@ -26,8 +26,8 @@ func PostPinHandler(c echo.Context) error {
 	}
 
 	var userID string
-	Db.Get(&userID,"SELECT user_ID FROM tweet WHERE tweet_ID=?",pin.TweetID)
-	if userID!=sess.Values["UserID"]{
+	Db.Get(&userID, "SELECT user_ID FROM tweet WHERE tweet_ID=?", pin.TweetID)
+	if userID != sess.Values["UserID"] {
 		return c.String(http.StatusInternalServerError, "あなたのTweetではありません")
 	}
 
@@ -48,4 +48,16 @@ func DeletePinHandler(c echo.Context) error {
 
 	Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", sess.Values["UserID"], pin.TweetID)
 	return c.NoContent(http.StatusOK)
+}
+
+//GetIsPinHandler Get /isPin/:tweetID ピンを入れたかの確認
+func GetIsPinHandler(c echo.Context) error {
+	tweetID := c.Param("tweetID")
+
+	var userID string
+	Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
+	if userID != "" {
+		return c.NoContent(http.StatusOK)
+	}
+	return c.String(http.StatusOK, "none")
 }

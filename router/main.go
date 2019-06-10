@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	err:=model.Establish()
+	err := model.Establish()
 	if err != nil {
 		panic(err)
 	}
@@ -29,17 +29,18 @@ func main() {
 
 	withLogin := e.Group("")
 	withLogin.Use(model.CheckLogin)
-	withLogin.POST("/logout",model.PostLogoutHandler)
+	withLogin.POST("/logout", model.PostLogoutHandler)
 	withLogin.POST("/tweet", model.PostTweetHandler)
 	withLogin.POST("/pin", model.PostPinHandler)
 	withLogin.DELETE("/pin", model.DeletePinHandler)
+	withLogin.GET("/isPin/:tweetID", model.GetIsPinHandler)
 	withLogin.GET("/timeline/:userName", model.GetTimelineHandler)
 	withLogin.GET("/timelinePin/:userName", model.GetPinHandler)
 	withLogin.POST("/favo", model.PostFavoHandler)
 	withLogin.DELETE("/favo", model.DeleteFavoHandler)
 	withLogin.GET("/isFavo/:tweetID", model.GetIsFavoHandler)
 	withLogin.GET("/whoAmI", model.GetWhoAmIHandler)
-	withLogin.GET("/reloadTimeline/:userName",model.GetIsReloadTimelineHandler)
+	withLogin.GET("/reloadTimeline/:userName", model.GetIsReloadTimelineHandler)
 
 	e.Start(":11400")
 }

@@ -2,8 +2,8 @@ package model
 
 import (
 	"fmt"
-	"time"
 	"net/http"
+	"time"
 	"unicode/utf8"
 
 	"github.com/labstack/echo"
@@ -51,27 +51,27 @@ func PostLoginHandler(c echo.Context) error {
 	var userID string
 	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
 	sess.Values["UserID"] = userID
-	sess.Values["ClientID"]=uuid.New()
-	sess.Values["LastReloadTime"]=time.Now()
+	sess.Values["ClientID"] = uuid.New()
+	sess.Values["LastReloadTime"] = time.Now()
 	sess.Save(c.Request(), c.Response())
 
 	return c.String(http.StatusOK, "OK")
 }
 
 //PostLogoutHandler Post /logout ログアウト
-func PostLogoutHandler(c echo.Context) error{
+func PostLogoutHandler(c echo.Context) error {
 	sess, err := session.Get("sessions", c)
 	if err != nil {
 		fmt.Println(err)
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
 
-    sess.Values["UserName"]=nil
-	err=sess.Save(c.Request(), c.Response())
-	if err!=nil{
-        return c.NoContent(http.StatusInternalServerError)
-    }
-    return c.NoContent(http.StatusOK)
+	sess.Values["UserName"] = nil
+	err = sess.Save(c.Request(), c.Response())
+	if err != nil {
+		return c.NoContent(http.StatusInternalServerError)
+	}
+	return c.NoContent(http.StatusOK)
 }
 
 //CheckLogin ログイン確認
