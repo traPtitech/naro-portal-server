@@ -115,8 +115,7 @@ func GetFavoHandler(c echo.Context) error {
 	}
 
 	favoSort := Favo{}
-	var i int
-	for i < len(favos)-1 {
+	for i := 0; i < len(favos)-1; i++ {
 		if favos[i].CreatedAt.Before(favos[i+1].CreatedAt) {
 			favoSort = favos[i]
 			favos[i] = favos[i+1]
