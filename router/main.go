@@ -36,6 +36,7 @@ func main() {
 	withLogin.GET("/isPin/:tweetID", model.GetIsPinHandler)
 	withLogin.GET("/timeline/:userName", model.GetTimelineHandler)
 	withLogin.GET("/timelinePin/:userName", model.GetPinHandler)
+	withLogin.GET("/timelineFavo/:userName", model.GetFavoHandler)
 	withLogin.POST("/favo", model.PostFavoHandler)
 	withLogin.DELETE("/favo", model.DeleteFavoHandler)
 	withLogin.GET("/isFavo/:tweetID", model.GetIsFavoHandler)

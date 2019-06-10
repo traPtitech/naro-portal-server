@@ -28,9 +28,25 @@ type Pin struct {
 	FavoNum   int       `json:"favoNum,omitempty"  db:"favo_num"`
 }
 
+//Favo Favoの構造体
+type Favo struct {
+	FavoID    string    `json:"favoID,omitempty" db:"favo_ID"`
+	TweetID   string    `json:"tweetID,omitempty"  db:"tweet_ID"`
+	UserID    string    `json:"userID,omitempty"  db:"user_ID"`
+	Tweet     string    `json:"tweet,omitempty"  db:"tweet"`
+	CreatedAt time.Time `json:"createdAt,omitempty"  db:"created_at"`
+	FavoNum   int       `json:"favoNum,omitempty"  db:"favo_num"`
+}
+
 //TweetIDOfPin Pin止めされたTweetの構造体
 type TweetIDOfPin struct {
 	PinID   string `json:"pinID,omitempty" db:"pin_ID"`
+	TweetID string `json:"tweetID,omitempty" db:"tweet_ID"`
+}
+
+//TweetIDOfFavo FavoしたTweetの構造体
+type TweetIDOfFavo struct {
+	FavoID  string `json:"favoID,omitempty" db:"favo_ID"`
 	TweetID string `json:"tweetID,omitempty" db:"tweet_ID"`
 }
 
@@ -69,15 +85,44 @@ func GetPinHandler(c echo.Context) error {
 		pins = append(pins, Pin{PinID: v.PinID, TweetID: pin.TweetID, UserID: pin.UserID, Tweet: pin.Tweet, CreatedAt: pin.CreatedAt, FavoNum: pin.FavoNum})
 	}
 
-	pinSort:=Pin{}
+	pinSort := Pin{}
 	var i int
-	for i<len(pins)-1{
-		if pins[i].CreatedAt.Before(pins[i+1].CreatedAt){
-			pinSort=pins[i]
-			pins[i]=pins[i+1]
-			pins[i+1]=pinSort
+	for i < len(pins)-1 {
+		if pins[i].CreatedAt.Before(pins[i+1].CreatedAt) {
+			pinSort = pins[i]
+			pins[i] = pins[i+1]
+			pins[i+1] = pinSort
 		}
 	}
 
 	return c.JSON(http.StatusOK, pins)
+}
+
+//GetFavoHandler Get /timelineFavo/:userName タイムラインのピン
+func GetFavoHandler(c echo.Context) error {
+	userName := c.Param("userName")
+
+	dbFavos := []TweetIDOfFavo{}
+	var userID string
+	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", userName)
+	Db.Select(&dbFavos, "SELECT favo_ID,tweet_ID FROM favo WHERE user_ID=?", userID)
+
+	favos := []Favo{}
+	favo := Tweet{}
+	for _, v := range dbFavos {
+		Db.Get(&favo, "SELECT * FROM tweet WHERE tweet_ID=?", v.TweetID)
+		favos = append(favos, Favo{FavoID: v.FavoID, TweetID: favo.TweetID, UserID: favo.UserID, Tweet: favo.Tweet, CreatedAt: favo.CreatedAt, FavoNum: favo.FavoNum})
+	}
+
+	favoSort := Favo{}
+	var i int
+	for i < len(favos)-1 {
+		if favos[i].CreatedAt.Before(favos[i+1].CreatedAt) {
+			favoSort = favos[i]
+			favos[i] = favos[i+1]
+			favos[i+1] = favoSort
+		}
+	}
+
+	return c.JSON(http.StatusOK, favos)
 }
