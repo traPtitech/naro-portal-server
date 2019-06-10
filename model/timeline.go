@@ -105,7 +105,7 @@ func GetFavoHandler(c echo.Context) error {
 	dbFavos := []TweetIDOfFavo{}
 	var userID string
 	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", userName)
-	Db.Select(&dbFavos, "SELECT favo_ID,tweet_ID FROM favo WHERE user_ID=?", userID)
+	Db.Select(&dbFavos, "SELECT favo_ID,tweet_ID FROM favorite WHERE user_ID=?", userID)
 
 	favos := []Favo{}
 	favo := Tweet{}

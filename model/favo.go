@@ -36,7 +36,7 @@ func PostFavoHandler(c echo.Context) error {
 	Db.Get(&FavoNum, "SELECT favo_num FROM tweet WHERE tweet_ID=?", favo.TweetID)
 	Db.Exec("UPDATE tweet SET favo_num=? WHERE tweet_ID=?", FavoNum+1, favo.TweetID)
 
-	Db.Exec("INSERT INTO favorite (favo_ID,user_ID,tweet_ID,created_at) VALUES (?,?,?)", uuid.New(), sess.Values["UserID"], favo.TweetID, time.Now())
+	Db.Exec("INSERT INTO favorite (favo_ID,user_ID,tweet_ID,created_at) VALUES (?,?,?,?)", uuid.New(), sess.Values["UserID"], favo.TweetID, time.Now())
 	return c.NoContent(http.StatusOK)
 }
 

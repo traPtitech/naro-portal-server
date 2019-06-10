@@ -41,6 +41,7 @@ func main() {
 	withLogin.DELETE("/favo", model.DeleteFavoHandler)
 	withLogin.GET("/isFavo/:tweetID", model.GetIsFavoHandler)
 	withLogin.GET("/whoAmI", model.GetWhoAmIHandler)
+	withLogin.GET("/userName", model.GetUserListHandler)
 	withLogin.GET("/reloadTimeline/:userName", model.GetIsReloadTimelineHandler)
 
 	e.Start(":11400")

@@ -55,7 +55,7 @@ func PostLoginHandler(c echo.Context) error {
 	sess.Values["LastReloadTime"] = time.Now()
 	sess.Save(c.Request(), c.Response())
 
-	return c.String(http.StatusOK, "OK")
+	return c.NoContent(http.StatusOK)
 }
 
 //PostLogoutHandler Post /logout ログアウト
@@ -127,4 +127,11 @@ func GetWhoAmIHandler(c echo.Context) error {
 	return c.JSON(http.StatusOK, Me{
 		UserName: c.Get("UserName").(string),
 	})
+}
+
+//GetUserListHandler Get /userList
+func GetUserListHandler(c echo.Context) error {
+	userNames := []Me{}
+	Db.Select(&userNames, "SELECT name FROM user")
+	return c.JSON(http.StatusOK, userNames)
 }
