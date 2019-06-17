@@ -1,4 +1,4 @@
-type:"runtime"
+type:runtime
 
 entrypoint: ./main.go
 
