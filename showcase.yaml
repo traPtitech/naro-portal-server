@@ -1,7 +1,7 @@
-type:runtime
+type: runtime
 
 entrypoint: ./main.go
 
-http_proxy:11400
+http_proxy: 11400
 
-expose:11400
+expose: 11400
