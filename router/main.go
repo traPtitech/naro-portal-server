@@ -6,7 +6,7 @@ import (
 	"github.com/labstack/echo/middleware"
 	"github.com/srinathgs/mysqlstore"
 
-	"github.com/naro-portal-server/model"
+	"git.trapti.tech/mazrean/twitter_clone_server/model"
 )
 
 func main() {
