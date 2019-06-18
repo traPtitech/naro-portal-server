@@ -1,6 +1,6 @@
 type: runtime
 
-entrypoint: ./main
+entrypoint: ./twitter_clone_server
 
 startup: |
   PATH=$PATH:$GOPATH/bin
@@ -10,7 +10,7 @@ startup: |
   ln -s `pwd`/ $REPO
   cd $REPO
   dep ensure -v
-  go build -o main
+  go build
   cd client
 
 http_proxy: 11400
