@@ -1,7 +1,15 @@
 type: runtime
 
-entrypoint: ./router/main.go
+entrypoint: ./main
+
+startup: |
+  PATH=$PATH:$GOPATH/bin
+  NS=$GOPATH/src/git.trapti.tech/mazrean
+  REPO=$NS/twitter_clone_server
+  mkdir -p $NS
+  ln -s `pwd`/ $REPO
+  cd $REPO
+  dep ensure -v
+  go build -o main
 
 http_proxy: 11400
-
-expose: 11400
