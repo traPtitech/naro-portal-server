@@ -29,7 +29,7 @@
    version="4.0.0"
 
 [[constraint]]
-   name="github.com/labstack/echo-contrib/session"
+   name="github.com/labstack/echo-contrib"
 
 [[constraint]]
    name="github.com/srinathgs/mysqlstore"
@@ -38,7 +38,7 @@
    name="github.com/pborman/uuid"
 
 [[constraint]]
-   name="golang.org/x/crypto/bcrypt"
+   name="golang.org/x/crypto"
 
 [[constraint]]
    name="github.com/jmoiron/sqlx"
