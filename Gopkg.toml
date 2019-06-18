@@ -26,7 +26,6 @@
 
 [[constraint]]
    name="github.com/labstack/echo"
-   version="4.0.0"
 
 [[constraint]]
    name="github.com/labstack/echo-contrib"
