@@ -1,6 +1,6 @@
 type: runtime
 
-entrypoint: go run router/main.go
+entrypoint: ./router/main.go
 
 http_proxy: 11400
 
