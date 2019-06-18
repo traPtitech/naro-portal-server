@@ -11,5 +11,6 @@ startup: |
   cd $REPO
   dep ensure -v
   go build -o main
+  cd client
 
 http_proxy: 11400
