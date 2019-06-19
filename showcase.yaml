@@ -10,6 +10,8 @@ startup: |
   ln -s `pwd`/ $REPO
   cd $REPO
   dep ensure -v
-  go build -o main main.go
+  go build -o main
 
 http_proxy: 11400
+
+expose: 3333
