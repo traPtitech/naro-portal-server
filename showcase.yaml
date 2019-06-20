@@ -10,7 +10,7 @@ startup: |
   ln -s `pwd`/ $REPO
   cd $REPO
   dep ensure -v
-  go build -o main
+  go build -o main ./router
 
 http_proxy: 11400
 
