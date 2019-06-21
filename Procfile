@@ -1,1 +1,1 @@
-web: naro-portal-server
+web: bin/naro-portal-server

@@ -12,3 +12,6 @@
 *.out
 
 env.sh
+
+# vscode setting
+.history/*
