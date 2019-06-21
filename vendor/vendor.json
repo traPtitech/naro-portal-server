@@ -1,0 +1,199 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"path": "appengine/cloudsql",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "P6u6fDWwSfRL2Bc6uhZ9kcoPsek=",
+			"path": "github.com/dgrijalva/jwt-go",
+			"revision": "5e25c22bd5d6de03265bbe5462dcd162f85046f6",
+			"revisionTime": "2019-06-20T18:01:02Z"
+		},
+		{
+			"checksumSHA1": "zGYOyUB58GVhLkrwhG1ut66SPec=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "877a9775f06853f611fb2d4e817d92479242d1cd",
+			"revisionTime": "2019-05-10T10:23:35Z"
+		},
+		{
+			"checksumSHA1": "oHwfghigjTz8Xs+ssxwdl/atb44=",
+			"path": "github.com/gorilla/context",
+			"revision": "51ce91d2eaddeca0ef29a71d766bb3634dadf729",
+			"revisionTime": "2018-10-12T15:35:48Z"
+		},
+		{
+			"checksumSHA1": "NScdwrIOpSH9hoP7i3a6JGmE5rw=",
+			"path": "github.com/gorilla/securecookie",
+			"revision": "e65cf8c5df817c89aeb47ecb46064e802e2de943",
+			"revisionTime": "2018-10-10T17:46:47Z"
+		},
+		{
+			"checksumSHA1": "csomktSHfKVMLgh9B6nikPxd6sk=",
+			"path": "github.com/gorilla/sessions",
+			"revision": "12bd4761fc66ac946e16fcc2a32b1e0b066f6177",
+			"revisionTime": "2018-12-08T21:45:19Z"
+		},
+		{
+			"checksumSHA1": "vFb/tA6zAeUX1rCRmp3a1BNCmXU=",
+			"path": "github.com/jmoiron/sqlx",
+			"revision": "38398a30ed8516ffda617a04c822de09df8a3ec5",
+			"revisionTime": "2019-04-26T15:48:59Z"
+		},
+		{
+			"checksumSHA1": "i2O6Ji8ZL6q+EL+4cu/ftBytqZg=",
+			"path": "github.com/jmoiron/sqlx/reflectx",
+			"revision": "38398a30ed8516ffda617a04c822de09df8a3ec5",
+			"revisionTime": "2019-04-26T15:48:59Z"
+		},
+		{
+			"checksumSHA1": "mnuMj+NUqX18xCPHEcFBxcCV+h8=",
+			"path": "github.com/labstack/echo",
+			"revision": "858270f6f5e4fd02d9e147e8a6b0d97df023f14b",
+			"revisionTime": "2019-06-21T13:12:55Z"
+		},
+		{
+			"checksumSHA1": "cF/f94fsHrwyLRTwP1kP+azikJI=",
+			"path": "github.com/labstack/echo-contrib/session",
+			"revision": "6423d26e4327a255cf0949789775f5ff9a83bfb2",
+			"revisionTime": "2019-06-10T21:58:09Z"
+		},
+		{
+			"checksumSHA1": "RC6kD/JXUPmbZSOrqDpnBv3u6kM=",
+			"path": "github.com/labstack/echo/middleware",
+			"revision": "858270f6f5e4fd02d9e147e8a6b0d97df023f14b",
+			"revisionTime": "2019-06-21T13:12:55Z"
+		},
+		{
+			"path": "github.com/labstack/echo/v4",
+			"revision": "858270f6f5e4fd02d9e147e8a6b0d97df023f14b"
+		},
+		{
+			"path": "github.com/labstack/echo/v4/middleware",
+			"revision": "858270f6f5e4fd02d9e147e8a6b0d97df023f14b"
+		},
+		{
+			"checksumSHA1": "pfEL7LCj3pOF6ko/iLRXRDvrSnU=",
+			"path": "github.com/labstack/gommon/bytes",
+			"revision": "d700b06ce5f78800a08e16a7288a4cca389a6e83",
+			"revisionTime": "2019-06-10T06:34:36Z"
+		},
+		{
+			"checksumSHA1": "R6DzcBLEP0BONPpsyr+11N7xh5w=",
+			"path": "github.com/labstack/gommon/color",
+			"revision": "d700b06ce5f78800a08e16a7288a4cca389a6e83",
+			"revisionTime": "2019-06-10T06:34:36Z"
+		},
+		{
+			"checksumSHA1": "NRXvF1Wn6fF9wcPOOv9MNSdDRaE=",
+			"path": "github.com/labstack/gommon/log",
+			"revision": "d700b06ce5f78800a08e16a7288a4cca389a6e83",
+			"revisionTime": "2019-06-10T06:34:36Z"
+		},
+		{
+			"checksumSHA1": "iPlSnDjuur4cK1G/7mJM/7frIm4=",
+			"path": "github.com/labstack/gommon/random",
+			"revision": "d700b06ce5f78800a08e16a7288a4cca389a6e83",
+			"revisionTime": "2019-06-10T06:34:36Z"
+		},
+		{
+			"checksumSHA1": "TZ1sJQ03juGU53DFxbI1g7RgU50=",
+			"path": "github.com/mattn/go-colorable",
+			"revision": "8029fb3788e5a4a9c00e415f586a6d033f5d38b3",
+			"revisionTime": "2019-05-24T00:26:58Z"
+		},
+		{
+			"checksumSHA1": "74gCzvJiE6bXX3i4vIVCYhffDHc=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "1311e847b0cb909da63b5fecfb5370aa66236465",
+			"revisionTime": "2019-05-22T01:25:13Z"
+		},
+		{
+			"checksumSHA1": "4h/en1J63Qjd2SQRQzm4N9UQBCI=",
+			"path": "github.com/oklog/ulid",
+			"revision": "e51a56f2a4c1bf73c967ca6d45d5366bade31943",
+			"revisionTime": "2019-06-03T12:02:39Z"
+		},
+		{
+			"checksumSHA1": "ua2PK6PDbNCyzxOmakS3BJoF8Co=",
+			"path": "github.com/valyala/bytebufferpool",
+			"revision": "cdfbe9377474227bb42120c1e22fd4433e7f69bf",
+			"revisionTime": "2018-09-05T18:22:47Z"
+		},
+		{
+			"checksumSHA1": "2seEGCjQ/1dNc4E9g5+X0zA8w0I=",
+			"path": "github.com/valyala/fasttemplate",
+			"revision": "8b5e4e491ab636663841c42ea3c5a9adebabaf36",
+			"revisionTime": "2019-03-15T20:00:27Z"
+		},
+		{
+			"checksumSHA1": "31Q46st1pd0VJJmD7yQFHKB8jrE=",
+			"path": "golang.org/x/crypto/acme",
+			"revision": "ea8f1a30c4438cc8b13f05538385ad8dc6049b43",
+			"revisionTime": "2019-06-17T22:25:17Z"
+		},
+		{
+			"checksumSHA1": "l7TB2niSgScZLRYd9knWNTB6yyc=",
+			"path": "golang.org/x/crypto/acme/autocert",
+			"revision": "ea8f1a30c4438cc8b13f05538385ad8dc6049b43",
+			"revisionTime": "2019-06-17T22:25:17Z"
+		},
+		{
+			"checksumSHA1": "oCH3J96RWvO8W4xjix47PModpio=",
+			"path": "golang.org/x/crypto/bcrypt",
+			"revision": "ea8f1a30c4438cc8b13f05538385ad8dc6049b43",
+			"revisionTime": "2019-06-17T22:25:17Z"
+		},
+		{
+			"checksumSHA1": "q+XI9g44wd9mYvf3S5Wo8YZjAus=",
+			"path": "golang.org/x/crypto/blowfish",
+			"revision": "ea8f1a30c4438cc8b13f05538385ad8dc6049b43",
+			"revisionTime": "2019-06-17T22:25:17Z"
+		},
+		{
+			"checksumSHA1": "vL6l4FZWitsxht0uqA/GpDNkNNc=",
+			"path": "golang.org/x/net/idna",
+			"revision": "3b0461eec859c4b73bb64fdc8285971fd33e3938",
+			"revisionTime": "2019-06-20T19:42:36Z"
+		},
+		{
+			"checksumSHA1": "ezx232vaaoRNaADj0TqG1VCCrUM=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "06bbe82148b16dfec13e08ba9f49df393f6af499",
+			"revisionTime": "2019-06-21T13:11:52Z"
+		},
+		{
+			"checksumSHA1": "CbpjEkkOeh0fdM/V8xKDdI0AA88=",
+			"path": "golang.org/x/text/secure/bidirule",
+			"revision": "342b2e1fbaa52c93f31447ad2c6abc048c63e475",
+			"revisionTime": "2018-12-15T17:52:45Z"
+		},
+		{
+			"checksumSHA1": "R9iBDY+aPnT+8pyRcqGjXq5QixA=",
+			"path": "golang.org/x/text/transform",
+			"revision": "342b2e1fbaa52c93f31447ad2c6abc048c63e475",
+			"revisionTime": "2018-12-15T17:52:45Z"
+		},
+		{
+			"checksumSHA1": "vv9EDuekZgHxFbh+0jJhB7jLZXY=",
+			"path": "golang.org/x/text/unicode/bidi",
+			"revision": "342b2e1fbaa52c93f31447ad2c6abc048c63e475",
+			"revisionTime": "2018-12-15T17:52:45Z"
+		},
+		{
+			"checksumSHA1": "8fzd6fnxrstdNSVg+Srhf1nKgek=",
+			"path": "golang.org/x/text/unicode/norm",
+			"revision": "342b2e1fbaa52c93f31447ad2c6abc048c63e475",
+			"revisionTime": "2018-12-15T17:52:45Z"
+		},
+		{
+			"checksumSHA1": "LiyXfqOzaeQ8vgYZH3t2hUEdVTw=",
+			"path": "google.golang.org/appengine/cloudsql",
+			"revision": "b2f4a3cf3c67576a2ee09e1fe62656a5086ce880",
+			"revisionTime": "2019-06-06T17:30:15Z"
+		}
+	],
+	"rootPath": "github.com/WistreHosshii/naro-portal-server"
+}
