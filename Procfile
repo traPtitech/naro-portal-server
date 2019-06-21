@@ -1,0 +1,1 @@
+web: naro-portal-server
