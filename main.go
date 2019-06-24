@@ -20,13 +20,17 @@ func main() {
 		panic(err)
 	}
 
+	err=model.Create()
+	if err != nil {
+		panic(err)
+	}
+
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Use(session.Middleware(store))
 
 	e.POST("/login", model.PostLoginHandler)
 	e.POST("/signup", model.PostSignUpHandler)
-	e.GET("/create",model.Create)
 
 	withLogin := e.Group("")
 	withLogin.Use(model.CheckLogin)
