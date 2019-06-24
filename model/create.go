@@ -1,7 +1,11 @@
 package model
 
+import (
+	"github.com/labstack/echo"
+)
+
 //Create DBのテーブル作成
-func Create() {
+func Create(c echo.Context) {
 	_, err := Db.Exec(`CREATE TABLE "favorite" (favo_ID TEXT,user_ID VARCHAR(36),tweet_ID VARCHAR(36),created_at DATETIME)`)
 	if err != nil {
 		panic(err)
