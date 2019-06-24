@@ -14,7 +14,7 @@ var (
 
 //Establish データベースに接続
 func Establish() error {
-	_db, err := sqlx.Connect("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", os.Getenv("database"), os.Getenv("username"), os.Getenv("password"), os.Getenv("hostname")))
+	_db, err := sqlx.Connect("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", os.Getenv("MARIADB_HOSTNAME"), os.Getenv("MARIADB_DATABASE"), os.Getenv("MARIADB_USERNAME"), os.Getenv("MARIADB_PASSWORD")))
 	if err != nil {
 		return err
 	}
