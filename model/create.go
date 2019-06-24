@@ -5,7 +5,7 @@ import (
 )
 
 //Create DBのテーブル作成
-func Create(c echo.Context) {
+func Create(c echo.Context) error {
 	_, err := Db.Exec(`CREATE TABLE "favorite" (favo_ID TEXT,user_ID VARCHAR(36),tweet_ID VARCHAR(36),created_at DATETIME)`)
 	if err != nil {
 		panic(err)
@@ -26,4 +26,5 @@ func Create(c echo.Context) {
 	if err != nil {
 		panic(err)
 	}
+	return err
 }
