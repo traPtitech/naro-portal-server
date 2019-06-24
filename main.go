@@ -26,7 +26,7 @@ func main() {
 
 	e.POST("/login", model.PostLoginHandler)
 	e.POST("/signup", model.PostSignUpHandler)
-	e.GET("/create",model.Create())
+	e.GET("/create",model.Create)
 
 	withLogin := e.Group("")
 	withLogin.Use(model.CheckLogin)
