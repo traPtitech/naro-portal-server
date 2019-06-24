@@ -16,3 +16,5 @@ startup: |
   go build -o main main.go
 
 http_proxy: 11400
+
+expose: 3333
