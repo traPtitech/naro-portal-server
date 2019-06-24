@@ -4,6 +4,7 @@ entrypoint: ./main
 
 use_mariadb: false
 
+
 startup: |
   PATH=$PATH:$GOPATH/bin
   NS=$GOPATH/src/git.trapti.tech/mazrean
