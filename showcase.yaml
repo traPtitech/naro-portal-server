@@ -2,8 +2,7 @@ type: runtime
 
 entrypoint: ./main
 
-use_mariadb: false
-
+use_mariadb: true
 
 startup: |
   PATH=$PATH:$GOPATH/bin
@@ -16,5 +15,3 @@ startup: |
   go build -o main main.go
 
 http_proxy: 11400
-
-expose: 3333
