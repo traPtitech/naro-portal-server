@@ -15,6 +15,8 @@ func main() {
 		panic(err)
 	}
 
+	model.Create()
+
 	store, err := mysqlstore.NewMySQLStoreFromConnection(model.Db.DB, "sessions", "/", 60*60*24*14, []byte("secret-token"))
 	if err != nil {
 		panic(err)
