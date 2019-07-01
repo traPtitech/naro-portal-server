@@ -86,8 +86,7 @@ func GetPinHandler(c echo.Context) error {
 	}
 
 	pinSort := Pin{}
-	var i int
-	for i < len(pins)-1 {
+	for i := 0; i < len(pins)-1; i++ {
 		if pins[i].CreatedAt.Before(pins[i+1].CreatedAt) {
 			pinSort = pins[i]
 			pins[i] = pins[i+1]
