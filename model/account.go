@@ -117,7 +117,17 @@ func PostSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
 
-	PostLoginHandler(c)
+	sess, err := session.Get("sessions", c)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusInternalServerError, "something wrong in getting session")
+	}
+	sess.Values["UserName"] = req.UserName
+	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	sess.Values["UserID"] = userID
+	sess.Values["ClientID"] = uuid.New()
+	sess.Values["LastReloadTime"] = time.Now()
+	sess.Save(c.Request(), c.Response())
 
 	return c.NoContent(http.StatusCreated)
 }
