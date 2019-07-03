@@ -112,7 +112,7 @@ func GetFavoHandler(c echo.Context) error {
 	for _, v := range dbFavos {
 		Db.Get(&favo, "SELECT * FROM tweet WHERE tweet_ID=?", v.TweetID)
 		var name string
-		Db.Get(&name, "SELECT name FROM user WHERE ID=?", userID)
+		Db.Get(&name, "SELECT name FROM user WHERE ID=?", favo.UserID)
 		favos = append(favos, Favo{FavoID: v.FavoID, TweetID: favo.TweetID, UserID: favo.UserID, UserName: name, Tweet: favo.Tweet, CreatedAt: favo.CreatedAt, FavoNum: favo.FavoNum})
 	}
 
