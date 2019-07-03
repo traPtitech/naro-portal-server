@@ -33,6 +33,7 @@ type Favo struct {
 	FavoID    string    `json:"favoID,omitempty" db:"favo_ID"`
 	TweetID   string    `json:"tweetID,omitempty"  db:"tweet_ID"`
 	UserID    string    `json:"userID,omitempty"  db:"user_ID"`
+	UserName  string    `json:"userName,omitempty"`
 	Tweet     string    `json:"tweet,omitempty"  db:"tweet"`
 	CreatedAt time.Time `json:"createdAt,omitempty"  db:"created_at"`
 	FavoNum   int       `json:"favoNum,omitempty"  db:"favo_num"`
@@ -110,7 +111,9 @@ func GetFavoHandler(c echo.Context) error {
 	favo := Tweet{}
 	for _, v := range dbFavos {
 		Db.Get(&favo, "SELECT * FROM tweet WHERE tweet_ID=?", v.TweetID)
-		favos = append(favos, Favo{FavoID: v.FavoID, TweetID: favo.TweetID, UserID: favo.UserID, Tweet: favo.Tweet, CreatedAt: favo.CreatedAt, FavoNum: favo.FavoNum})
+		var name string
+		Db.Get(&name, "SELECT name FROM user WHERE ID=?", userID)
+		favos = append(favos, Favo{FavoID: v.FavoID, TweetID: favo.TweetID, UserID: favo.UserID, UserName: name, Tweet: favo.Tweet, CreatedAt: favo.CreatedAt, FavoNum: favo.FavoNum})
 	}
 
 	favoSort := Favo{}
