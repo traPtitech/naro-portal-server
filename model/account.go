@@ -152,6 +152,13 @@ func DeleteAccountHandler(c echo.Context) error {
 		Db.Exec("DELETE FROM favorite WHERE tweet_ID = ?", v.TweetID)
 	}
 	Db.Exec("DELETE FROM user WHERE ID = ?", sess.Values["UserID"])
+
+	sess.Values["UserName"] = nil
+	err = sess.Save(c.Request(), c.Response())
+	if err != nil {
+		return c.NoContent(http.StatusInternalServerError)
+	}
+
 	return c.NoContent(http.StatusOK)
 }
 
