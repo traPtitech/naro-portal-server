@@ -23,6 +23,10 @@ type Me struct {
 	UserName string `json:"userName,omitempty" db:"name"`
 }
 
+type TweetID struct {
+	TweetID string `db:"tweet_ID"`
+}
+
 //PostLoginHandler POST /login ログイン
 func PostLoginHandler(c echo.Context) error {
 	req := User{}
@@ -130,6 +134,25 @@ func PostSignUpHandler(c echo.Context) error {
 	sess.Save(c.Request(), c.Response())
 
 	return c.NoContent(http.StatusCreated)
+}
+
+//DeleteAccountHandler Delete /account
+func DeleteAccountHandler(c echo.Context) error {
+	sess, err := session.Get("sessions", c)
+	if err != nil {
+		fmt.Println(err)
+		return c.String(http.StatusInternalServerError, "something wrong in getting session")
+	}
+
+	Db.Exec("DELETE FROM pin WHERE user_ID = ?", sess.Values["UserID"])
+	Db.Exec("DELETE FROM favorite WHERE user_ID = ?", sess.Values["UserID"])
+	tweetIDs := []TweetID{}
+	Db.Select(&tweetIDs, "SELECT tweet_ID FROM tweet WHERE userID = ?", sess.Values["UserID"])
+	for _, v := range tweetIDs {
+		Db.Exec("DELETE FROM favorite WHERE tweet_ID = ?", v.TweetID)
+	}
+	Db.Exec("DELETE FROM user WHERE ID = ?", sess.Values["UserID"])
+	return c.NoContent(http.StatusOK)
 }
 
 //GetWhoAmIHandler Get /whoAmI

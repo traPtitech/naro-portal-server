@@ -30,6 +30,7 @@ func main() {
 	withLogin := e.Group("")
 	withLogin.Use(model.CheckLogin)
 	withLogin.POST("/logout", model.PostLogoutHandler)
+	withLogin.DELETE("/account",model.DeleteAccountHandler)
 	withLogin.POST("/tweet", model.PostTweetHandler)
 	withLogin.POST("/pin", model.PostPinHandler)
 	withLogin.DELETE("/pin", model.DeletePinHandler)
