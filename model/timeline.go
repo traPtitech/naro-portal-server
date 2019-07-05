@@ -75,7 +75,7 @@ func GetPinHandler(c echo.Context) error {
 func GetFavoHandler(c echo.Context) error {
 	userName := c.Param("userName")
 	favos := []Favo{}
-	err := Db.Select(&favos, "SELECT favorite.favo_ID,tweet.tweet_ID,tweet.user_ID,tweet.tweet,tweet.created_at,tweet.favo_num FROM favorite JOIN tweet ON favorite.tweet_ID = tweet.tweet_ID JOIN user ON favorite.user_ID = user.ID WHERE user.name = ? WHERE favorite.user_ID = ? ORDER BY tweet.created_at", userName)
+	err := Db.Select(&favos, "SELECT favorite.favo_ID,tweet.tweet_ID,tweet.user_ID,tweet.tweet,tweet.created_at,tweet.favo_num FROM favorite JOIN tweet ON favorite.tweet_ID = tweet.tweet_ID JOIN user ON favorite.user_ID = user.ID WHERE user.name = ? ORDER BY tweet.created_at", userName)
 	if err != nil {
 		return c.NoContent(http.StatusInternalServerError)
 	}
