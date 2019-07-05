@@ -32,7 +32,7 @@ func DeletePinHandler(c echo.Context) error {
 	pin := ChangePin{}
 	c.Bind(&pin)
 
-	err := Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), pin.TweetID)
+	_, err := Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), pin.TweetID)
 	if err != nil {
 		return c.NoContent(http.StatusInternalServerError)
 	}

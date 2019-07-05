@@ -27,9 +27,9 @@ func PostFavoHandler(c echo.Context) error {
 		return c.NoContent(http.StatusBadRequest)
 	}
 
-	err = Db.Exec("UPDATE tweet SET favo_num=favo_num+1 WHERE tweet_ID=?", favo.TweetID)
+	_, err = Db.Exec("UPDATE tweet SET favo_num=favo_num+1 WHERE tweet_ID=?", favo.TweetID)
 
-	err = Db.Exec("INSERT INTO favorite (favo_ID,user_ID,tweet_ID,created_at) VALUES (?,?,?,?)", uuid.New(), c.Get("UserID"), favo.TweetID, time.Now())
+	_, err = Db.Exec("INSERT INTO favorite (favo_ID,user_ID,tweet_ID,created_at) VALUES (?,?,?,?)", uuid.New(), c.Get("UserID"), favo.TweetID, time.Now())
 	if err != nil {
 		return c.NoContent(http.StatusInternalServerError)
 	}
@@ -42,8 +42,8 @@ func DeleteFavoHandler(c echo.Context) error {
 	favo := Favorite{}
 	c.Bind(&favo)
 
-	err := Db.Exec("UPDATE tweet SET favo_num=favo_num-1 WHERE tweet_ID=?", favo.TweetID)
-	err = Db.Exec("DELETE FROM favorite WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), favo.TweetID)
+	_, err := Db.Exec("UPDATE tweet SET favo_num=favo_num-1 WHERE tweet_ID=?", favo.TweetID)
+	_, err = Db.Exec("DELETE FROM favorite WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), favo.TweetID)
 	if err != nil {
 		return c.NoContent(http.StatusInternalServerError)
 	}

@@ -154,9 +154,9 @@ func DeleteAccountHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
 
-	err = Db.Exec("DELETE FROM pin WHERE user_ID = ?", c.Get("UserID"))
-	err = Db.Exec("DELETE FROM favorite JOIN tweet ON favorite.tweet_ID = tweet.tweet_ID WHERE tweet.user_ID = ? OR favorite.user_ID = ?", c.Get("UserID"), c.Get("UserID"))
-	err = Db.Exec("DELETE FROM user WHERE ID = ?", c.Get("UserID"))
+	_, err = Db.Exec("DELETE FROM pin WHERE user_ID = ?", c.Get("UserID").(string))
+	_, err = Db.Exec("DELETE FROM favorite JOIN tweet ON favorite.tweet_ID = tweet.tweet_ID WHERE tweet.user_ID = ? OR favorite.user_ID = ?", c.Get("UserID").(string), c.Get("UserID").(string))
+	_, err = Db.Exec("DELETE FROM user WHERE ID = ?", c.Get("UserID").(string))
 
 	sess.Values["UserName"] = nil
 	err = sess.Save(c.Request(), c.Response())
