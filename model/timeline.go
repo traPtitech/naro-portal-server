@@ -49,7 +49,7 @@ func GetTimelineHandler(c echo.Context) error {
 
 	userName := c.Param("userName")
 	tweets := []Tweet{}
-	err = Db.Select(&tweets, "SELECT * FROM tweet JOIN user ON tweet.user_ID = user.ID WHERE user.name = ? ORDER BY created_at DESC", userName)
+	err = Db.Select(&tweets, "SELECT * FROM tweet JOIN user ON tweet.user_ID = user.ID WHERE user.name = ? ORDER BY tweet.created_at DESC", userName)
 	if err != nil {
 		return c.NoContent(http.StatusInternalServerError)
 	}
