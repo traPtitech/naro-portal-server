@@ -53,7 +53,10 @@ func PostLoginHandler(c echo.Context) error {
 	}
 	sess.Values["UserName"] = req.UserName
 	var userID string
-	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	err = Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, "username is wrong or something wrong in getting user`s information")
+	}
 	sess.Values["UserID"] = userID
 	sess.Values["ClientID"] = uuid.New()
 	sess.Values["LastReloadTime"] = time.Now()
@@ -91,6 +94,7 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 			return c.String(http.StatusForbidden, "please login")
 		}
 		c.Set("UserName", sess.Values["UserName"].(string))
+		c.Set("UserID", sess.Values["UserID"].(string))
 
 		return next(c)
 	}
@@ -127,11 +131,17 @@ func PostSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
 	sess.Values["UserName"] = req.UserName
-	Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	err = Db.Get(&userID, "SELECT ID FROM user WHERE name=?", req.UserName)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, "username is wrong or something wrong in getting user`s information")
+	}
 	sess.Values["UserID"] = userID
 	sess.Values["ClientID"] = uuid.New()
 	sess.Values["LastReloadTime"] = time.Now()
-	sess.Save(c.Request(), c.Response())
+	err = sess.Save(c.Request(), c.Response())
+	if err != nil {
+		return c.NoContent(http.StatusInternalServerError)
+	}
 
 	return c.NoContent(http.StatusCreated)
 }
@@ -144,14 +154,9 @@ func DeleteAccountHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
 
-	Db.Exec("DELETE FROM pin WHERE user_ID = ?", sess.Values["UserID"])
-	Db.Exec("DELETE FROM favorite WHERE user_ID = ?", sess.Values["UserID"])
-	tweetIDs := []TweetID{}
-	Db.Select(&tweetIDs, "SELECT tweet_ID FROM tweet WHERE userID = ?", sess.Values["UserID"])
-	for _, v := range tweetIDs {
-		Db.Exec("DELETE FROM favorite WHERE tweet_ID = ?", v.TweetID)
-	}
-	Db.Exec("DELETE FROM user WHERE ID = ?", sess.Values["UserID"])
+	err = Db.Exec("DELETE FROM pin WHERE user_ID = ?", c.Get("UserID"))
+	err = Db.Exec("DELETE FROM favorite JOIN tweet ON favorite.tweet_ID = tweet.tweet_ID WHERE tweet.user_ID = ? OR favorite.user_ID = ?", c.Get("UserID"), c.Get("UserID"))
+	err = Db.Exec("DELETE FROM user WHERE ID = ?", c.Get("UserID"))
 
 	sess.Values["UserName"] = nil
 	err = sess.Save(c.Request(), c.Response())
@@ -172,6 +177,10 @@ func GetWhoAmIHandler(c echo.Context) error {
 //GetUserListHandler Get /userList
 func GetUserListHandler(c echo.Context) error {
 	userNames := []Me{}
-	Db.Select(&userNames, "SELECT name FROM user")
+	err := Db.Select(&userNames, "SELECT name FROM user")
+	if err != nil {
+		return c.NoContent(http.StatusInternalServerError)
+	}
+
 	return c.JSON(http.StatusOK, userNames)
 }

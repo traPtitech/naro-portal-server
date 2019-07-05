@@ -1,11 +1,9 @@
 package model
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo"
-	"github.com/labstack/echo-contrib/session"
 	"github.com/pborman/uuid"
 )
 
@@ -19,34 +17,26 @@ func PostPinHandler(c echo.Context) error {
 	pin := ChangePin{}
 	c.Bind(&pin)
 
-	sess, err := session.Get("sessions", c)
-	if err != nil {
-		fmt.Println(err)
-		return c.String(http.StatusInternalServerError, "something wrong in getting session")
-	}
-
 	var userID string
 	Db.Get(&userID, "SELECT user_ID FROM tweet WHERE tweet_ID=?", pin.TweetID)
-	if userID != sess.Values["UserID"] {
+	if userID != c.Get("UserID") {
 		return c.String(http.StatusInternalServerError, "あなたのTweetではありません")
 	}
 
-	Db.Exec("INSERT INTO pin (pin_ID, user_ID,tweet_ID) VALUES (?, ?,?)", uuid.New(), sess.Values["UserID"], pin.TweetID)
+	Db.Exec("INSERT INTO pin (pin_ID, user_ID,tweet_ID) VALUES (?, ?,?)", uuid.New(), c.Get("UserID"), pin.TweetID)
 	return c.NoContent(http.StatusOK)
 }
 
 //DeletePinHandler Delete /pin Pin消去
 func DeletePinHandler(c echo.Context) error {
-	sess, err := session.Get("sessions", c)
-	if err != nil {
-		fmt.Println(err)
-		return c.String(http.StatusInternalServerError, "something wrong in getting session")
-	}
-
 	pin := ChangePin{}
 	c.Bind(&pin)
 
-	Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", sess.Values["UserID"], pin.TweetID)
+	err := Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), pin.TweetID)
+	if err != nil {
+		return c.NoContent(http.StatusInternalServerError)
+	}
+
 	return c.NoContent(http.StatusOK)
 }
 
@@ -55,9 +45,13 @@ func GetIsPinHandler(c echo.Context) error {
 	tweetID := c.Param("tweetID")
 
 	var userID string
-	Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
+	err := Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
+	if err != nil {
+		return c.NoContent(http.StatusInternalServerError)
+	}
 	if userID != "" {
 		return c.NoContent(http.StatusOK)
 	}
+
 	return c.String(http.StatusOK, "none")
 }
