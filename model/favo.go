@@ -24,7 +24,7 @@ func PostFavoHandler(c echo.Context) error {
 		return c.NoContent(http.StatusBadRequest)
 	}
 
-	_, err = Db.Exec("UPDATE tweet SET favo_num=favo_num+1 WHERE tweet_ID=?", favo.TweetID)
+	_, err := Db.Exec("UPDATE tweet SET favo_num=favo_num+1 WHERE tweet_ID=?", favo.TweetID)
 
 	_, err = Db.Exec("INSERT INTO favorite (favo_ID,user_ID,tweet_ID,created_at) VALUES (?,?,?,?)", uuid.New(), c.Get("UserID"), favo.TweetID, time.Now())
 	if err != nil {
