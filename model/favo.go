@@ -19,10 +19,7 @@ func PostFavoHandler(c echo.Context) error {
 	c.Bind(&favo)
 
 	var userID string
-	err := Db.Get(&userID, "SELECT user_ID FROM favorite WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), favo.TweetID)
-	if err != nil {
-		return c.NoContent(http.StatusInternalServerError)
-	}
+	Db.Get(&userID, "SELECT user_ID FROM favorite WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), favo.TweetID)
 	if userID != "" {
 		return c.NoContent(http.StatusBadRequest)
 	}
