@@ -45,10 +45,7 @@ func GetIsPinHandler(c echo.Context) error {
 	tweetID := c.Param("tweetID")
 
 	var userID string
-	err := Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
-	if err != nil {
-		return c.NoContent(http.StatusInternalServerError)
-	}
+	Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
 	if userID != "" {
 		return c.NoContent(http.StatusOK)
 	}

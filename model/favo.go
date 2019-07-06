@@ -56,10 +56,7 @@ func GetIsFavoHandler(c echo.Context) error {
 	tweetID := c.Param("tweetID")
 
 	var userID string
-	err := Db.Get(&userID, "SELECT user_ID FROM favorite WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), tweetID)
-	if err != nil {
-		return c.NoContent(http.StatusInternalServerError)
-	}
+	Db.Get(&userID, "SELECT user_ID FROM favorite WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), tweetID)
 	if userID != "" {
 		return c.NoContent(http.StatusOK)
 	}
