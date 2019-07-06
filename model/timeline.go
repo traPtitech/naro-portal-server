@@ -71,7 +71,7 @@ func GetPinHandler(c echo.Context) error {
 	return c.JSON(http.StatusOK, pins)
 }
 
-//GetFavoHandler Get /timelineFavo/:userName タイムラインのピン
+//GetFavoHandler Get /timelineFavo/:userName タイムラインのファボ
 func GetFavoHandler(c echo.Context) error {
 	userName := c.Param("userName")
 	favos := []Favo{}
