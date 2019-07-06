@@ -18,37 +18,18 @@ func PostPinHandler(c echo.Context) error {
 	c.Bind(&pin)
 
 	var userID string
-	Db.Get(&userID, "SELECT user_ID FROM tweet WHERE tweet_ID=?", pin.TweetID)
-	if userID != c.Get("UserID") {
-		return c.String(http.StatusInternalServerError, "あなたのTweetではありません")
+	Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
+	if userID != "" {
+		_, err := Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), pin.TweetID)
+		if err != nil {
+			return c.NoContent(http.StatusInternalServerError)
+		}
+		return c.NoContent(http.StatusOK)
 	}
-
-	Db.Exec("INSERT INTO pin (pin_ID, user_ID,tweet_ID) VALUES (?, ?,?)", uuid.New(), c.Get("UserID"), pin.TweetID)
-	return c.NoContent(http.StatusOK)
-}
-
-//DeletePinHandler Delete /pin Pin消去
-func DeletePinHandler(c echo.Context) error {
-	pin := ChangePin{}
-	c.Bind(&pin)
-
-	_, err := Db.Exec("DELETE FROM pin WHERE user_ID=? AND tweet_ID=?", c.Get("UserID"), pin.TweetID)
+	_, err := Db.Exec("INSERT INTO pin (pin_ID, user_ID,tweet_ID) VALUES (?, ?,?)", uuid.New(), c.Get("UserID"), pin.TweetID)
 	if err != nil {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
 	return c.NoContent(http.StatusOK)
-}
-
-//GetIsPinHandler Get /isPin/:tweetID ピンを入れたかの確認
-func GetIsPinHandler(c echo.Context) error {
-	tweetID := c.Param("tweetID")
-
-	var userID string
-	Db.Get(&userID, "SELECT user_ID FROM pin WHERE tweet_ID=?", tweetID)
-	if userID != "" {
-		return c.NoContent(http.StatusOK)
-	}
-
-	return c.String(http.StatusOK, "none")
 }
