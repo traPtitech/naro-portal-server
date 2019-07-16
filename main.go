@@ -22,7 +22,6 @@ import (
 type userRequestBody struct {
 	Name        string    `json:"name,omitempty"`
 	Password    string    `json:"password,omitempty"`
-	DateOfBirth time.Time `json:"date_of_birth,omitempty"`
 }
 
 type tweetRequestBody struct {
@@ -58,9 +57,9 @@ func main() {
 	e.Use(session.Middleware(store)) //通行証の正当性を確認したのち、echo.Contextにその情報を追加
 	e.Use(middleware.Static("."))
 
-	/*e.GET("/ping", func(c echo.Context) error {
+	e.GET("/ping", func(c echo.Context) error {
 		return c.String(http.StatusOK, "pong")
-	})*/ //ピンポン
+	}) //ピンポン
 
 	e.Static("/", "public")
 	//file upload
@@ -105,7 +104,7 @@ func postSignUpHandler(c echo.Context) error {
 	}
 
 	//_=返り値が返ってくるけどいらないから明示的に捨てる
-	_, err = db.Exec("INSERT INTO user (name, hashed_pass) VALUES (?, ?)", req.Name, hashedPass)
+	_, err = db.Exec("INSERT INTO user (name, hashed_pass VALUES (?, ?)", req.Name, hashedPass)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -117,12 +116,11 @@ func postLoginHandler(c echo.Context) error {
 	c.Bind(&req)
 
 	type User struct {
-		//なんかエラー書かれてるけど動かしてみないとよくわからん
-		Name        string    `json:"name,omitempty" db:name`
-		HashedPass  string    `json:"hashed_pass,omitempty" db:hashed_pass`
-		DateOfBirth time.Time `db:date_of_birth`
-		CreatedAt   time.Time `db:"created_at" json:"created_at,omitempty"`
-		UpdatedAt   time.Time `db:"updated_at" json:"updated_at,omitempty"`
+		ID          int       `db:"id"`
+		Name        string    `db:"name"`
+		HashedPass  string    `db:"hashed_pass"`
+		CreatedAt   time.Time `db:"created_at"`
+		UpdatedAt   time.Time `db:"updated_at"`
 	}
 	user := User{}
 	err := db.Get(&user, "SELECT * FROM user WHERE name=?", req.Name) //リクエストのUserがDBに存在するか問い合わせしていればその情報をUserにその情報を追加
@@ -229,6 +227,9 @@ func postImgHandler(c echo.Context) error {
 func postTweetHandler(c echo.Context) error {
 	tweet := tweetRequestBody{}
 	c.Bind(&tweet)
+
+	//tweet.UserID = 1  (うまくidがbindされない)
+
 	result, err := db.Exec("INSERT INTO tweet (text, user_id) VALUES (?, ?)", tweet.Text, tweet.UserID)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
