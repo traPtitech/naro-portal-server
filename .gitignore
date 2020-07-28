@@ -1,0 +1,9 @@
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.exe~
+*.test
+
+env.sh
