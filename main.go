@@ -1,35 +1,44 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"os"
-	"time"
-
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/jmoiron/sqlx"
+	"github.com/labstack/echo-contrib/session"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
+	"github.com/purewhite404/naro-server/model"
+	"github.com/purewhite404/naro-server/router"
+	"github.com/srinathgs/mysqlstore"
 )
 
-type Tweet struct {
-	ID        string    `json:"id,omitempty"  db:"id"`
-	TweetBody string    `json:"name,omitempty"  db:"tweet_body"`
-	Author    string    `json:"countryCode,omitempty"  db:"author"`
-	CreatedAt time.Time `json:"district,omitempty"  db:"created_at"`
-}
-
 func main() {
-	db, err := sqlx.Connect("mysql", fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?charset=utf8&parseTime=True&loc=Local", os.Getenv("DB_USERNAME"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOSTNAME"), os.Getenv("DB_DATABASE")))
+	db, err := model.EstablishConnection()
 	if err != nil {
-		log.Fatalf("Cannot Connect to Database: %s", err)
+		panic(err)
 	}
 
-	fmt.Println("Connected!")
-	tweet := Tweet{}
-	err = db.Get(&tweet, "SELECT author FROM tweets WHERE id='Tokyo'")
+	store, err := mysqlstore.NewMySQLStoreFromConnection(db.DB, "sessions", "/", 60*60*24*14, []byte("secret-token"))
 	if err != nil {
-		fmt.Printf("db error")
-		os.Exit(1)
+		panic(err)
 	}
 
-	fmt.Printf("%s\n", tweet.Author)
+	e := echo.New()
+	e.Use(middleware.Logger())
+	e.Use(session.Middleware(store))
+	e.Use(
+		middleware.CORSWithConfig(middleware.CORSConfig{
+			AllowCredentials: true,
+			AllowOrigins:     []string{"http://localhost:8000"},
+		}),
+	)
+
+	e.POST("/register", router.PostRegisterHandler)
+	e.POST("/login", router.PostLoginHandler)
+	e.GET("/tweet", router.GetTweetHandler)
+
+	withLogin := e.Group("")
+	withLogin.Use(router.HasLoggedin)
+	withLogin.GET("/whoami", router.GetMeHandler)
+	withLogin.GET("/timeline", router.GetTweetHandler)
+	withLogin.POST("/timeline", router.PostTweetHandler)
+
+	e.Start(":11900")
 }
