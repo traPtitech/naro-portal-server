@@ -30,6 +30,16 @@ CREATE TABLE `tweets` (
 
 -- --------------------------------------------------------
 
+--
+-- テーブルの構造 `users`
+--
+
+CREATE TABLE `users` (
+  `id` varchar(36) NOT NULL PRIMARY KEY,
+  `hashed_pass` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

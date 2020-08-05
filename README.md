@@ -19,3 +19,9 @@ Webエンジニアになろう講習会課題のサーバリポジトリ
 | message      | varchar(256)   | NO     |       |           |         | 本文             |
 | username     | varchar(32)    | NO     |       |           |         | ツイートした人   |
 | created_at   | datetime       | NO     |       |           |         | ツイート時刻     |
+
+### users
+| Field       | Type         | NULL | Key | Default | Extra | 説明                           |
+|-------------|--------------|------|-----|---------|-------|--------------------------------|
+| id          | varchar(36)  | NO   | PRI |         |       | userのid,tweets.authorと同じ   |
+| hashed_pass | varchar(256) | NO   |     |         |       | ハッシュ化されたパスワード     |

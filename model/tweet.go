@@ -5,10 +5,10 @@ import (
 )
 
 type JsonTweet struct {
-	ID        string    `json:id,omitempty db:id`
-	TweetBody string    `json:tweet_body,omitempty db:tweet_body`
-	Author    string    `json:author,omitempty db:author`
-	CreatedAt time.Time `json:created_at,omitempty db:created_at`
+	ID        string    `json:"id,omitempty" db:"id"`
+	TweetBody string    `json:"tweet_body,omitempty" db:"tweet_body"`
+	Author    string    `json:"author,omitempty" db:"author"`
+	CreatedAt time.Time `json:"created_at,omitempty" db:"created_at"`
 }
 
 func SelectTweet() ([]JsonTweet, error) {

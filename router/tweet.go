@@ -23,11 +23,11 @@ func PostTweetHandler(c echo.Context) error {
 	if err != nil {
 		return c.String(http.StatusInternalServerError, "Cannot create tweet uuid")
 	}
-	tweet.ID = u.String()
 	err = c.Bind(tweet)
 	if err != nil {
 		return c.String(http.StatusBadRequest, "Not suitable for JsonTweet format")
 	}
+	tweet.ID = u.String()
 
 	err = model.InsertTweet(tweet)
 	if err != nil {
