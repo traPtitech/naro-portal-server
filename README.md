@@ -12,16 +12,16 @@ Webエンジニアになろう講習会課題のサーバリポジトリ
 * `POST /timeline` ツイート投稿
 
 ## DB schema
-### tweets
-| Field        | Type           | NULL   | Key   | Default   | Extra   | 説明             |
-| ------------ | -------------- | ------ | ----- | --------- | ------- | ---------------- |
-| uuid         | char(36)       | NO     | PRI   |           |         | tweetのuuid      |
-| message      | varchar(256)   | NO     |       |           |         | 本文             |
-| username     | varchar(32)    | NO     |       |           |         | ツイートした人   |
-| created_at   | datetime       | NO     |       |           |         | ツイート時刻     |
-
 ### users
 | Field       | Type         | NULL | Key | Default | Extra | 説明                           |
 |-------------|--------------|------|-----|---------|-------|--------------------------------|
 | id          | varchar(36)  | NO   | PRI |         |       | userのid,tweets.authorと同じ   |
 | hashed_pass | varchar(256) | NO   |     |         |       | ハッシュ化されたパスワード     |
+
+### tweets
+| Field      | Type           | NULL   | Key   | Default   | Extra   | 説明             |
+| ---------- | -------------- | ------ | ----- | --------- | ------- | ---------------- |
+| id         | char(36)       | NO     | PRI   |           |         | tweetのuuid      |
+| tweet_body | varchar(256)   | NO     |       |           |         | 本文             |
+| author     | varchar(32)    | NO     |       |           |         | ツイートした人   |
+| created_at | datetime       | NO     |       |           |         | ツイート時刻     |
