@@ -12,6 +12,12 @@ Webエンジニアになろう講習会課題のサーバリポジトリ
 * `POST /timeline` ツイート投稿
 
 ## DB schema
+### users
+| Field       | Type         | NULL | Key | Default | Extra | 説明                           |
+|-------------|--------------|------|-----|---------|-------|--------------------------------|
+| id          | varchar(36)  | NO   | PRI |         |       | userのid,tweets.authorと同じ   |
+| hashed_pass | varchar(256) | NO   |     |         |       | ハッシュ化されたパスワード     |
+
 ### tweets
 | Field      | Type           | NULL   | Key   | Default   | Extra   | 説明             |
 | ---------- | -------------- | ------ | ----- | --------- | ------- | ---------------- |
