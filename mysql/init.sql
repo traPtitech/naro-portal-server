@@ -23,8 +23,8 @@ USE `twitterclone`;
 
 CREATE TABLE `tweets` (
   `id` char(36) NOT NULL PRIMARY KEY,
+  `user_id` varchar(32) NOT NULL,
   `tweet_body` varchar(256) NOT NULL,
-  `author` varchar(32) NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

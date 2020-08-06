@@ -19,7 +19,7 @@ func GetTweetHandler(c echo.Context) error {
 
 func PostTweetHandler(c echo.Context) error {
 	tweet := new(model.JsonTweet)
-	err = c.Bind(tweet)
+	err := c.Bind(tweet)
 	if err != nil {
 		return c.String(http.StatusBadRequest, "Not suitable for JsonTweet format")
 	}

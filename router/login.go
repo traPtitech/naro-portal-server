@@ -11,26 +11,26 @@ import (
 )
 
 type UserInfo struct {
-	Username string `json:"username,omitempty"`
+	UserID   string `json:"user_id,omitempty"`
 	Password string `json:"password,omitempty"`
 }
 
 func validation(user *UserInfo) (int, error) {
-	// empty username
-	if user.Username == "" {
-		return http.StatusBadRequest, errors.New("Empty username")
+	// empty userID
+	if user.UserID == "" {
+		return http.StatusBadRequest, errors.New("Empty userID")
 	}
 	// empty password
 	if len(user.Password) < 6 {
 		return http.StatusBadRequest, errors.New("Weak password")
 	}
 	// reject multiple user
-	count, err := model.Counter(user.Username)
+	count, err := model.Counter(user.UserID)
 	if err != nil {
 		return http.StatusInternalServerError, errors.New("Database is not working well, and cannot verify user infomation")
 	}
 	if count > 0 {
-		return http.StatusConflict, errors.New("The same username already exists")
+		return http.StatusConflict, errors.New("The same userID already exists")
 	}
 	return http.StatusAccepted, nil
 }
@@ -49,7 +49,7 @@ func PostRegisterHandler(c echo.Context) error {
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Hash algorithm is not working well: %v", err))
 	}
-	err = model.InsertUserWithHashedPass(req.Username, hashedPass)
+	err = model.InsertUserWithHashedPass(req.UserID, hashedPass)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Database is not working well: %v", err))
 	}
@@ -60,9 +60,9 @@ func PostLoginHandler(c echo.Context) error {
 	req := new(UserInfo)
 	c.Bind(&req)
 
-	savedUser, err := model.SelectUser(req.Username)
+	savedUser, err := model.SelectUser(req.UserID)
 	if err != nil {
-		// TODO: usernameがない場合とDBが壊れた場合でstatusを分ける
+		// TODO: userIDがない場合とDBが壊れた場合でstatusを分ける
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Database is not working well: %v", err))
 	}
 
@@ -80,14 +80,14 @@ func PostLoginHandler(c echo.Context) error {
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Something wrong in getting session: %v", err))
 	}
-	sess.Values["username"] = req.Username
+	sess.Values["userID"] = req.UserID
 	sess.Save(c.Request(), c.Response())
 
 	return c.String(http.StatusOK, "Login successfully")
 }
 
 func GetMeHandler(c echo.Context) error {
-	return c.String(http.StatusOK, c.Get("username").(string))
+	return c.String(http.StatusOK, c.Get("userID").(string))
 }
 
 func HasLoggedin(next echo.HandlerFunc) echo.HandlerFunc {
@@ -97,10 +97,10 @@ func HasLoggedin(next echo.HandlerFunc) echo.HandlerFunc {
 			return c.String(http.StatusInternalServerError, fmt.Sprintf("Something wrong in getting session: %v", err))
 		}
 
-		if sess.Values["username"] == nil {
+		if sess.Values["userID"] == nil {
 			return c.String(http.StatusForbidden, "Please login")
 		}
-		c.Set("username", sess.Values["username"].(string))
+		c.Set("userID", sess.Values["userID"].(string))
 
 		return next(c)
 	}

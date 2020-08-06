@@ -1,23 +1,23 @@
 package model
 
-func Counter(username string) (int, error) {
+func Counter(userID string) (int, error) {
 	var count int
-	err := db.Get(&count, "SELECT COUNT(*) FROM users WHERE id=?", username)
+	err := db.Get(&count, "SELECT COUNT(*) FROM users WHERE id=?", userID)
 	return count, err
 }
 
 type UserWithHashedPass struct {
-	Username   string `json:"username,omitempty" db:"id"`
-	HashedPass string `json:"-" db:"hashed_pass"`
+	ID         string `db:"id"`
+	HashedPass string `db:"hashed_pass"`
 }
 
-func InsertUserWithHashedPass(username string, hashedPass []byte) error {
-	_, err := db.Exec("INSERT INTO users (id, hashed_pass) VALUES (?, ?)", username, hashedPass)
+func InsertUserWithHashedPass(userID string, hashedPass []byte) error {
+	_, err := db.Exec("INSERT INTO users (id, hashed_pass) VALUES (?, ?)", userID, hashedPass)
 	return err
 }
 
-func SelectUser(username string) (UserWithHashedPass, error) {
+func SelectUser(userID string) (UserWithHashedPass, error) {
 	savedUser := UserWithHashedPass{}
-	err := db.Get(&savedUser, "SELECT * FROM users WHERE id=?", username)
+	err := db.Get(&savedUser, "SELECT * FROM users WHERE id=?", userID)
 	return savedUser, err
 }

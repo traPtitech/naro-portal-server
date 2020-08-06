@@ -6,8 +6,8 @@ import (
 
 type JsonTweet struct {
 	ID        string    `json:"id,omitempty" db:"id"`
+	UserID    string    `json:"user_id,omitempty" db:"user_id"`
 	TweetBody string    `json:"tweet_body,omitempty" db:"tweet_body"`
-	Author    string    `json:"author,omitempty" db:"author"`
 	CreatedAt time.Time `json:"created_at,omitempty" db:"created_at"`
 }
 
@@ -18,8 +18,8 @@ func SelectTweet() ([]JsonTweet, error) {
 }
 
 func InsertTweet(tweet *JsonTweet) error {
-	_, err := db.Exec("INSERT INTO tweets (id, tweet_body, author, created_at) VALUES (?, ?, ?, ?)",
-		tweet.ID, tweet.TweetBody, tweet.Author, tweet.CreatedAt)
+	_, err := db.Exec("INSERT INTO tweets (id, user_id, tweet_body, created_at) VALUES (?, ?, ?, ?)",
+		tweet.ID, tweet.UserID, tweet.TweetBody, tweet.CreatedAt)
 
 	return err
 }
