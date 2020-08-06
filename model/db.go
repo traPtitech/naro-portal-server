@@ -30,7 +30,7 @@ func EstablishConnection() (*sqlx.DB, error) {
 		dbname = "twitterclone"
 	}
 
-	_db, err := sqlx.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:3306)/%s", user, pass, host, dbname)+"?parseTime=true&loc=Asia%2FTokyo&charset=utf8mb4")
+	_db, err := sqlx.Connect("mysql", fmt.Sprintf("%s:%s@tcp(%s:3306)/%s", user, pass, host, dbname)+"?parseTime=true&loc=Asia%2FTokyo&charset=utf8mb4")
 	db = _db
 	return db, err
 }
