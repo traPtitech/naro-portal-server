@@ -6,11 +6,10 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/purewhite404/naro-server/model"
 	"net/http"
-	"time"
 )
 
 func GetTweetHandler(c echo.Context) error {
-	tweets, err := model.SelectTweet()
+	tweets, err := model.GetTweets()
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Cannot get timeline: %v", err))
 	}
@@ -19,25 +18,29 @@ func GetTweetHandler(c echo.Context) error {
 }
 
 func PostTweetHandler(c echo.Context) error {
-	tweet := new(model.JsonTweet)
-	err := c.Bind(tweet) // ここでidとcreated_atはダミー値なので以下の処理においてサーバ側で生成する
+	req := new(model.RequestTweet)
+	err := c.Bind(req)
 	if err != nil {
-		return c.String(http.StatusBadRequest, "Not suitable for JsonTweet format")
+		return c.String(http.StatusBadRequest, fmt.Sprintf("Not suitable for JsonTweet format: %v", err))
 	}
 
 	// uuidを生成し、tweetのidとする
 	u, err := uuid.NewRandom()
 	if err != nil {
-		return c.String(http.StatusInternalServerError, "Cannot create tweet uuid")
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("Cannot create tweet uuid: %v", err))
 	}
-	tweet.ID = u.String()
+	uuid := u.String()
 
-	// created_atを生成しタイムスタンプとする
-	tweet.CreatedAt = time.Now()
-
-	err = model.InsertTweet(tweet)
+	// uuidとreq
+	err = model.InsertTweet(uuid, req)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Cannot insert tweet into database: %v", err))
 	}
-	return c.JSON(http.StatusCreated, tweet)
+
+	// 今INSERTしたものをもう一度取り出す
+	tweetFromDB, err := model.GetPostedTweet(uuid)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("Tweet was created, but cannot get from DB: %v", err))
+	}
+	return c.JSON(http.StatusCreated, tweetFromDB)
 }
