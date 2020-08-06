@@ -19,13 +19,14 @@ func GetTweetHandler(c echo.Context) error {
 
 func PostTweetHandler(c echo.Context) error {
 	tweet := new(model.JsonTweet)
-	u, err := uuid.NewRandom()
-	if err != nil {
-		return c.String(http.StatusInternalServerError, "Cannot create tweet uuid")
-	}
 	err = c.Bind(tweet)
 	if err != nil {
 		return c.String(http.StatusBadRequest, "Not suitable for JsonTweet format")
+	}
+
+	u, err := uuid.NewRandom()
+	if err != nil {
+		return c.String(http.StatusInternalServerError, "Cannot create tweet uuid")
 	}
 	tweet.ID = u.String()
 
