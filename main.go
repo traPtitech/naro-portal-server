@@ -38,7 +38,7 @@ func main() {
 	withLogin.Use(router.HasLoggedin)
 	withLogin.GET("/whoami", router.GetMeHandler)
 	withLogin.GET("/timeline", router.GetTweetHandler)
-	withLogin.POST("/timeline", router.PostTweetHandler)
+	withLogin.POST("/tweet", router.PostTweetHandler)
 
 	e.Start(":11900")
 }
