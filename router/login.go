@@ -1,7 +1,6 @@
 package router
 
 import (
-	"errors"
 	"fmt"
 	"github.com/labstack/echo-contrib/session"
 	"github.com/labstack/echo/v4"
@@ -15,24 +14,24 @@ type UserInfo struct {
 	Password string `json:"password,omitempty"`
 }
 
-func validation(user *UserInfo) (int, error) {
+func validation(user *UserInfo) string {
 	// empty userID
 	if user.UserID == "" {
-		return http.StatusBadRequest, errors.New("Empty userID")
+		return "Empty userID"
 	}
 	// empty password
 	if len(user.Password) < 6 {
-		return http.StatusBadRequest, errors.New("Weak password")
+		return "Weak password"
 	}
 	// reject multiple user
 	count, err := model.Counter(user.UserID)
 	if err != nil {
-		return http.StatusInternalServerError, errors.New("Database is not working well, and cannot verify user infomation")
+		return "Database is not working well, and cannot verify user infomation"
 	}
 	if count > 0 {
-		return http.StatusConflict, errors.New("The same userID already exists")
+		return "The same userID already exists"
 	}
-	return http.StatusAccepted, nil
+	return ""
 }
 
 func PostRegisterHandler(c echo.Context) error {
@@ -40,8 +39,15 @@ func PostRegisterHandler(c echo.Context) error {
 	c.Bind(&req)
 
 	// validation
-	if statusCode, err := validation(req); err != nil {
-		return c.String(statusCode, fmt.Sprintf("%v", err))
+	switch s := validation(req); s {
+	case "Empty userID":
+		return c.String(http.StatusBadRequest, s)
+	case "Weak password":
+		return c.String(http.StatusBadRequest, s)
+	case "Database is not working well, and cannot verify user infomation":
+		return c.String(http.StatusInternalServerError, s)
+	case "The same userID already exists":
+		return c.String(http.StatusConflict, s)
 	}
 
 	// passwordをhash化してuserを作成

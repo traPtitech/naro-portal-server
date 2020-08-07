@@ -31,8 +31,8 @@ func InsertTweet(id string, tweet *RequestTweet) error {
 }
 
 // 送信したツイートをDBに格納して、created_atを付けてからもう一度クライアントに送り返す
-func GetPostedTweet(id string) (*RequestTweet, error) {
-	tweet := new(RequestTweet)
+func GetPostedTweet(id string) (*ResponseTweet, error) {
+	tweet := new(ResponseTweet)
 	err := db.Get(tweet, "SELECT * FROM tweets WHERE id = ?", id)
 	return tweet, err
 }
