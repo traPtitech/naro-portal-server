@@ -4,17 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/Ras96/naro-portal-server/domain"
 	"github.com/labstack/echo/v4"
 )
 
-type User struct {
-	UserName string `json:"userName,omitempty"  db:"userName"`
-	Password string `json:"password,omitempty"  db:"password"`
-}
-
 func GetUsersHandler(c echo.Context) error {
-	users := []User{}
-	err := db.Select(&users, "SELECT * FROM users")
+	users := []domain.User{}
+	err := db.Select(&users, "SELECT userName FROM users")
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("Failed to Get Users: %v", err))
 	}

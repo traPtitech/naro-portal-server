@@ -8,12 +8,25 @@ import (
 )
 
 func SetRouting(e *echo.Echo) {
-	e.GET("/ping", func(c echo.Context) error {
-		return c.String(http.StatusOK, "pong")
-	})
+	e.GET("/ping", getpingHandler)
 
-	users := e.Group("/users")
+
+	e.POST("/signup", model.PostSignUpHandler)
+	e.POST("/login", model.PostLoginHandler)
+
+	withlogin := e.Group("")
 	{
-		users.GET("", model.GetUsersHandler)
+		withlogin.Use(model.CheckLogin)
+		withlogin.GET("/pingping", getpingHandler)
+
+		users := withlogin.Group("/users")
+		{
+			users.GET("", model.GetUsersHandler)
+		}
 	}
+}
+
+
+func getpingHandler(c echo.Context) error {
+	return c.String(http.StatusOK, "pong")
 }

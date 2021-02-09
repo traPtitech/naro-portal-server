@@ -6,6 +6,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
+	"github.com/srinathgs/mysqlstore"
 )
 
 var (
@@ -38,4 +39,9 @@ func EstablishConnection() (*sqlx.DB, error) {
 	db = _db
 
 	return db, err
+}
+
+func NewSession(db *sqlx.DB) (store *mysqlstore.MySQLStore, err error) {
+	store, err = mysqlstore.NewMySQLStoreFromConnection(db.DB, "sessions", "/", 60*60*24*14, []byte("secret-token"))
+	return
 }
