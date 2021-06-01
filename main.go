@@ -52,6 +52,7 @@ func main() {
 
 	withLogin := e.Group("")
 	withLogin.Use(checkLogin)
+	withLogin.GET("/whoami", getWhoAmIHandler)
 
 	e.Start(":12502")
 }
@@ -140,4 +141,14 @@ func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
 
 		return next(c)
 	}
+}
+
+type Me struct {
+	Username string `json:"username,omitempty"  db:"username"`
+}
+
+func getWhoAmIHandler(c echo.Context) error {
+	return c.JSON(http.StatusOK, Me{
+		Username: c.Get("userName").(string),
+	})
 }
