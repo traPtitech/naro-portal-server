@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/labstack/echo-contrib/session"
@@ -17,6 +18,23 @@ import (
 var (
 	db *sqlx.DB
 )
+
+type SignupRequestBody struct {
+	ID       string `json:"id,omitempty" from:"id"`
+	Name     string `json:"name,omitempty" from:"name"`
+	Password string `json:"password,omitempty" from:"password"`
+}
+
+type LoginRequestBody struct {
+	ID         string `json:"id,omitempty" from:"id"`
+	HashedPass string `json:"hashed_pass,omitempty" from:"hashed_pass"`
+}
+
+type User struct {
+	ID         string `json:"id,omitempty" db:"id"`
+	Name       string `json:"name,omitempty" db:"name"`
+	HashedPass string `json:"hashed_pass,omitempty" db:"hashed_pass"`
+}
 
 func main() {
 	_db, err := sqlx.Connect(
@@ -40,6 +58,10 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Use(session.Middleware(store))
+
+	e.GET("/ping", func(c echo.Context) error {
+		return c.String(http.StatusOK, "pong")
+	})
 
 	e.Start(":13300")
 }
