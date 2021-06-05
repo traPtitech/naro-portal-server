@@ -15,3 +15,6 @@
 # vendor/
 
 env.sh
+go.sum
+go.mod
+kurage-server
