@@ -54,16 +54,18 @@ func main() {
 	withLogin.Use(checkLogin)
 	withLogin.GET("/whoami", getWhoAmIHandler)
 
+	//e.GET("/timelineall", getTimeLineAllHandler)
+
 	e.Start(":12502")
 }
 
 type LoginRequestBody struct {
-	Username string `json:"username,omitempty" form:"username"`
+	UserID   string `json:"userid,omitempty" form:"userid"`
 	Password string `json:"password,omitempty" form:"password"`
 }
 
 type User struct {
-	Username   string `json:"username,omitempty"  db:"Username"`
+	UserID     string `json:"userid,omitempty"  db:"UserID"`
 	HashedPass string `json:"-"  db:"HashedPass"`
 }
 
@@ -71,7 +73,7 @@ func postSignUpHandler(c echo.Context) error {
 	req := LoginRequestBody{}
 	c.Bind(&req)
 
-	if req.Password == "" || req.Username == "" {
+	if req.Password == "" || req.UserID == "" {
 		return c.String(http.StatusBadRequest, "項目が空です")
 	}
 
@@ -80,7 +82,7 @@ func postSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("bcrypt generate error: %v", err))
 	}
 	var count int
-	err = db.Get(&count, "SELECT COUNT(*) FROM users WHERE Username=?", req.Username)
+	err = db.Get(&count, "SELECT COUNT(*) FROM users WHERE UserID=?", req.UserID)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -89,7 +91,7 @@ func postSignUpHandler(c echo.Context) error {
 		return c.String(http.StatusConflict, "ユーザーが既に存在しています")
 	}
 
-	_, err = db.Exec("INSERT INTO users (Username, HashedPass) VALUES (?, ?)", req.Username, hashedPass)
+	_, err = db.Exec("INSERT INTO users (UserID, HashedPass) VALUES (?, ?)", req.UserID, hashedPass)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -101,7 +103,7 @@ func postLoginHandler(c echo.Context) error {
 	c.Bind(&req)
 
 	user := User{}
-	err := db.Get(&user, "SELECT * FROM users WHERE username=?", req.Username)
+	err := db.Get(&user, "SELECT * FROM users WHERE userid=?", req.UserID)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -120,7 +122,7 @@ func postLoginHandler(c echo.Context) error {
 		fmt.Println(err)
 		return c.String(http.StatusInternalServerError, "something wrong in getting session")
 	}
-	sess.Values["userName"] = req.Username
+	sess.Values["userID"] = req.UserID
 	sess.Save(c.Request(), c.Response())
 
 	return c.NoContent(http.StatusOK)
@@ -134,21 +136,31 @@ func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
 
-		if sess.Values["userName"] == nil {
+		if sess.Values["userID"] == nil {
 			return c.String(http.StatusForbidden, "please login")
 		}
-		c.Set("userName", sess.Values["userName"].(string))
+		c.Set("userID", sess.Values["userID"].(string))
 
 		return next(c)
 	}
 }
 
 type Me struct {
-	Username string `json:"username,omitempty"  db:"username"`
+	UserID string `json:"userid,omitempty"  db:"userid"`
 }
 
 func getWhoAmIHandler(c echo.Context) error {
 	return c.JSON(http.StatusOK, Me{
-		Username: c.Get("userName").(string),
+		UserID: c.Get("userID").(string),
 	})
 }
+
+/*
+type TweetData struct{
+
+}
+
+func getTimeLineAllHandler(c echo.Context) error{
+
+}
+*/
