@@ -55,7 +55,7 @@ func main() {
 	withLogin := e.Group("")
 	withLogin.Use(checkLogin)
 	withLogin.GET("/cities/:cityName", getCityInfoHandler)
-	//withLogin.GET("/home")
+	withLogin.GET("/home", getTweetHandler)
 	withLogin.POST("/home", postTweetHandler)
 
 	e.Start(":11800")
@@ -153,21 +153,37 @@ func checkLogin(next echo.HandlerFunc) echo.HandlerFunc {
 	}
 }
 
-type TweetRequestBody struct {
-	Tweet string `json:"tweet,omitempty" form:"tweet"`
+type Tweet struct {
+	DateTime time.Time `json:"datetime,omitempty" db:"DateTime"`
+	UserID   string `json:"userid,omitempty" db:"UserID"`
+	Text     string `json:"text,omitempty" db:"Tweet"`
 }
+
+type TweetRequestBody struct {
+	Text string `json:"text,omitempty" form:"text"`
+}
+
+func getTweetHandler(c echo.Context) error {
+	tweets := []Tweet{}
+	err := db.Select(&tweets, "SELECT * FROM tweets LIMIT 20")
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+	}
+	return c.JSON(http.StatusOK, tweets)
+}
+
 func postTweetHandler(c echo.Context) error {
 	req := TweetRequestBody{}
 	c.Bind(&req)
 
-	if req.Tweet == "" {
+	if req.Text == "" {
 		return c.String(http.StatusBadRequest, "empty tweet");
 	}
 
 	sess, err := session.Get("sessions", c)
 	username := sess.Values["userName"].(string)
 
-	_, err = db.Exec("INSERT INTO tweets (DateTime, UserID, Tweet) VALUES (?, ?, ?)", time.Now(), username, req.Tweet)
+	_, err = db.Exec("INSERT INTO tweets (DateTime, UserID, Tweet) VALUES (?, ?, ?)", time.Now(), username, req.Text)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
