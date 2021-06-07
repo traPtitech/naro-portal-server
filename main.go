@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/labstack/echo-contrib/session"
@@ -28,13 +29,6 @@ type User struct {
 	HashedPass string `json:"hashed_pass,omitempty" db:"hashed_pass"`
 }
 
-type Post struct {
-	ID       int    `json:"id,omitempty" db:"id"`
-	UserID   string `json:"user_id,omitempty" db:"user_id"`
-	Text     string `json:"text,omitempty" db:"text"`
-	PostTime string `json:"post_time,omitempty" db:"post_time"`
-}
-
 type SignUpRequestBody struct {
 	ID       string `json:"id,omitempty" from:"id"`
 	Name     string `json:"name,omitempty" from:"name"`
@@ -46,21 +40,39 @@ type LoginRequestBody struct {
 	Password string `json:"password,omitempty" from:"password"`
 }
 
+type IsValidIDResponseBody bool
+
+type IsValidPasswordResponseBody bool
+
+type IsValidNameResponseBody bool
+
 type WhoAmIResponseBody struct {
 	ID   string `json:"id,omitempty" db:"id"`
 	Name string `json:"name,omitempty" db:"name"`
 }
 
+//投稿
 type UpdatePostRequestBody struct {
 	Text string `json:"text,omitempty" from:"text"`
 }
 
-type PostsResponseBody []struct {
+//ファボ/ファボを外す
+type FavPostRequestBody int
+
+//投稿の取得
+type PostResponseBody struct {
+	PostData PostBody `json:post_data`
+	FavUsers []string `json:"fav_users"`
+}
+type PostsResponseBody []PostResponseBody
+
+type PostBody struct {
 	ID       int    `json:"id,omitempty" db:"id"`
 	UserID   string `json:"user_id,omitempty" db:"user_id"`
 	Text     string `json:"text,omitempty" db:"text"`
 	PostTime string `json:"post_time,omitempty" db:"post_time"`
 }
+type PostsBody []PostBody
 
 func main() {
 	_db, err := sqlx.Connect(
@@ -89,6 +101,9 @@ func main() {
 		return c.String(http.StatusOK, "pong")
 	})
 
+	e.POST("/isvalidid", postIsValidIDHandler) //(Stringで)投げられたIDが使われているか(Boolで)返す
+	e.POST("/isvalidname", postIsValidNameHandler)
+	e.POST("/isvalidpassword", postIsValidPasswordHandler)
 	e.POST("/signup", postSignUpHandler)
 	e.POST("/login", postLoginHandler)
 
@@ -98,9 +113,56 @@ func main() {
 	withLogin.GET("/whoami", getWhoAmIHandler)
 	withLogin.GET("/logout", getLogoutHandler)
 	withLogin.POST("/updatepost", postUpdatePostHandler)
+	withLogin.POST("/favpost", postFavPostHandler)
+	withLogin.POST("/unfavpost", postUnFavPostHandler)
 	withLogin.GET("/posts", getPostsHandler)
 
 	e.Start(":13300")
+}
+
+func postIsValidIDHandler(c echo.Context) error {
+	var req string
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusBadRequest, fmt.Sprintf("Bad Request: %s", err.Error()))
+	}
+	if len(req) == 0 || len(req) > 20 {
+		return c.JSON(http.StatusOK, false)
+	}
+
+	var count int
+	err = db.Get(&count, "SELECT COUNT(*) FROM users WHERE id=?", req)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+	}
+	if count > 0 {
+		return c.JSON(http.StatusOK, false)
+	}
+	return c.JSON(http.StatusOK, true)
+}
+
+func postIsValidNameHandler(c echo.Context) error {
+	var req string
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusBadRequest, fmt.Sprintf("Bad Request: %s", err.Error()))
+	}
+	if len(req) == 0 || len(req) > 30 {
+		return c.JSON(http.StatusOK, false)
+	}
+	return c.JSON(http.StatusOK, true)
+}
+
+func postIsValidPasswordHandler(c echo.Context) error {
+	var req string
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusBadRequest, fmt.Sprintf("Bad Request: %s", err.Error()))
+	}
+	if len(req) == 0 || len(req) > 20 {
+		return c.JSON(http.StatusOK, false)
+	}
+	return c.JSON(http.StatusOK, true)
 }
 
 func postSignUpHandler(c echo.Context) error {
@@ -212,18 +274,85 @@ func postUpdatePostHandler(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-func getPostsHandler(c echo.Context) error {
-	reqID := c.QueryParam("id")
-	if reqID != "" {
-		reqID = " AND id=" + reqID
+func postFavPostHandler(c echo.Context) error {
+	userID := c.Get("userID").(string)
+	var req int
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
 	}
 
-	res := PostsResponseBody{}
-	err := db.Select(&res, "SELECT id, user_id, text, post_time  FROM posts WHERE 1"+reqID)
+	var count int
+	err = db.Get(&count, "SELECT COUNT(*) FROM favolates WHERE post_id=? AND user_id=?", req, userID)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+	}
+	if count > 0 {
+		return c.NoContent(http.StatusOK)
+	}
+
+	_, err = db.Exec("INSERT INTO favolates (post_id, user_id) VALUES (?, ?)", req, userID)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
 
+	return c.NoContent(http.StatusOK)
+}
+func postUnFavPostHandler(c echo.Context) error {
+	userID := c.Get("userID").(string)
+	var req int
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
+	}
+
+	_, err = db.Exec("DELETE favolates WHERE user_id=? AND post_id=?", userID, req)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+	}
+
+	return c.NoContent(http.StatusOK)
+}
+
+func favUsers(postID int) []string {
+	var userIDs []string
+	db.Select(&userIDs, "SELECT user_id FROM favolates WHERE post_id=?", postID)
+
+	if len(userIDs) == 0 {
+		return []string{}
+	}
+
+	return userIDs
+}
+
+func getPostsHandler(c echo.Context) error {
+	reqIDStr := c.QueryParam("id")
+	var posts PostsBody
+	var err error
+
+	if reqIDStr == "" {
+		err = db.Select(&posts, "SELECT id, user_id, text, post_time FROM posts ORDER BY id DESC")
+		if err != nil {
+			return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		}
+	} else {
+		reqID, err := strconv.Atoi(reqIDStr)
+		if err != nil {
+			return c.String(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
+		}
+		err = db.Select(&posts, "SELECT id, user_id, text, post_time FROM posts WHERE id=? ORDER BY id DESC", reqID)
+		if err != nil {
+			return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		}
+	}
+
+	//favしたユーザーを取得、追加
+	var res PostsResponseBody
+	for i := 0; i < len(posts); i++ {
+		println(i)
+		post := posts[i]
+		res = append(res, PostResponseBody{PostData: post, FavUsers: favUsers(post.ID)})
+	}
 	return c.JSON(http.StatusOK, res)
 }
 
