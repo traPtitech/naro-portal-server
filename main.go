@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"database/sql"
+	//"database/sql"
 	"time"
 
 	"github.com/labstack/echo/v4"
@@ -37,7 +37,7 @@ func main() {
 	}
 	db = _db
 
-	store, err := mysqlstore.NewMySQLStoreFromConnection(db.DB, "sessions", "/", 60*60*1, []byte("secret-token"))
+	store, err := mysqlstore.NewMySQLStoreFromConnection(db.DB, "sessions", "/", 60*60*24, []byte("secret-token"))
 	if err != nil {
 		panic(err)
 	}
@@ -54,9 +54,9 @@ func main() {
 
 	withLogin := e.Group("")
 	withLogin.Use(checkLogin)
-	withLogin.GET("/cities/:cityName", getCityInfoHandler)
 	withLogin.GET("/home", getTweetHandler)
 	withLogin.POST("/home", postTweetHandler)
+	withLogin.GET("/:userid", getAccountHome)
 
 	e.Start(":11800")
 }
@@ -191,23 +191,12 @@ func postTweetHandler(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-
-type City struct {
-	ID          int    `json:"id,omitempty"  db:"ID"`
-	Name        sql.NullString `json:"name,omitempty"  db:"Name"`
-	CountryCode sql.NullString `json:"countryCode,omitempty"  db:"CountryCode"`
-	District    sql.NullString `json:"district,omitempty"  db:"District"`
-	Population  sql.NullInt64    `json:"population,omitempty"  db:"Population"`
-}
-
-func getCityInfoHandler(c echo.Context) error {
-	cityName := c.Param("cityName")
-
-	city := City{}
-	db.Get(&city, "SELECT * FROM city WHERE Name=?", cityName)
-	if !city.Name.Valid {
-		return c.NoContent(http.StatusNotFound)
+func getAccountHome(c echo.Context) error {
+	UserID := c.Param("userid")
+	tweets := []Tweet{}
+	err := db.Select(&tweets, "SELECT * FROM tweets WHERE UserID = ? LIMIT 20", UserID)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
-
-	return c.JSON(http.StatusOK, city)
+	return c.JSON(http.StatusOK, tweets)
 }
