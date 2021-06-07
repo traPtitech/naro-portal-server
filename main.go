@@ -61,7 +61,7 @@ type FavPostRequestBody int
 
 //投稿の取得
 type PostResponseBody struct {
-	PostData PostBody `json:post_data`
+	PostData PostBody `json:"post_data"`
 	FavUsers []string `json:"fav_users"`
 }
 type PostsResponseBody []PostResponseBody
@@ -349,7 +349,6 @@ func getPostsHandler(c echo.Context) error {
 	//favしたユーザーを取得、追加
 	var res PostsResponseBody
 	for i := 0; i < len(posts); i++ {
-		println(i)
 		post := posts[i]
 		res = append(res, PostResponseBody{PostData: post, FavUsers: favUsers(post.ID)})
 	}
