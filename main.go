@@ -113,7 +113,7 @@ func postLoginHandler(c echo.Context) error {
 	}
 
 	user := User{}
-	err = db.Get(&user, "SELECT * FROM users WHERE username=?", req.Username)
+	err = db.Get(&user, "SELECT * FROM users WHERE username = ?", req.Username)
 	// users { Username, HashedPass }
 
 	if err != nil {
@@ -171,7 +171,7 @@ type TweetRequestBody struct {
 
 func getTweetHandler(c echo.Context) error {
 	tweets := []Tweet{}
-	err := db.Select(&tweets, "SELECT * FROM tweets LIMIT 20")
+	err := db.Select(&tweets, "SELECT * FROM tweets ORDER BY DateTime DESC LIMIT 20")
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -201,7 +201,7 @@ func postTweetHandler(c echo.Context) error {
 func getAccountHome(c echo.Context) error {
 	UserID := c.Param("userid")
 	tweets := []Tweet{}
-	err := db.Select(&tweets, "SELECT * FROM tweets WHERE UserID = ? LIMIT 20", UserID)
+	err := db.Select(&tweets, "SELECT * FROM tweets WHERE UserID = ? ORDER BY DateTime DESC LIMIT 20", UserID)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
