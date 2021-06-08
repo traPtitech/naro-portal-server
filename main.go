@@ -73,7 +73,10 @@ type User struct {
 
 func postSignUpHandler(c echo.Context) error {
 	req := LoginRequestBody{}
-	c.Bind(&req)
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("binding error: %v", err))
+	}
 
 	if req.Password == "" || req.Username == "" {
 		return c.String(http.StatusBadRequest, "項目が空です")
@@ -104,10 +107,13 @@ func postSignUpHandler(c echo.Context) error {
 
 func postLoginHandler(c echo.Context) error {
 	req := LoginRequestBody{}
-	c.Bind(&req)
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("binding error: %v", err))
+	}
 
 	user := User{}
-	err := db.Get(&user, "SELECT * FROM users WHERE username=?", req.Username)
+	err = db.Get(&user, "SELECT * FROM users WHERE username=?", req.Username)
 	// users { Username, HashedPass }
 
 	if err != nil {
@@ -174,15 +180,16 @@ func getTweetHandler(c echo.Context) error {
 
 func postTweetHandler(c echo.Context) error {
 	req := TweetRequestBody{}
-	c.Bind(&req)
+	err := c.Bind(&req)
+	if err != nil {
+		return c.String(http.StatusInternalServerError, fmt.Sprintf("binding error: %v", err))
+	}
 
 	if req.Text == "" {
 		return c.String(http.StatusBadRequest, "empty tweet");
 	}
 
-	sess, err := session.Get("sessions", c)
-	username := sess.Values["userName"].(string)
-
+	username := c.Get("userName");
 	_, err = db.Exec("INSERT INTO tweets (DateTime, UserID, Tweet) VALUES (?, ?, ?)", time.Now(), username, req.Text)
 	if err != nil {
 		return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
