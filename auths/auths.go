@@ -64,7 +64,7 @@ func isValidPassword(id string) bool {
 }
 
 func GetIsValidIDHandler(c echo.Context) error {
-	req := c.QueryParam("reqID")
+	req := c.Param("reqID")
 
 	isValid, err := isValidId(req)
 	if err != nil {

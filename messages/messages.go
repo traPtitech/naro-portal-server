@@ -16,13 +16,6 @@ type PostMassageRequestBody struct {
 	Text string `json:"text,omitempty" from:"text"`
 }
 
-type UpdatePostRequestBody struct {
-	Text string `json:"text,omitempty" from:"text"`
-}
-
-//ファボ/ファボを外す
-type FavPostRequestBody int
-
 //投稿の取得
 //一つの投稿
 type GetMessageBody struct {
@@ -33,23 +26,6 @@ type GetMessageBody struct {
 	FavUsers []string `json:"fav_users"`
 }
 type GetMessagesBody []GetMessageBody
-
-func PostUpdatePostHandler(c echo.Context) error {
-	userID := c.Get("userID").(string)
-	req := UpdatePostRequestBody{}
-	err := c.Bind(&req)
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
-	}
-
-	time := time.Now()
-	_, err = dbs.Db.Exec("INSERT INTO messages (user_id, text, post_time) VALUES (?, ?, ?)", userID, req.Text, time)
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
-	}
-
-	return c.NoContent(http.StatusOK)
-}
 
 func PostMessageHandler(c echo.Context) error {
 	userID := c.Get("userID").(string)
@@ -72,14 +48,10 @@ func PostMessageHandler(c echo.Context) error {
 
 func PutMessageFavHandler(c echo.Context) error {
 	userID := c.Get("userID").(string)
-	var req int
-	err := c.Bind(&req)
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
-	}
+	messageID := c.Param("id")
 
 	var count int
-	err = dbs.Db.Get(&count, "SELECT COUNT(*) FROM favolates WHERE message_id=? AND user_id=?", req, userID)
+	err := dbs.Db.Get(&count, "SELECT COUNT(*) FROM favolates WHERE message_id=? AND user_id=?", messageID, userID)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -87,7 +59,7 @@ func PutMessageFavHandler(c echo.Context) error {
 		return c.NoContent(http.StatusOK)
 	}
 
-	_, err = dbs.Db.Exec("INSERT INTO favolates (message_id, user_id) VALUES (?, ?)", req, userID)
+	_, err = dbs.Db.Exec("INSERT INTO favolates (message_id, user_id) VALUES (?, ?)", messageID, userID)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -97,13 +69,9 @@ func PutMessageFavHandler(c echo.Context) error {
 
 func DeleteMessageFavHandler(c echo.Context) error {
 	userID := c.Get("userID").(string)
-	var req int
-	err := c.Bind(&req)
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
-	}
+	messageID := c.Param("id")
 
-	_, err = dbs.Db.Exec("DELETE favolates WHERE user_id=? AND message_id=?", userID, req)
+	_, err := dbs.Db.Exec("DELETE FROM favolates WHERE user_id=? AND message_id=?", userID, messageID)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -132,19 +100,18 @@ func GetMassagesHandler(c echo.Context) error {
 
 	//favしたユーザーを取得
 	for i := 0; i < len(messages); i++ {
-		message := messages[i]
-		users, err := favUsers(message.ID)
+		users, err := favUsers(messages[i].ID)
 		if err != nil {
-			return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+			return c.JSON(http.StatusInternalServerError, fmt.Sprintf("Internal Server Error: %v", err))
 		}
-		message.FavUsers = users
+		messages[i].FavUsers = users
 	}
 	return c.JSON(http.StatusOK, messages)
 }
 
 func GetSingleMassageHandler(c echo.Context) error {
 	var message GetMessageBody
-	id := c.QueryParam("id")
+	id := c.Param("id")
 
 	err := dbs.Db.Get(&message, "SELECT id, user_id, text, post_time FROM messages WHERE id=?", id)
 	if err != nil {
@@ -153,7 +120,7 @@ func GetSingleMassageHandler(c echo.Context) error {
 
 	users, err := favUsers(message.ID)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("Internal Server Error: %v", err))
 	}
 	message.FavUsers = users
 
