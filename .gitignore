@@ -18,3 +18,4 @@ env.sh
 go.sum
 go.mod
 kurage-server
+.vscode
