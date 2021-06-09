@@ -87,7 +87,7 @@ func PutMessageFavHandler(c echo.Context) error {
 		return c.NoContent(http.StatusOK)
 	}
 
-	_, err = dbs.Db.Exec("INSERT INTO favolates (post_id, user_id) VALUES (?, ?)", req, userID)
+	_, err = dbs.Db.Exec("INSERT INTO favolates (message_id, user_id) VALUES (?, ?)", req, userID)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -103,7 +103,7 @@ func DeleteMessageFavHandler(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
 	}
 
-	_, err = dbs.Db.Exec("DELETE favolates WHERE user_id=? AND post_id=?", userID, req)
+	_, err = dbs.Db.Exec("DELETE favolates WHERE user_id=? AND message_id=?", userID, req)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 	}
@@ -111,9 +111,9 @@ func DeleteMessageFavHandler(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-func favUsers(postID int) ([]string, error) {
+func favUsers(messageID int) ([]string, error) {
 	var userIDs []string
-	err := dbs.Db.Select(&userIDs, "SELECT user_id FROM favolates WHERE post_id=?", postID)
+	err := dbs.Db.Select(&userIDs, "SELECT user_id FROM favolates WHERE message_id=?", messageID)
 
 	if len(userIDs) == 0 {
 		return []string{}, err
