@@ -13,16 +13,16 @@ import (
 
 //投稿
 type PostMassageRequestBody struct {
-	Text string `json:"text,omitempty" from:"text"`
+	Text string `json:"text" from:"text"`
 }
 
 //投稿の取得
 //一つの投稿
 type GetMessageBody struct {
-	ID       int      `json:"id,omitempty" db:"id"`
-	UserID   string   `json:"user_id,omitempty" db:"user_id"`
-	Text     string   `json:"text,omitempty" db:"text"`
-	PostTime string   `json:"post_time,omitempty" db:"post_time"`
+	ID       int      `json:"id" db:"id"`
+	UserID   string   `json:"user_id" db:"user_id"`
+	Text     string   `json:"text" db:"text"`
+	PostTime string   `json:"post_time" db:"post_time"`
 	FavUsers []string `json:"fav_users"`
 }
 type GetMessagesBody []GetMessageBody
