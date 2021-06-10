@@ -20,8 +20,8 @@ Web エンジニアになろう講習会課題のポータルリポジトリ(Ser
 | /messages/:id/fav       | GET    | Get users who fav a message                        | x           |
 | /profiles/:id           | GET    | Return profile of a user                           | x           |
 | /profiles/:id/messages  | GET    | Return messages posted by a user                   | x           |
-| /profiles/:id/following | GET    | Return users followed by a user                    | x           |
+| /profiles/:id/following | GET    | Return users followed by a user                    | o           |
 | /profiles/:id/followed  | GET    | Return users who are following a user              | o           |
 | /profiles/:id/followed  | PUT    | follow user                                        | o           |
 | /profiles/:id/followed  | DELETE | unfollow user                                      | o           |
-| /timeline/:id           | GET    | Return messages posted by a user's following users | x           |
+| /profiles/:id/timeline  | GET    | Return messages posted by a user's following users | x           |
