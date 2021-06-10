@@ -4,6 +4,7 @@ import (
 	"kuragate-server/auths"
 	"kuragate-server/dbs"
 	"kuragate-server/messages"
+	"kuragate-server/profiles"
 	"net/http"
 
 	"github.com/labstack/echo-contrib/session"
@@ -45,6 +46,11 @@ func main() {
 	withLogin.GET("/messages/:id", messages.GetSingleMassageHandler)
 	withLogin.PUT("/messages/:id/fav", messages.PutMessageFavHandler)
 	withLogin.DELETE("/messages/:id/fav", messages.DeleteMessageFavHandler)
+
+	withLogin.GET("/profiles/:id/followed", profiles.GetFollowdHandler)
+	withLogin.PUT("/profiles/:id/followed", profiles.PutFollowdHandler)
+	withLogin.DELETE("/profiles/:id/followed", profiles.DeleteFollowdHandler)
+	withLogin.GET("/profiles/:id/following", profiles.GetFollowingHandler)
 
 	e.Start(":13300")
 }
