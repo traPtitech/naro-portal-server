@@ -5,6 +5,7 @@ import (
 	"kuragate-server/dbs"
 	"kuragate-server/messages"
 	"kuragate-server/profiles"
+	"log"
 	"net/http"
 
 	"github.com/labstack/echo-contrib/session"
@@ -16,16 +17,26 @@ import (
 )
 
 func main() {
-	dbs.InitDb()
+	db, err := dbs.GetDB()
+	if err != nil {
+		log.Fatalf("Cannot Connect to Database: %s", err)
+	}
 
-	store, err := mysqlstore.NewMySQLStoreFromConnection(dbs.Db.DB, "sessions", "/", 60*60*24*14, []byte("secret-token"))
+	store, err := mysqlstore.NewMySQLStoreFromConnection(db.DB, "sessions", "/", 60*60*24*14, []byte("secret-token"))
 	if err != nil {
 		panic(err)
 	}
 
+	messages.DB = db
+	auths.DB = db
+	profiles.DB = db
+
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Use(session.Middleware(store))
+	e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{
+		StackSize: 1 << 10, // 1 KB
+	}))
 
 	e.GET("/ping", func(c echo.Context) error {
 		return c.String(http.StatusOK, "pong")
@@ -39,7 +50,7 @@ func main() {
 	withLogin.Use(auths.CheckLogin)
 
 	withLogin.GET("/whoami", auths.GetWhoAmIHandler)
-	withLogin.GET("/logout", auths.GetLogoutHandler)
+	withLogin.POST("/logout", auths.PostLogoutHandler)
 
 	withLogin.POST("/messages", messages.PostMessageHandler)
 	withLogin.GET("/messages", messages.GetMassagesHandler)
@@ -47,9 +58,9 @@ func main() {
 	withLogin.PUT("/messages/:id/fav", messages.PutMessageFavHandler)
 	withLogin.DELETE("/messages/:id/fav", messages.DeleteMessageFavHandler)
 
-	withLogin.GET("/profiles/:id/followed", profiles.GetFollowdHandler)
-	withLogin.PUT("/profiles/:id/followed", profiles.PutFollowdHandler)
-	withLogin.DELETE("/profiles/:id/followed", profiles.DeleteFollowdHandler)
+	withLogin.GET("/profiles/:id/followed", profiles.GetFollowedHandler)
+	withLogin.PUT("/profiles/:id/followed", profiles.PutFollowedHandler)
+	withLogin.DELETE("/profiles/:id/followed", profiles.DeleteFollowedHandler)
 	withLogin.GET("/profiles/:id/following", profiles.GetFollowingHandler)
 
 	e.Start(":13300")

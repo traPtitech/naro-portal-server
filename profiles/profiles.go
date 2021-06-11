@@ -1,13 +1,16 @@
 package profiles
 
 import (
-	"fmt"
-	"kuragate-server/dbs"
 	"net/http"
 
+	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo/v4"
 
 	_ "github.com/go-sql-driver/mysql"
+)
+
+var (
+	DB *sqlx.DB
 )
 
 type GetFollowingResponseBody []string
@@ -16,9 +19,9 @@ func GetFollowingHandler(c echo.Context) error {
 	id := c.Param("id")
 	var response GetFollowingResponseBody
 
-	err := dbs.Db.Select(&response, "SELECT followed_user_id FROM follows WHERE following_user_id=?", id)
+	err := DB.Select(&response, "SELECT followed_user_id FROM follows WHERE following_user_id=?", id)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
 	if response == nil {
@@ -27,52 +30,53 @@ func GetFollowingHandler(c echo.Context) error {
 	return c.JSON(http.StatusOK, response)
 }
 
-type GetFollowdResponseBody []string
+type GetFollowedResponseBody []string
 
-func GetFollowdHandler(c echo.Context) error {
+func GetFollowedHandler(c echo.Context) error {
 	id := c.Param("id")
-	var response GetFollowdResponseBody
+	var response GetFollowedResponseBody
 
-	err := dbs.Db.Select(&response, "SELECT following_user_id FROM follows WHERE followed_user_id=?", id)
+	err := DB.Select(&response, "SELECT following_user_id FROM follows WHERE followed_user_id=?", id)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
 	if response == nil {
-		response = GetFollowdResponseBody{}
+		response = GetFollowedResponseBody{}
 	}
 
 	return c.JSON(http.StatusOK, response)
 }
 
-func PutFollowdHandler(c echo.Context) error {
+func PutFollowedHandler(c echo.Context) error {
 	userID := c.Get("userID").(string)
 	id := c.Param("id")
 
 	var count int
-	err := dbs.Db.Get(&count, "SELECT COUNT(*) FROM follows WHERE following_user_id=? AND followed_user_id=?", userID, id)
+	err := DB.Get(&count, "SELECT COUNT(*) FROM follows WHERE following_user_id=? AND followed_user_id=?", userID, id)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 	if count > 0 {
 		return c.NoContent(http.StatusOK)
 	}
 
-	_, err = dbs.Db.Exec("INSERT INTO follows (following_user_id, followed_user_id) VALUES (?, ?)", userID, id)
+	_, err = DB.Exec("INSERT INTO follows (following_user_id, followed_user_id) VALUES (?, ?)", userID, id)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
 	return c.NoContent(http.StatusOK)
 }
 
-func DeleteFollowdHandler(c echo.Context) error {
+func DeleteFollowedHandler(c echo.Context) error {
 	userID := c.Get("userID").(string)
 	id := c.Param("id")
 
-	_, err := dbs.Db.Exec("DELETE FROM follows WHERE following_user_id=? AND followed_user_id=?", userID, id)
+	_, err := DB.Exec("DELETE FROM follows WHERE following_user_id=? AND followed_user_id=?", userID, id)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		println(err)
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
 	return c.NoContent(http.StatusOK)

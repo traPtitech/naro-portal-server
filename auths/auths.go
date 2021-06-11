@@ -3,13 +3,17 @@ package auths
 import (
 	"errors"
 	"fmt"
-	"kuragate-server/dbs"
 	"net/http"
 	"regexp"
 
+	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo-contrib/session"
 	"github.com/labstack/echo/v4"
 	"golang.org/x/crypto/bcrypt"
+)
+
+var (
+	DB *sqlx.DB
 )
 
 type User struct {
@@ -45,7 +49,7 @@ func isValidId(id string) (bool, error) {
 		return false, nil
 	}
 	var count int
-	err := dbs.Db.Get(&count, "SELECT COUNT(*) FROM users WHERE id=?", id)
+	err := DB.Get(&count, "SELECT COUNT(*) FROM users WHERE id=?", id)
 	if err != nil {
 		return false, err
 	}
@@ -68,13 +72,13 @@ func GetIsValidIDHandler(c echo.Context) error {
 
 	isValid, err := isValidId(req)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("Internal Server Error: %s", err.Error()))
+		return c.JSON(http.StatusInternalServerError, "Internal Server Error")
 	}
 	return c.JSON(http.StatusOK, isValid)
 }
 
 func PostSignUpHandler(c echo.Context) error {
-	req := SignUpRequestBody{}
+	var req SignUpRequestBody
 	err := c.Bind(&req)
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Bad Request: %s", err.Error()))
@@ -82,7 +86,7 @@ func PostSignUpHandler(c echo.Context) error {
 
 	validId, err := isValidId(req.ID)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("bcrypt generate error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "bcrypt generate error")
 	}
 
 	if !validId || !isValidName(req.Name) || !isValidPassword(req.Password) {
@@ -91,28 +95,28 @@ func PostSignUpHandler(c echo.Context) error {
 
 	hashedPass, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("bcrypt generate error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "bcrypt generate error")
 	}
 
-	_, err = dbs.Db.Exec("INSERT INTO users (id, name, hashed_pass) VALUES (?, ?, ?)", req.ID, req.Name, hashedPass)
+	_, err = DB.Exec("INSERT INTO users (id, name, hashed_pass) VALUES (?, ?, ?)", req.ID, req.Name, hashedPass)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
 	return c.NoContent(http.StatusCreated)
 }
 
 func PostLoginHandler(c echo.Context) error {
-	req := LoginRequestBody{}
+	var req LoginRequestBody
 	err := c.Bind(&req)
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Bad Request: %v", err))
 	}
 
 	user := User{}
-	err = dbs.Db.Get(&user, "SELECT * FROM users WHERE id=?", req.ID)
+	err = DB.Get(&user, "SELECT * FROM users WHERE id=?", req.ID)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
 	err = bcrypt.CompareHashAndPassword([]byte(user.HashedPass), []byte(req.Password))
@@ -120,14 +124,14 @@ func PostLoginHandler(c echo.Context) error {
 		if errors.Is(err, bcrypt.ErrMismatchedHashAndPassword) {
 			return c.JSON(http.StatusForbidden, "パスワードが違います")
 		} else {
-			return c.JSON(http.StatusInternalServerError, fmt.Sprintf("hash error: %v", err))
+			return c.JSON(http.StatusInternalServerError, "hash error")
 		}
 	}
 
 	sess, err := session.Get("sessions", c)
 	if err != nil {
 		fmt.Println(err)
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("session error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "session error")
 	}
 	sess.Values["userID"] = req.ID
 	sess.Save(c.Request(), c.Response())
@@ -158,16 +162,16 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 
 func GetWhoAmIHandler(c echo.Context) error {
 	userID := c.Get("userID").(string)
-	res := WhoAmIResponseBody{}
+	var res WhoAmIResponseBody
 
-	err := dbs.Db.Get(&res, "SELECT id,name FROM users WHERE id=?", userID)
+	err := DB.Get(&res, "SELECT id,name FROM users WHERE id=?", userID)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 	return c.JSON(http.StatusOK, res)
 }
 
-func GetLogoutHandler(c echo.Context) error {
+func PostLogoutHandler(c echo.Context) error {
 	sess, err := session.Get("sessions", c)
 	if err != nil {
 		return c.JSON(http.StatusForbidden, "please login")

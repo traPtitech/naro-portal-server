@@ -25,3 +25,7 @@ Web エンジニアになろう講習会課題のポータルリポジトリ(Ser
 | /profiles/:id/followed  | PUT    | follow user                                        | o           |
 | /profiles/:id/followed  | DELETE | unfollow user                                      | o           |
 | /profiles/:id/timeline  | GET    | Return messages posted by a user's following users | x           |
+
+# ToDo
+
+In ステートメントを使ったファボしたユーザーの取得
