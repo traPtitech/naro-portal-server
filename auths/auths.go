@@ -3,6 +3,7 @@ package auths
 import (
 	"errors"
 	"fmt"
+	"log"
 	"net/http"
 	"regexp"
 
@@ -100,6 +101,7 @@ func PostSignUpHandler(c echo.Context) error {
 
 	_, err = DB.Exec("INSERT INTO users (id, name, hashed_pass) VALUES (?, ?, ?)", req.ID, req.Name, hashedPass)
 	if err != nil {
+		log.Print(err)
 		return c.JSON(http.StatusInternalServerError, "db error")
 	}
 
