@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/logica0419/Q-n-A/router"
+	"github.com/Q-n-A-dev-team/Q-n-A/router"
 )
 
 func main() {
