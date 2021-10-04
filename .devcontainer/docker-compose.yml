@@ -21,7 +21,6 @@ services:
     build:
       context: ../dev
       dockerfile: Dockerfile
-    restart: always
     ports:
       - "9001:80"
     depends_on:
@@ -30,7 +29,6 @@ services:
   mariadb:
     container_name: Q-n-A_mariadb
     image: mariadb:latest
-    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: Q-n-A
@@ -40,7 +38,6 @@ services:
   phpmyadmin:
     container_name: Q-n-A_phpmyadmin
     image: phpmyadmin/phpmyadmin:latest
-    restart: always
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mariadb

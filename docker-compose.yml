@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     # entrypoint: dockerize -timeout 60s -wait tcp://mysql:3306
     command: ./Q-n-A
+    restart: always
     ports:
       - "9000:9000"
       - "9060:6060"
