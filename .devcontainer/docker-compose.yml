@@ -2,6 +2,7 @@ version: "3"
 
 services:
   dev-env:
+    container_name: Q-n-A_dev-env
     build:
       context: .
       dockerfile: Dockerfile
@@ -16,6 +17,7 @@ services:
       - mariadb
 
   frontend:
+    container_name: Q-n-A_frontend
     build:
       context: ../dev
       dockerfile: Dockerfile
@@ -26,6 +28,7 @@ services:
       - dev-env
 
   mariadb:
+    container_name: Q-n-A_mariadb
     image: mariadb:latest
     restart: always
     environment:
@@ -35,6 +38,7 @@ services:
       - db:/var/lib/mysql
 
   phpmyadmin:
+    container_name: Q-n-A_phpmyadmin
     image: phpmyadmin/phpmyadmin:latest
     restart: always
     environment:
