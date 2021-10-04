@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # entrypoint: dockerize -timeout 60s -wait tcp://mysql:3306
+    command: ./Q-n-A
+    ports:
+      - "9000:9000"
+      - "9060:6060"
+    depends_on:
+      - mariadb
+
+  frontend:
+    build:
+      context: ./dev
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "9001:80"
+    depends_on:
+      - dev-env
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: Q-n-A
+    volumes:
+      - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+      - PMA_USER=root
+      - PMA_PASSWORD=password
+    ports:
+      - "9100:80"
+    depends_on:
+      - mariadb
+
+volumes:
+  db:
