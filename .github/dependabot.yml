@@ -22,7 +22,7 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/dev" # Location of package manifests
+    directory: "/frontend" # Location of package manifests
     schedule:
       interval: "daily"
 

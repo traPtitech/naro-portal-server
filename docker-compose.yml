@@ -21,6 +21,8 @@ services:
       context: ./dev
       dockerfile: Dockerfile
     restart: always
+    volumes:
+      - frontend/debug/Caddyfile:/etc/caddy/Caddyfile:ro
     ports:
       - "9001:80"
     depends_on:

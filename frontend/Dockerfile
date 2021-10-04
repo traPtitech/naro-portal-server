@@ -11,4 +11,3 @@ FROM caddy:2.4.5-alpine AS runner
 EXPOSE 80
 
 COPY --from=builder /build/Q-n-A_UI/dist /usr/share/caddy
-COPY Caddyfile /etc/caddy/Caddyfile
