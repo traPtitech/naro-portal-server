@@ -41,6 +41,10 @@ rm-front:
 delete-front-image:
 	@docker images -a | grep q-n-a | grep frontend | awk '{print $$3}' | xargs docker rmi
 
+.PHONY: prune
+prune: ## Delete redundant images and volumes
+	@docker image prune && docker volume prune
+
 .PHONY: chown
 chown:
 	$(eval name := $(shell whoami))
