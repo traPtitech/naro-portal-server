@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+  dev-env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    volumes:
+      - ..:/Q-n-A:cached
+    command: sleep infinity
+    ports:
+      - "9000:9000"
+      - "9060:6060"
+    depends_on:
+      - mariadb
+
+  frontend:
+    build:
+      context: ../dev
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "9001:80"
+    depends_on:
+      - dev-env
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: Q-n-A
+    volumes:
+      - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+      - PMA_USER=root
+      - PMA_PASSWORD=password
+    ports:
+      - "9100:80"
+    depends_on:
+      - mariadb
+
+volumes:
+  db:
