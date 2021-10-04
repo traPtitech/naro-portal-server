@@ -37,6 +37,11 @@ stop-front:
 rm-front:
 	@docker ps -a | grep Q-n-A_frontend | awk '{print $$1}' | xargs docker rm
 
-.PHONE: delete-front-image
+.PHONY: delete-front-image
 delete-front-image:
 	@docker images -a | grep q-n-a | grep frontend | awk '{print $$3}' | xargs docker rmi
+
+.PHONY: chown
+chown:
+	$(eval name := $(shell whoami))
+	@sudo chown -R $(name):$(name) .
