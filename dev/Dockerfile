@@ -1,9 +1,6 @@
 FROM golang:1.17.1-alpine
 WORKDIR /Q-n-A
 
-RUN apk add --no-cache --update ca-certificates imagemagick \
-  && update-ca-certificates
-
 RUN go install github.com/jwilder/dockerize@latest
 RUN go install github.com/cosmtrek/air@latest
 
