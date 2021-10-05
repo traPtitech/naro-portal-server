@@ -56,27 +56,35 @@ jobs:
   deploy:
     name: Create PR to dev-deploy repo
     runs-on: ubuntu-latest
-    needs: [build, scan]
+    needs: [build]
     steps:
-      - name: Setting up dev-deploy repository
+      - name: Setting up repository
+        uses: actions/checkout@v2
+        with:
+          repository: Q-n-A-dev-team/${{ env.DEPLOY_REPO }}
+          token: ${{ secrets.DEPLOY_PAT }}
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Setting up git
         run: |
-          echo "${{ secrets.DEV_DEPLOY_KEY }}" > ~/deploy_key.pem
-          chmod 600 ~/deploy_key.pem
-          git clone https://github.com/Q-n-A-dev-team/${{ env.DEPLOY_REPO }}
-          cd ${{ env.DEPLOY_REPO }}
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github"
+          git config --local user.name "Q'n'A-backend"
       - name: Make log file
         run: |
-          cd ${{ env.DEPLOY_REPO }}
           mkdir -p deploy-log/backend
           echo "Deployment of backend-${{ github.sha }}" >> deploy-log/backend/${{ github.sha }}.txt
-      - name: Commit & push & Create pull request
-        env:
-          GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
+      - name: Commit
         run: |
-          cd ${{ env.DEPLOY_REPO }}
+          git checkout -b backend-${{ github.sha }}
           git add .
           git commit -m "Requesting deployment of backend-${{ github.sha }}"
-          git push origin backend-${{ github.sha }}
-          gh pr create -R Q-n-A-dev-team/${{ env.DEPLOY_REPO }} -H backend-${{ github.sha }} -t "Requesting deployment of backend-${{ github.sha }}"
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.DEPLOY_PAT }}
+          branch: backend-${{ github.sha }}
+          repository: Q-n-A-dev-team/${{ env.DEPLOY_REPO }}
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ secrets.DEPLOY_PAT }}
+        run: gh pr create -R Q-n-A-dev-team/${{ env.DEPLOY_REPO }} -H backend-${{ github.sha }} -t "Requesting deployment of backend" -b "On ${{ github.sha }}"
