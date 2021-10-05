@@ -9,6 +9,7 @@ env:
   IMAGE_NAME: q-n-a
   IMAGE_TAG: master
   DEPLOY_REPO: dev-deploy
+  SIDE: frontend
 
 jobs:
   build:
@@ -68,23 +69,23 @@ jobs:
       - name: Setting up git
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "Q'n'A-backend"
+          git config --local user.name "Q'n'A-${{ env.SIDE }}"
       - name: Make log file
         run: |
-          mkdir -p deploy-log/backend
-          echo "Deployment of backend-${{ github.sha }}" >> deploy-log/backend/${{ github.sha }}.txt
+          mkdir -p deploy-log/${{ env.SIDE }}
+          echo "Deployment of ${{ env.SIDE }}-${{ github.sha }}" >> deploy-log/${{ env.SIDE }}/${{ github.sha }}.txt
       - name: Commit
         run: |
-          git checkout -b backend-${{ github.sha }}
+          git checkout -b ${{ env.SIDE }}-${{ github.sha }}
           git add .
-          git commit -m "Requesting deployment of backend-${{ github.sha }}"
+          git commit -m "Requesting deployment of ${{ env.SIDE }}-${{ github.sha }}"
       - name: Push
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.DEPLOY_PAT }}
-          branch: backend-${{ github.sha }}
+          branch: ${{ env.SIDE }}-${{ github.sha }}
           repository: Q-n-A-dev-team/${{ env.DEPLOY_REPO }}
       - name: Create PR
         env:
           GH_TOKEN: ${{ secrets.DEPLOY_PAT }}
-        run: gh pr create -R Q-n-A-dev-team/${{ env.DEPLOY_REPO }} -H backend-${{ github.sha }} -t "Requesting deployment of backend" -b "On ${{ github.sha }}"
+        run: gh pr create -R Q-n-A-dev-team/${{ env.DEPLOY_REPO }} -H ${{ env.SIDE }}-${{ github.sha }} -t "Requesting deployment of ${{ env.SIDE }}" -b "On ${{ github.sha }}"
