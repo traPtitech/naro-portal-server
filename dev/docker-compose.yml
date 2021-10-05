@@ -6,8 +6,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # entrypoint: dockerize -timeout 60s -wait tcp://mysql:3306
-    command: ./Q-n-A
+    entrypoint: dockerize -timeout 60s -wait tcp://mariadb:3306
+    command: air
+    volumes:
+      - ..:/Q-n-A
     restart: always
     ports:
       - "9000:9000"
@@ -18,15 +20,15 @@ services:
   frontend:
     container_name: Q-n-A_frontend
     build:
-      context: ./dev
+      context: ./frontend
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - frontend/debug/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./frontend/hotreload/Caddyfile:/etc/caddy/Caddyfile:ro
     ports:
       - "9001:80"
     depends_on:
-      - dev-env
+      - backend
 
   mariadb:
     container_name: Q-n-A_mariadb

@@ -19,12 +19,12 @@ run: ## Run Q'n'A directly
 	@go run ./*.go
 
 .PHONY: up
-up: ## Build and start Q'n'A debug containers (Not recommended)
-	@docker-compose up -d --force-recreate
+up: ## Build and start Q'n'A hot reload environment
+	@cd dev && COMPOSE_PROJECT_NAME=q-n-a_hot_reload docker-compose up -d --build
 
 .PHONY: down
-down: ## Stop and remove app containers (Not recommended as `up`)
-	@docker-compose down
+down: ## Stop and remove hot reload environment
+	@cd dev && docker-compose down
 
 .PHONY: reset-frontend
 reset-frontend: stop-front rm-front delete-front-image ## Delete frontend container and image completely
@@ -43,7 +43,7 @@ delete-front-image:
 
 .PHONY: prune
 prune: ## Delete redundant images and volumes
-	@docker image prune && docker volume prune
+	@docker image prune -a && docker volume prune
 
 .PHONY: chown
 chown:

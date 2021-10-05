@@ -19,10 +19,10 @@ services:
   frontend:
     container_name: Q-n-A_frontend
     build:
-      context: ../dev
+      context: ../dev/frontend
       dockerfile: Dockerfile
     volumes:
-      - ../frontend/devcontainer/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ../dev/frontend/devcontainer/Caddyfile:/etc/caddy/Caddyfile:ro
     ports:
       - "9001:80"
     depends_on:

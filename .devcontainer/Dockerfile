@@ -8,3 +8,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
   && apt-get install curl sudo git vim mariadb-client -y --no-install-recommends
+
+RUN go install github.com/cosmtrek/air@latest
