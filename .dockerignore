@@ -1,0 +1,11 @@
+.github
+.git
+
+.vscode
+dav
+docs
+tmp
+
+LICENSE
+README.md
+Makefile
