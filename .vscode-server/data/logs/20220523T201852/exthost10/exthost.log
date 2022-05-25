@@ -79,3 +79,9 @@
 	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
 	at processImmediate (node:internal/timers:464:21)
 [2022-05-25 20:39:07.625] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+[2022-05-25 20:45:26.194] [exthost] [error] [golang.go] provider FAILED
+[2022-05-25 20:45:26.194] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)

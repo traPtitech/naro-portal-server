@@ -1560,3 +1560,6 @@ For other options, see:
 
 [Info  - 8:28:01 PM] 2022/05/25 20:28:01 background refresh finished after 78.299068ms
 
+[Error - 8:45:26 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
