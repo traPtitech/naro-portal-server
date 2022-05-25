@@ -1,0 +1,24 @@
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+

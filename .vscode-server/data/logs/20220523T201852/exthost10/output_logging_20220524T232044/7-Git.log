@@ -1,0 +1,84 @@
+[2022-05-24T14:20:45.055Z] Validating found git in: git
+[2022-05-24T14:20:45.100Z] Using git 2.34.1 from git
+[2022-05-24T14:20:45.134Z] > git rev-parse --show-toplevel [13ms]
+[2022-05-24T14:20:45.134Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.160Z] > git rev-parse --show-toplevel [15ms]
+[2022-05-24T14:20:45.160Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.175Z] > git rev-parse --show-toplevel [2ms]
+[2022-05-24T14:20:45.175Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.231Z] > git rev-parse --show-toplevel [47ms]
+[2022-05-24T14:20:45.231Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.254Z] > git rev-parse --show-toplevel [2ms]
+[2022-05-24T14:20:45.254Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.282Z] > git rev-parse --show-toplevel [12ms]
+[2022-05-24T14:20:45.282Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.302Z] > git rev-parse --show-toplevel [8ms]
+[2022-05-24T14:20:45.302Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.314Z] > git rev-parse --show-toplevel [3ms]
+[2022-05-24T14:20:45.314Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.342Z] > git rev-parse --show-toplevel [16ms]
+[2022-05-24T14:20:45.342Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:45.762Z] > git rev-parse --show-toplevel [2ms]
+[2022-05-24T14:20:45.762Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:20:46.422Z] > git rev-parse --show-toplevel [7ms]
+[2022-05-24T14:20:46.422Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:36:29.333Z] > git rev-parse --show-toplevel [3ms]
+[2022-05-24T14:36:29.333Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:36:29.822Z] > git rev-parse --show-toplevel [12ms]
+[2022-05-24T14:36:29.822Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:42:05.595Z] > git rev-parse --show-toplevel [1ms]
+[2022-05-24T14:42:05.596Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:51:58.234Z] > git rev-parse --show-toplevel [1ms]
+[2022-05-24T14:51:58.234Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:51:58.673Z] > git rev-parse --show-toplevel [2ms]
+[2022-05-24T14:51:58.673Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T14:51:59.079Z] > git rev-parse --show-toplevel [10ms]
+[2022-05-24T14:51:59.079Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T15:32:37.543Z] > git rev-parse --show-toplevel [4ms]
+[2022-05-24T15:32:37.543Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T15:32:37.958Z] > git rev-parse --show-toplevel [1ms]
+[2022-05-24T15:32:37.958Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T15:32:38.649Z] > git rev-parse --show-toplevel [8ms]
+[2022-05-24T15:32:38.649Z] fatal: not a git repository (or any of the parent directories): .git
+[2022-05-24T15:50:19.152Z] > git rev-parse --show-toplevel [1ms]
+[2022-05-24T15:50:19.161Z] > git rev-parse --git-dir --git-common-dir [1ms]
+[2022-05-24T15:50:19.173Z] Open repository: /home/user11/naro-portal-server
+[2022-05-24T15:50:19.187Z] > git status -z -uall [2ms]
+[2022-05-24T15:50:19.196Z] > git symbolic-ref --short HEAD [1ms]
+[2022-05-24T15:50:19.206Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+[2022-05-24T15:50:19.225Z] > git remote --verbose [5ms]
+[2022-05-24T15:50:19.226Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [13ms]
+[2022-05-24T15:50:19.238Z] > git config --get commit.template [1ms]
+[2022-05-24T15:50:19.762Z] > git check-ignore -v -z --stdin [3ms]
+[2022-05-25T11:38:57.574Z] > git rev-parse --show-toplevel [4ms]
+[2022-05-25T11:38:57.585Z] > git rev-parse --git-dir --git-common-dir [2ms]
+[2022-05-25T11:38:57.592Z] Open repository: /home/user11
+[2022-05-25T11:38:57.946Z] > git show --textconv :go/src/account/main.go [9ms]
+[2022-05-25T11:38:57.946Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [3ms]
+[2022-05-25T11:38:58.128Z] > git check-ignore -v -z --stdin [1ms]
+[2022-05-25T11:38:58.749Z] > git status -z -uall [1147ms]
+[2022-05-25T11:39:07.343Z] > git symbolic-ref --short HEAD [3ms]
+[2022-05-25T11:39:07.353Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+[2022-05-25T11:39:07.369Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [8ms]
+[2022-05-25T11:39:07.369Z] > git remote --verbose [2ms]
+[2022-05-25T11:39:10.584Z] > git config --get commit.template [8ms]
+[2022-05-25T11:39:50.070Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [12ms]
+[2022-05-25T11:39:50.084Z] > git cat-file -s 94f8df51a24f1f4de5ce6f47971c20644bc45693 [2ms]
+[2022-05-25T11:39:50.114Z] > git show --textconv :go/src/account/main.go [10ms]
+[2022-05-25T11:40:58.724Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [7ms]
+[2022-05-25T11:40:58.735Z] > git cat-file -s 94f8df51a24f1f4de5ce6f47971c20644bc45693 [2ms]
+[2022-05-25T11:40:58.764Z] > git show --textconv :go/src/account/main.go [10ms]
+[2022-05-25T11:41:52.218Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [11ms]
+[2022-05-25T11:41:52.230Z] > git cat-file -s 94f8df51a24f1f4de5ce6f47971c20644bc45693 [2ms]
+[2022-05-25T11:41:52.256Z] > git show --textconv :go/src/account/main.go [10ms]
+[2022-05-25T11:42:41.739Z] > git check-ignore -v -z --stdin [13ms]
+[2022-05-25T11:43:04.140Z] > git check-ignore -v -z --stdin [12ms]
+[2022-05-25T11:43:19.651Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [9ms]
+[2022-05-25T11:43:19.661Z] > git cat-file -s 94f8df51a24f1f4de5ce6f47971c20644bc45693 [1ms]
+[2022-05-25T11:43:19.694Z] > git show --textconv :go/src/account/main.go [9ms]
+[2022-05-25T11:43:22.988Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [6ms]
+[2022-05-25T11:43:22.997Z] > git cat-file -s 94f8df51a24f1f4de5ce6f47971c20644bc45693 [2ms]
+[2022-05-25T11:43:23.019Z] > git show --textconv :go/src/account/main.go [6ms]
+[2022-05-25T11:43:40.897Z] > git ls-files --stage -- /home/user11/go/src/account/main.go [10ms]
+[2022-05-25T11:43:40.908Z] > git cat-file -s 94f8df51a24f1f4de5ce6f47971c20644bc45693 [2ms]
+[2022-05-25T11:43:40.935Z] > git show --textconv :go/src/account/main.go [10ms]

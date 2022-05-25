@@ -1,0 +1,6 @@
+./common.go
+./enabled_go117.go
+./normalize.go
+./termlist.go
+./typeparams_go117.go
+./typeterm.go

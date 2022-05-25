@@ -1,0 +1,904 @@
+Starting linting the current package at /home/user11/hello-go
+Starting "go vet" under the folder /home/user11/hello-go
+Starting building the current package at /home/user11/hello-go
+Not able to determine import path of current package by using cwd: /home/user11/hello-go and Go workspace: 
+/home/user11/hello-go>Finished running tool: /usr/local/go/bin/go vet .
+
+/home/user11/hello-go>Finished running tool: /usr/local/go/bin/go build -o /tmp/vscode-gobYKwNV/go-code-check .
+
+Tools environment: GOPATH=/home/user11/go
+Installing 7 tools at /home/user11/go/bin in module mode.
+  gotests
+  gomodifytags
+  impl
+  goplay
+  dlv
+  staticcheck
+  gopls
+
+Tools environment: GOPATH=/home/user11/go
+Installing 8 tools at /home/user11/go/bin in module mode.
+  gotests
+  gomodifytags
+  impl
+  goplay
+  dlv
+  staticcheck
+  gopls
+  go-outline
+
+Installing github.com/cweill/gotests/gotests@latest (/home/user11/go/bin/gotests) SUCCEEDED
+Installing github.com/cweill/gotests/gotests@latest (/home/user11/go/bin/gotests) SUCCEEDED
+Installing github.com/fatih/gomodifytags@latest (/home/user11/go/bin/gomodifytags) SUCCEEDED
+Installing github.com/fatih/gomodifytags@latest (/home/user11/go/bin/gomodifytags) SUCCEEDED
+Installing github.com/josharian/impl@latest (/home/user11/go/bin/impl) SUCCEEDED
+Installing github.com/josharian/impl@latest (/home/user11/go/bin/impl) SUCCEEDED
+Installing github.com/haya14busa/goplay/cmd/goplay@latest (/home/user11/go/bin/goplay) SUCCEEDED
+Installing github.com/haya14busa/goplay/cmd/goplay@latest (/home/user11/go/bin/goplay) SUCCEEDED
+Installing github.com/go-delve/delve/cmd/dlv@latest FAILED
+{
+ "killed": false,
+ "code": 2,
+ "signal": null,
+ "cmd": "/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest",
+ "stdout": "",
+ "stderr": "go: downloading github.com/go-delve/delve v1.8.3\ngo: downloading github.com/sirupsen/logrus v1.6.0\ngo: downloading github.com/spf13/cobra v1.1.3\ngo: downloading github.com/mattn/go-isatty v0.0.3\ngo: downloading gopkg.in/yaml.v2 v2.4.0\ngo: downloading golang.org/x/sys v0.0.0-20211117180635-dee7805ff2e1\ngo: downloading github.com/google/go-dap v0.6.0\ngo: downloading github.com/derekparker/trie v0.0.0-20200317170641-1fdf38b7b0e9\ngo: downloading github.com/go-delve/liner v1.2.2-1\ngo: downloading github.com/hashicorp/golang-lru v0.5.4\ngo: downloading golang.org/x/arch v0.0.0-20190927153633-4e8777c89be4\ngo: downloading go.starlark.net v0.0.0-20200821142938-949cc6f4b097\ngo: downloading github.com/cilium/ebpf v0.7.0\ngo: downloading github.com/russross/blackfriday/v2 v2.0.1\ngolang.org/x/sys/internal/unsafeheader\ngithub.com/go-delve/delve/pkg/proc/macutil\ngithub.com/shurcooL/sanitized_anchor_name\ngithub.com/rivo/uniseg\ngithub.com/derekparker/trie\ngopkg.in/yaml.v2\ngolang.org/x/sys/unix\ngithub.com/cosiner/argv\ngithub.com/go-delve/delve/pkg/astutil\ngithub.com/go-delve/delve/pkg/dwarf/util\ngithub.com/go-delve/delve/pkg/dwarf/regnum\ngithub.com/go-delve/delve/pkg/elfwriter\ngithub.com/go-delve/delve/pkg/proc/debuginfod\ngithub.com/go-delve/delve/pkg/dwarf/frame\ngithub.com/go-delve/delve/pkg/dwarf/op\ngithub.com/go-delve/delve/pkg/dwarf/line\ngithub.com/go-delve/delve/pkg/version\ngolang.org/x/arch/arm64/arm64asm\ngolang.org/x/arch/x86/x86asm\ngithub.com/go-delve/delve/pkg/dwarf/godwarf\ngithub.com/go-delve/delve/pkg/terminal/colorize\ngithub.com/mattn/go-runewidth\ngithub.com/go-delve/liner\ngithub.com/go-delve/delve/pkg/dwarf/loclist\ngithub.com/go-delve/delve/pkg/dwarf/reader\ngo.starlark.net/syntax\ngithub.com/google/go-dap\ngithub.com/go-delve/delve/pkg/config\ngithub.com/spf13/pflag\ngithub.com/russross/blackfriday/v2\ngithub.com/sirupsen/logrus\ngithub.com/go-delve/delve/pkg/gobuild\ngithub.com/cilium/ebpf/internal/unix\ngo.starlark.net/resolve\ngithub.com/cilium/ebpf/asm\ngithub.com/cilium/ebpf/internal\ngo.starlark.net/internal/compile\ngithub.com/go-delve/delve/pkg/logflags\ngithub.com/go-delve/delve/pkg/goversion\ngithub.com/go-delve/delve/service/internal/sameuser\ngithub.com/cilium/ebpf/internal/btf\ngithub.com/cpuguy83/go-md2man/v2/md2man\ngo.starlark.net/starlark\ngithub.com/spf13/cobra\ngithub.com/cilium/ebpf\ngithub.com/spf13/cobra/doc\ngithub.com/cilium/ebpf/ringbuf\ngithub.com/cilium/ebpf/link\ngithub.com/go-delve/delve/pkg/proc/internal/ebpf\n# github.com/go-delve/delve/pkg/proc/internal/ebpf\ncgo: C compiler \"gcc\" not found: exec: \"gcc\": executable file not found in $PATH\n"
+}
+Installing github.com/go-delve/delve/cmd/dlv@latest FAILED
+{
+ "killed": false,
+ "code": 2,
+ "signal": null,
+ "cmd": "/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest",
+ "stdout": "",
+ "stderr": "go: downloading github.com/go-delve/delve v1.8.3\ngo: downloading github.com/sirupsen/logrus v1.6.0\ngo: downloading github.com/mattn/go-isatty v0.0.3\ngo: downloading github.com/spf13/cobra v1.1.3\ngo: downloading gopkg.in/yaml.v2 v2.4.0\ngo: downloading github.com/cosiner/argv v0.1.0\ngo: downloading github.com/derekparker/trie v0.0.0-20200317170641-1fdf38b7b0e9\ngo: downloading github.com/go-delve/liner v1.2.2-1\ngo: downloading golang.org/x/sys v0.0.0-20211117180635-dee7805ff2e1\ngo: downloading go.starlark.net v0.0.0-20200821142938-949cc6f4b097\ngo: downloading golang.org/x/arch v0.0.0-20190927153633-4e8777c89be4\ngo: downloading github.com/cpuguy83/go-md2man/v2 v2.0.0\ngo: downloading github.com/spf13/pflag v1.0.5\ngo: downloading github.com/mattn/go-runewidth v0.0.13\ngo: downloading github.com/cilium/ebpf v0.7.0\ngo: downloading github.com/russross/blackfriday/v2 v2.0.1\ngo: downloading github.com/rivo/uniseg v0.2.0\ngo: downloading github.com/shurcooL/sanitized_anchor_name v1.0.0\ngithub.com/rivo/uniseg\ngithub.com/hashicorp/golang-lru/simplelru\ngithub.com/mattn/go-isatty\ngolang.org/x/sys/unix\ngopkg.in/yaml.v2\ngithub.com/cosiner/argv\ngithub.com/go-delve/delve/pkg/dwarf/frame\ngithub.com/go-delve/delve/pkg/dwarf/op\ngithub.com/go-delve/delve/pkg/dwarf/line\ngithub.com/go-delve/delve/pkg/version\ngolang.org/x/arch/arm64/arm64asm\ngolang.org/x/arch/x86/x86asm\ngithub.com/go-delve/delve/pkg/terminal/colorize\ngithub.com/go-delve/delve/pkg/dwarf/godwarf\ngithub.com/mattn/go-runewidth\ngithub.com/go-delve/liner\ngithub.com/go-delve/delve/pkg/dwarf/loclist\ngithub.com/go-delve/delve/pkg/dwarf/reader\ngo.starlark.net/internal/spell\ngo.starlark.net/syntax\ngithub.com/google/go-dap\ngithub.com/go-delve/delve/pkg/config\ngithub.com/spf13/pflag\ngithub.com/go-delve/delve/pkg/gobuild\ngithub.com/sirupsen/logrus\ngithub.com/cilium/ebpf/internal/unix\ngithub.com/russross/blackfriday/v2\ngithub.com/cilium/ebpf/asm\ngithub.com/cilium/ebpf/internal\ngo.starlark.net/resolve\ngo.starlark.net/internal/compile\ngithub.com/go-delve/delve/pkg/logflags\ngithub.com/cilium/ebpf/internal/btf\ngo.starlark.net/starlark\ngithub.com/spf13/cobra\ngithub.com/cilium/ebpf\ngithub.com/spf13/cobra/doc\ngithub.com/cilium/ebpf/link\ngithub.com/go-delve/delve/pkg/proc/internal/ebpf\n# github.com/go-delve/delve/pkg/proc/internal/ebpf\ncgo: C compiler \"gcc\" not found: exec: \"gcc\": executable file not found in $PATH\n"
+}
+Starting linting the current package at /home/user11/hello-go
+Starting "go vet" under the folder /home/user11/hello-go
+Tools environment: GOPATH=/home/user11/go
+Installing 4 tools at /home/user11/go/bin in module mode.
+  dlv
+  staticcheck
+  gopls
+  go-outline
+
+/home/user11/hello-go>Finished running tool: /usr/local/go/bin/go vet .
+
+Starting building the current package at /home/user11/hello-go
+Not able to determine import path of current package by using cwd: /home/user11/hello-go and Go workspace: 
+/home/user11/hello-go>Finished running tool: /usr/local/go/bin/go build -o /tmp/vscode-gobYKwNV/go-code-check .
+go: go.mod file not found in current directory or any parent directory; see 'go help modules'
+
+
+Installing github.com/go-delve/delve/cmd/dlv@latest FAILED
+{
+ "killed": false,
+ "code": 2,
+ "signal": null,
+ "cmd": "/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest",
+ "stdout": "",
+ "stderr": "github.com/go-delve/delve/pkg/proc/internal/ebpf\n# github.com/go-delve/delve/pkg/proc/internal/ebpf\ncgo: C compiler \"gcc\" not found: exec: \"gcc\": executable file not found in $PATH\n"
+}
+Installing honnef.co/go/tools/cmd/staticcheck@latest (/home/user11/go/bin/staticcheck) SUCCEEDED
+Installing honnef.co/go/tools/cmd/staticcheck@latest (/home/user11/go/bin/staticcheck) SUCCEEDED
+Installing honnef.co/go/tools/cmd/staticcheck@latest (/home/user11/go/bin/staticcheck) SUCCEEDED
+Tools environment: GOPATH=/home/user11/go
+Installing 4 tools at /home/user11/go/bin in module mode.
+  dlv
+  staticcheck
+  gopls
+  goimports
+
+Installing github.com/go-delve/delve/cmd/dlv@latest FAILED
+{
+ "killed": false,
+ "code": 2,
+ "signal": null,
+ "cmd": "/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest",
+ "stdout": "",
+ "stderr": "github.com/go-delve/delve/pkg/proc/internal/ebpf\n# github.com/go-delve/delve/pkg/proc/internal/ebpf\ncgo: C compiler \"gcc\" not found: exec: \"gcc\": executable file not found in $PATH\n"
+}
+Installing honnef.co/go/tools/cmd/staticcheck@latest (/home/user11/go/bin/staticcheck) SUCCEEDED
+Tools environment: GOPATH=/home/user11/go
+Installing 3 tools at /home/user11/go/bin in module mode.
+  dlv
+  gopls
+  go-outline
+
+Starting linting the current package at /home/user11/hello-go
+Starting "go vet" under the folder /home/user11/hello-go
+Starting building the current package at /home/user11/hello-go
+Not able to determine import path of current package by using cwd: /home/user11/hello-go and Go workspace: 
+/home/user11/hello-go>Finished running tool: /usr/local/go/bin/go vet .
+
+/home/user11/hello-go>Finished running tool: /usr/local/go/bin/go build -o /tmp/vscode-gobYKwNV/go-code-check .
+go: go.mod file not found in current directory or any parent directory; see 'go help modules'
+
+
+/home/user11/hello-go>Finished running tool: /home/user11/go/bin/staticcheck
+
+Installing github.com/go-delve/delve/cmd/dlv@latest FAILED
+{
+ "killed": false,
+ "code": 2,
+ "signal": null,
+ "cmd": "/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest",
+ "stdout": "",
+ "stderr": "github.com/go-delve/delve/pkg/proc/internal/ebpf\n# github.com/go-delve/delve/pkg/proc/internal/ebpf\ncgo: C compiler \"gcc\" not found: exec: \"gcc\": executable file not found in $PATH\n"
+}
+Installing golang.org/x/tools/gopls@latest (/home/user11/go/bin/gopls) SUCCEEDED
+Installing golang.org/x/tools/gopls@latest (/home/user11/go/bin/gopls) SUCCEEDED
+Installing golang.org/x/tools/gopls@latest (/home/user11/go/bin/gopls) SUCCEEDED
+Installing golang.org/x/tools/gopls@latest (/home/user11/go/bin/gopls) SUCCEEDED
+
+1 tools failed to install.
+
+dlv: failed to install dlv(github.com/go-delve/delve/cmd/dlv@latest): Error: Command failed: /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+go: downloading github.com/go-delve/delve v1.8.3
+go: downloading github.com/sirupsen/logrus v1.6.0
+go: downloading github.com/mattn/go-isatty v0.0.3
+go: downloading github.com/spf13/cobra v1.1.3
+go: downloading gopkg.in/yaml.v2 v2.4.0
+go: downloading github.com/cosiner/argv v0.1.0
+go: downloading github.com/derekparker/trie v0.0.0-20200317170641-1fdf38b7b0e9
+go: downloading github.com/go-delve/liner v1.2.2-1
+go: downloading golang.org/x/sys v0.0.0-20211117180635-dee7805ff2e1
+go: downloading go.starlark.net v0.0.0-20200821142938-949cc6f4b097
+go: downloading golang.org/x/arch v0.0.0-20190927153633-4e8777c89be4
+go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.0
+go: downloading github.com/spf13/pflag v1.0.5
+go: downloading github.com/mattn/go-runewidth v0.0.13
+go: downloading github.com/cilium/ebpf v0.7.0
+go: downloading github.com/russross/blackfriday/v2 v2.0.1
+go: downloading github.com/rivo/uniseg v0.2.0
+go: downloading github.com/shurcooL/sanitized_anchor_name v1.0.0
+github.com/rivo/uniseg
+github.com/hashicorp/golang-lru/simplelru
+github.com/mattn/go-isatty
+golang.org/x/sys/unix
+gopkg.in/yaml.v2
+github.com/cosiner/argv
+github.com/go-delve/delve/pkg/dwarf/frame
+github.com/go-delve/delve/pkg/dwarf/op
+github.com/go-delve/delve/pkg/dwarf/line
+github.com/go-delve/delve/pkg/version
+golang.org/x/arch/arm64/arm64asm
+golang.org/x/arch/x86/x86asm
+github.com/go-delve/delve/pkg/terminal/colorize
+github.com/go-delve/delve/pkg/dwarf/godwarf
+github.com/mattn/go-runewidth
+github.com/go-delve/liner
+github.com/go-delve/delve/pkg/dwarf/loclist
+github.com/go-delve/delve/pkg/dwarf/reader
+go.starlark.net/internal/spell
+go.starlark.net/syntax
+github.com/google/go-dap
+github.com/go-delve/delve/pkg/config
+github.com/spf13/pflag
+github.com/go-delve/delve/pkg/gobuild
+github.com/sirupsen/logrus
+github.com/cilium/ebpf/internal/unix
+github.com/russross/blackfriday/v2
+github.com/cilium/ebpf/asm
+github.com/cilium/ebpf/internal
+go.starlark.net/resolve
+go.starlark.net/internal/compile
+github.com/go-delve/delve/pkg/logflags
+github.com/cilium/ebpf/internal/btf
+go.starlark.net/starlark
+github.com/spf13/cobra
+github.com/cilium/ebpf
+github.com/spf13/cobra/doc
+github.com/cilium/ebpf/link
+github.com/go-delve/delve/pkg/proc/internal/ebpf
+# github.com/go-delve/delve/pkg/proc/internal/ebpf
+cgo: C compiler "gcc" not found: exec: "gcc": executable file not found in $PATH
+ 
+Installing golang.org/x/tools/gopls@latest (/home/user11/go/bin/gopls) SUCCEEDED
+Installing github.com/ramya-rao-a/go-outline@latest (/home/user11/go/bin/go-outline) SUCCEEDED
+
+1 tools failed to install.
+
+dlv: failed to install dlv(github.com/go-delve/delve/cmd/dlv@latest): Error: Command failed: /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+go: downloading github.com/go-delve/delve v1.8.3
+go: downloading github.com/sirupsen/logrus v1.6.0
+go: downloading github.com/spf13/cobra v1.1.3
+go: downloading github.com/mattn/go-isatty v0.0.3
+go: downloading gopkg.in/yaml.v2 v2.4.0
+go: downloading golang.org/x/sys v0.0.0-20211117180635-dee7805ff2e1
+go: downloading github.com/google/go-dap v0.6.0
+go: downloading github.com/derekparker/trie v0.0.0-20200317170641-1fdf38b7b0e9
+go: downloading github.com/go-delve/liner v1.2.2-1
+go: downloading github.com/hashicorp/golang-lru v0.5.4
+go: downloading golang.org/x/arch v0.0.0-20190927153633-4e8777c89be4
+go: downloading go.starlark.net v0.0.0-20200821142938-949cc6f4b097
+go: downloading github.com/cilium/ebpf v0.7.0
+go: downloading github.com/russross/blackfriday/v2 v2.0.1
+golang.org/x/sys/internal/unsafeheader
+github.com/go-delve/delve/pkg/proc/macutil
+github.com/shurcooL/sanitized_anchor_name
+github.com/rivo/uniseg
+github.com/derekparker/trie
+gopkg.in/yaml.v2
+golang.org/x/sys/unix
+github.com/cosiner/argv
+github.com/go-delve/delve/pkg/astutil
+github.com/go-delve/delve/pkg/dwarf/util
+github.com/go-delve/delve/pkg/dwarf/regnum
+github.com/go-delve/delve/pkg/elfwriter
+github.com/go-delve/delve/pkg/proc/debuginfod
+github.com/go-delve/delve/pkg/dwarf/frame
+github.com/go-delve/delve/pkg/dwarf/op
+github.com/go-delve/delve/pkg/dwarf/line
+github.com/go-delve/delve/pkg/version
+golang.org/x/arch/arm64/arm64asm
+golang.org/x/arch/x86/x86asm
+github.com/go-delve/delve/pkg/dwarf/godwarf
+github.com/go-delve/delve/pkg/terminal/colorize
+github.com/mattn/go-runewidth
+github.com/go-delve/liner
+github.com/go-delve/delve/pkg/dwarf/loclist
+github.com/go-delve/delve/pkg/dwarf/reader
+go.starlark.net/syntax
+github.com/google/go-dap
+github.com/go-delve/delve/pkg/config
+github.com/spf13/pflag
+github.com/russross/blackfriday/v2
+github.com/sirupsen/logrus
+github.com/go-delve/delve/pkg/gobuild
+github.com/cilium/ebpf/internal/unix
+go.starlark.net/resolve
+github.com/cilium/ebpf/asm
+github.com/cilium/ebpf/internal
+go.starlark.net/internal/compile
+github.com/go-delve/delve/pkg/logflags
+github.com/go-delve/delve/pkg/goversion
+github.com/go-delve/delve/service/internal/sameuser
+github.com/cilium/ebpf/internal/btf
+github.com/cpuguy83/go-md2man/v2/md2man
+go.starlark.net/starlark
+github.com/spf13/cobra
+github.com/cilium/ebpf
+github.com/spf13/cobra/doc
+github.com/cilium/ebpf/ringbuf
+github.com/cilium/ebpf/link
+github.com/go-delve/delve/pkg/proc/internal/ebpf
+# github.com/go-delve/delve/pkg/proc/internal/ebpf
+cgo: C compiler "gcc" not found: exec: "gcc": executable file not found in $PATH
+ 
+Installing github.com/ramya-rao-a/go-outline@latest (/home/user11/go/bin/go-outline) SUCCEEDED
+
+1 tools failed to install.
+
+dlv: failed to install dlv(github.com/go-delve/delve/cmd/dlv@latest): Error: Command failed: /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+github.com/go-delve/delve/pkg/proc/internal/ebpf
+# github.com/go-delve/delve/pkg/proc/internal/ebpf
+cgo: C compiler "gcc" not found: exec: "gcc": executable file not found in $PATH
+ 
+Installing github.com/ramya-rao-a/go-outline@latest (/home/user11/go/bin/go-outline) SUCCEEDED
+
+1 tools failed to install.
+
+dlv: failed to install dlv(github.com/go-delve/delve/cmd/dlv@latest): Error: Command failed: /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+github.com/go-delve/delve/pkg/proc/internal/ebpf
+# github.com/go-delve/delve/pkg/proc/internal/ebpf
+cgo: C compiler "gcc" not found: exec: "gcc": executable file not found in $PATH
+ 
+Installing golang.org/x/tools/cmd/goimports@latest (/home/user11/go/bin/goimports) SUCCEEDED
+
+1 tools failed to install.
+
+dlv: failed to install dlv(github.com/go-delve/delve/cmd/dlv@latest): Error: Command failed: /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+github.com/go-delve/delve/pkg/proc/internal/ebpf
+# github.com/go-delve/delve/pkg/proc/internal/ebpf
+cgo: C compiler "gcc" not found: exec: "gcc": executable file not found in $PATH
+ 
+Starting linting the current package at /home/user11/hello-go
+/home/user11/hello-go>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/hello-go
+/home/user11/hello-go>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/hello-go
+/home/user11/hello-go>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/hello-go
+/home/user11/hello-go>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/hello-server
+/home/user11/go/src/hello-server>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:14:2 db declared but not used (compile)
+/home/user11/go/src/go-server-db/main.go:14:6 err declared but not used (compile)
+/home/user11/go/src/go-server-db/main.go:14:13 undeclared name: sqlx (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:18:2 db declared but not used (compile)
+/home/user11/go/src/go-server-db/main.go:18:13 undeclared name: sqlx (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:20:13 undeclared name: sqlx (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:10:2 no required module provides package github.com/go-sql-driver/mysql; to add it:
+/home/user11/go/src/go-server-db/main.go:11:2 no required module provides package github.com/jmoiron/sqlx; to add it:
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:10:2 no required module provides package github.com/go-sql-driver/mysql; to add it:
+/home/user11/go/src/go-server-db/main.go:11:2 no required module provides package github.com/jmoiron/sqlx; to add it:
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:10:2 no required module provides package github.com/go-sql-driver/mysql; to add it:
+/home/user11/go/src/go-server-db/main.go:11:2 no required module provides package github.com/jmoiron/sqlx; to add it:
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main1.go:3:1 expected 'package', found 'type' (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:2:1 expected 'package', found 'type' (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/go-server-db/main.go:2:1 expected 'package', found 'type' (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/go-server-db
+/home/user11/go/src/go-server-db>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/src/account/main.go:1:1 expected 'package', found 'EOF' (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/home/user11/go/pkg/mod/github.com/labstack/echo/v4@v4.7.2/middleware/jwt.go:9:2 missing go.sum entry for module providing package github.com/golang-jwt/jwt (imported by github.com/labstack/echo/v4/middleware); to add:
+/home/user11/go/pkg/mod/github.com/labstack/echo/v4@v4.7.2/middleware/rate_limiter.go:9:2 missing go.sum entry for module providing package golang.org/x/time/rate (imported by github.com/labstack/echo/v4/middleware); to add:
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+/home/user11/go/src/account/main.go:11:2 no required module provides package github.com/labstack/echo-contrib/session; to add it:
+/home/user11/go/src/account/main.go:14:2 no required module provides package github.com/srinathgs/mysqlstore; to add it:
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+
+Starting linting the current package at /home/user11/go/src/account
+/home/user11/go/src/account>Finished running tool: /home/user11/go/bin/staticcheck
+/usr/local/go/src/runtime/cgo/cgo.go:34:8 could not import C (cgo preprocessing failed) (compile)
+

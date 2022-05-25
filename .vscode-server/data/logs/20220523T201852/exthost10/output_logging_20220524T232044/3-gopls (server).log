@@ -1,0 +1,1562 @@
+[Info  - 11:20:45 PM] 2022/05/24 23:20:45 go env for /home/user11
+(root /home/user11)
+(go version go version go1.17.10 linux/amd64)
+(valid build configuration = true)
+(build flags: [])
+GOWORK=
+GOMODCACHE=/home/user11/go/pkg/mod
+GO111MODULE=
+GOMOD=/home/user11/go.mod
+GOSUMDB=sum.golang.org
+GOINSECURE=
+GONOSUMDB=
+GOPATH=/home/user11/go
+GONOPROXY=
+GOPRIVATE=
+GOFLAGS=
+GOPROXY=https://proxy.golang.org,direct
+GOCACHE=/home/user11/.cache/go-build
+GOROOT=/usr/local/go
+
+
+[Info  - 11:20:45 PM] 2022/05/24 23:20:45 go/packages.Load
+	snapshot=0
+	directory=/home/user11
+	query=[builtin naro-server/...]
+	packages=99
+
+[Info  - 11:20:45 PM] 2022/05/24 23:20:45 falling back to safe trimming due to type errors: [/usr/local/go/src/runtime/vdso_linux.go:55:38: invalid operation: division by zero /usr/local/go/src/runtime/vdso_linux.go:56:38: invalid operation: division by zero] or still-missing identifiers: map[memRecordCycle:true pageBits:true]
+	package="runtime"
+
+[Info  - 11:20:46 PM] 2022/05/24 23:20:46 falling back to safe trimming due to type errors: [/usr/local/go/src/net/cgo_linux.go:21:28: AI_CANONNAME not declared by package C /usr/local/go/src/net/cgo_linux.go:21:45: AI_V4MAPPED not declared by package C /usr/local/go/src/net/cgo_linux.go:21:61: AI_ALL not declared by package C] or still-missing identifiers: map[]
+	package="net"
+
+[Info  - 11:20:46 PM] 2022/05/24 23:20:46 discovered missing identifiers: map[options:true]
+	package="vendor/golang.org/x/text/unicode/bidi"
+
+[Info  - 11:20:46 PM] 2022/05/24 23:20:46 discovered missing identifiers: map[options:true]
+	package="golang.org/x/text/unicode/bidi"
+
+[Info  - 11:20:46 PM] 2022/05/24 23:20:46 discovered missing identifiers: map[cpuMask:true]
+	package="golang.org/x/sys/unix"
+
+[Info  - 11:20:46 PM] 2022/05/24 23:20:46 discovered missing identifiers: map[ipChecker:true]
+	package="github.com/labstack/echo/v4"
+
+[Error - 11:20:46 PM] 2022/05/24 23:20:46 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:20:46 PM] 2022/05/24 23:20:46 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:21:16 PM] 2022/05/24 23:21:16 background imports cache refresh starting
+
+[Info  - 11:21:16 PM] 2022/05/24 23:21:16 background refresh finished after 124.190979ms
+
+[Info  - 11:36:57 PM] 2022/05/24 23:36:57 background imports cache refresh starting
+
+[Info  - 11:36:57 PM] 2022/05/24 23:36:57 background refresh finished after 89.399857ms
+
+[Info  - 11:39:01 PM] 2022/05/24 23:39:01 background imports cache refresh starting
+
+[Info  - 11:39:01 PM] 2022/05/24 23:39:01 background refresh finished after 77.625096ms
+
+[Info  - 11:52:29 PM] 2022/05/24 23:52:29 background imports cache refresh starting
+
+[Info  - 11:52:29 PM] 2022/05/24 23:52:29 background refresh finished after 82.884219ms
+
+[Error - 11:52:32 PM] 2022/05/24 23:52:32 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:32 PM] 2022/05/24 23:52:32 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:69:2: expected identifier on left side of :=
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:52:32 PM] 2022/05/24 23:52:32 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:33 PM] 2022/05/24 23:52:33 no signature help: cannot find an enclosing function
+	position={68 8}
+
+[Error - 11:52:33 PM] 2022/05/24 23:52:33 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:34 PM] 2022/05/24 23:52:34 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:36 PM] 2022/05/24 23:52:36 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:37 PM] 2022/05/24 23:52:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:38 PM] 2022/05/24 23:52:38 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:43 PM] 2022/05/24 23:52:43 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:44 PM] 2022/05/24 23:52:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:49 PM] 2022/05/24 23:52:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:52:50 PM] 2022/05/24 23:52:50 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:52:59 PM] 2022/05/24 23:52:59 background imports cache refresh starting
+
+[Info  - 11:52:59 PM] 2022/05/24 23:52:59 background refresh finished after 73.406928ms
+
+[Error - 11:53:03 PM] 2022/05/24 23:53:03 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:03 PM] 2022/05/24 23:53:03 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found get
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:05 PM] 2022/05/24 23:53:05 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found get
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:05 PM] 2022/05/24 23:53:05 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:16 PM] 2022/05/24 23:53:16 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found get
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:16 PM] 2022/05/24 23:53:16 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:16 PM] 2022/05/24 23:53:16 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found get
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:16 PM] 2022/05/24 23:53:16 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:17 PM] 2022/05/24 23:53:17 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found get
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:17 PM] 2022/05/24 23:53:17 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:19 PM] 2022/05/24 23:53:19 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:19 PM] 2022/05/24 23:53:19 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getT
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:20 PM] 2022/05/24 23:53:20 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:20 PM] 2022/05/24 23:53:20 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:23 PM] Request textDocument/formatting failed.
+  Message: 197:1: expected declaration, found getTwitter
+  Code: 0 
+[Error - 11:53:24 PM] 2022/05/24 23:53:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:53:24 PM] 2022/05/24 23:53:24 reloadOrphanedFiles reloading
+	query=[file:///home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go]
+
+[Info  - 11:53:24 PM] 2022/05/24 23:53:24 go/packages.Load
+	snapshot=64
+	directory=/home/user11
+	query=[file=/home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go]
+	packages=1
+
+[Info  - 11:53:24 PM] 2022/05/24 23:53:24 go/packages.Load
+	snapshot=64
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:53:24 PM] 2022/05/24 23:53:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:53:30 PM] 2022/05/24 23:53:30 background imports cache refresh starting
+
+[Info  - 11:53:30 PM] 2022/05/24 23:53:30 background refresh finished after 87.779365ms
+
+[Error - 11:53:37 PM] 2022/05/24 23:53:37 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:37 PM] 2022/05/24 23:53:37 no signature help: cannot find an enclosing function
+	position={196 12}
+
+[Error - 11:53:37 PM] 2022/05/24 23:53:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:37 PM] 2022/05/24 23:53:37 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:39 PM] 2022/05/24 23:53:39 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:39 PM] 2022/05/24 23:53:39 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:40 PM] 2022/05/24 23:53:40 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:40 PM] 2022/05/24 23:53:40 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:40 PM] 2022/05/24 23:53:40 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:40 PM] 2022/05/24 23:53:40 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:41 PM] 2022/05/24 23:53:41 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:41 PM] 2022/05/24 23:53:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:41 PM] 2022/05/24 23:53:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:41 PM] 2022/05/24 23:53:41 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:42 PM] 2022/05/24 23:53:42 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:42 PM] 2022/05/24 23:53:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:46 PM] 2022/05/24 23:53:46 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:47 PM] 2022/05/24 23:53:47 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:49 PM] 2022/05/24 23:53:49 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:52 PM] 2022/05/24 23:53:52 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:53 PM] 2022/05/24 23:53:53 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:53 PM] 2022/05/24 23:53:53 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:53 PM] Request textDocument/definition failed.
+  Message: no object found for ident getCountry
+  Code: 0 
+[Error - 11:53:54 PM] 2022/05/24 23:53:54 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:54 PM] 2022/05/24 23:53:54 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:55 PM] 2022/05/24 23:53:55 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:56 PM] 2022/05/24 23:53:56 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:56 PM] 2022/05/24 23:53:56 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:56 PM] Request textDocument/definition failed.
+  Message: no object found for ident getCountry
+  Code: 0 
+[Error - 11:53:57 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:53:57 PM] 2022/05/24 23:53:57 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:57 PM] 2022/05/24 23:53:57 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:19: expected ';', found '(' (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:57 PM] 2022/05/24 23:53:57 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:19: expected ';', found '(' (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:58 PM] 2022/05/24 23:53:58 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:197:19: expected ';', found '(' (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:59 PM] 2022/05/24 23:53:59 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:59 PM] 2022/05/24 23:53:59 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:54:00 PM] 2022/05/24 23:54:00 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:202:1: expected declaration, found getTwitter
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:54:01 PM] 2022/05/24 23:54:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:10 PM] 2022/05/24 23:54:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:10 PM] 2022/05/24 23:54:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:13 PM] 2022/05/24 23:54:13 no completions found: this is a definition of type T struct{Name database/sql.NullString "json:\"name,omitempty\"  db:\"Name\""}
+	position={32 6}
+
+[Error - 11:54:13 PM] 2022/05/24 23:54:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:14 PM] 2022/05/24 23:54:14 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:24 PM] 2022/05/24 23:54:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:24 PM] 2022/05/24 23:54:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:25 PM] 2022/05/24 23:54:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:54:38 PM] 2022/05/24 23:54:38 background imports cache refresh starting
+
+[Info  - 11:54:38 PM] 2022/05/24 23:54:38 background refresh finished after 83.467939ms
+
+[Error - 11:54:42 PM] 2022/05/24 23:54:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:48 PM] 2022/05/24 23:54:48 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:48 PM] 2022/05/24 23:54:48 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:49 PM] 2022/05/24 23:54:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:51 PM] 2022/05/24 23:54:51 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:51 PM] 2022/05/24 23:54:51 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:52 PM] 2022/05/24 23:54:52 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:54 PM] 2022/05/24 23:54:54 no completions found: this is a definition of field I database/sql.NullString
+	position={34 2}
+
+[Error - 11:54:54 PM] 2022/05/24 23:54:54 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:56 PM] 2022/05/24 23:54:56 no completions found: this is a definition of field I database/sql.NullString
+	position={33 2}
+
+[Error - 11:54:56 PM] 2022/05/24 23:54:56 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:57 PM] 2022/05/24 23:54:57 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:58 PM] 2022/05/24 23:54:58 no completions found: this is a definition of field N database/sql.NullString
+	position={34 2}
+
+[Error - 11:54:59 PM] 2022/05/24 23:54:59 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:04 PM] 2022/05/24 23:55:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:06 PM] 2022/05/24 23:55:06 no completions found: this is a definition of field A database/sql.NullString
+	position={35 2}
+
+[Error - 11:55:06 PM] 2022/05/24 23:55:06 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:07 PM] 2022/05/24 23:55:07 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:08 PM] 2022/05/24 23:55:08 no completions found: this is a definition of field N database/sql.NullString
+	position={35 2}
+
+[Error - 11:55:08 PM] 2022/05/24 23:55:08 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:09 PM] 2022/05/24 23:55:09 no completions found: this is a definition of field NAIY database/sql.NullString
+	position={35 5}
+
+[Error - 11:55:09 PM] 2022/05/24 23:55:09 no completions found: this is a definition of field NAIYO database/sql.NullString
+	position={35 6}
+
+[Error - 11:55:09 PM] 2022/05/24 23:55:09 no completions found: this is a definition of field NAIYOU database/sql.NullString
+	position={35 7}
+
+[Error - 11:55:09 PM] 2022/05/24 23:55:09 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:55:09 PM] 2022/05/24 23:55:09 background imports cache refresh starting
+
+[Info  - 11:55:09 PM] 2022/05/24 23:55:09 background refresh finished after 136.629863ms
+
+[Error - 11:55:13 PM] 2022/05/24 23:55:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:23 PM] 2022/05/24 23:55:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:27 PM] 2022/05/24 23:55:27 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:30 PM] 2022/05/24 23:55:30 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:38 PM] 2022/05/24 23:55:38 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:38 PM] Request textDocument/foldingRange failed.
+  Message: context canceled
+  Code: 0 
+[Error - 11:55:39 PM] 2022/05/24 23:55:39 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:55:40 PM] 2022/05/24 23:55:40 background imports cache refresh starting
+
+[Info  - 11:55:40 PM] 2022/05/24 23:55:40 background refresh finished after 87.599052ms
+
+[Error - 11:55:41 PM] 2022/05/24 23:55:41 no completions found: this is a definition of var t []Twitter
+	position={203 2}
+
+[Error - 11:55:41 PM] 2022/05/24 23:55:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:42 PM] 2022/05/24 23:55:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:55:53 PM] 2022/05/24 23:55:53 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:56:00 PM] 2022/05/24 23:56:00 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:56:02 PM] 2022/05/24 23:56:02 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:56:03 PM] 2022/05/24 23:56:03 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:56:04 PM] 2022/05/24 23:56:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:56:07 PM] 2022/05/24 23:56:07 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:56:07 PM] 2022/05/24 23:56:07 go/packages.Load
+	snapshot=190
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:56:07 PM] 2022/05/24 23:56:07 go/packages.Load
+	snapshot=190
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/wvzJ.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:56:07 PM] 2022/05/24 23:56:07 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:56:10 PM] 2022/05/24 23:56:10 background imports cache refresh starting
+
+[Info  - 11:56:10 PM] 2022/05/24 23:56:10 background refresh finished after 81.407114ms
+
+[Error - 11:59:28 PM] 2022/05/24 23:59:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:59:31 PM] 2022/05/24 23:59:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:59:42 PM] 2022/05/24 23:59:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:59:43 PM] 2022/05/24 23:59:43 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:59:46 PM] Request textDocument/definition failed.
+  Message: no object found for ident postTwitterHandler
+  Code: 0 
+[Error - 11:59:46 PM] Request textDocument/definition failed.
+  Message: no object found for ident postTwitterHandler
+  Code: 0 
+[Info  - 11:59:49 PM] 2022/05/24 23:59:49 background imports cache refresh starting
+
+[Info  - 11:59:50 PM] 2022/05/24 23:59:50 background refresh finished after 140.413898ms
+
+[Error - 12:00:02 AM] 2022/05/25 00:00:02 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:03 AM] 2022/05/25 00:00:03 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:03 AM] 2022/05/25 00:00:03 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:08 AM] 2022/05/25 00:00:08 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:09 AM] 2022/05/25 00:00:09 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:10 AM] 2022/05/25 00:00:10 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:13 AM] 2022/05/25 00:00:13 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:15 AM] 2022/05/25 00:00:15 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:15 AM] 2022/05/25 00:00:15 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:15 AM] 2022/05/25 00:00:15 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:97:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:16 AM] 2022/05/25 00:00:16 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:16 AM] 2022/05/25 00:00:16 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:17 AM] 2022/05/25 00:00:17 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:19 AM] 2022/05/25 00:00:19 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:132:1: expected declaration, found postTwitterHandler
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:00:19 AM] 2022/05/25 00:00:19 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:22 AM] 2022/05/25 00:00:22 no completions found: this is a definition of func postT(c github.com/labstack/echo/v4.Context) error
+	position={131 10}
+
+[Error - 12:00:22 AM] 2022/05/25 00:00:22 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:23 AM] 2022/05/25 00:00:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:00:24 AM] 2022/05/25 00:00:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:00:49 AM] 2022/05/25 00:00:49 background imports cache refresh starting
+
+[Info  - 12:00:49 AM] 2022/05/25 00:00:49 background refresh finished after 124.930311ms
+
+[Error - 12:01:09 AM] 2022/05/25 00:01:09 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:13 AM] 2022/05/25 00:01:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:19 AM] 2022/05/25 00:01:19 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:25 AM] 2022/05/25 00:01:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:25 AM] 2022/05/25 00:01:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:28 AM] 2022/05/25 00:01:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:01:33 AM] 2022/05/25 00:01:33 background imports cache refresh starting
+
+[Info  - 12:01:33 AM] 2022/05/25 00:01:33 background refresh finished after 124.493631ms
+
+[Error - 12:01:43 AM] 2022/05/25 00:01:43 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:45 AM] 2022/05/25 00:01:45 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:46 AM] 2022/05/25 00:01:46 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:46 AM] 2022/05/25 00:01:46 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:47 AM] 2022/05/25 00:01:47 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:47 AM] 2022/05/25 00:01:47 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:49 AM] 2022/05/25 00:01:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:50 AM] 2022/05/25 00:01:50 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:01:51 AM] 2022/05/25 00:01:51 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:02:03 AM] 2022/05/25 00:02:03 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:02:04 AM] 2022/05/25 00:02:04 background imports cache refresh starting
+
+[Info  - 12:02:04 AM] 2022/05/25 00:02:04 background refresh finished after 132.628389ms
+
+[Error - 12:02:17 AM] 2022/05/25 00:02:17 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:02:19 AM] Request textDocument/definition failed.
+  Message: no object found for ident hashedPass
+  Code: 0 
+[Error - 12:02:19 AM] Request textDocument/definition failed.
+  Message: no object found for ident Password
+  Code: 0 
+[Error - 12:02:20 AM] 2022/05/25 00:02:20 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:02:25 AM] 2022/05/25 00:02:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:02:25 AM] 2022/05/25 00:02:25 error executing postfix template: template: postfix_snippet:1:33: executing "postfix_snippet" at <.TypeName>: error calling TypeName: invalid type: <nil>
+
+[Error - 12:02:25 AM] 2022/05/25 00:02:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:02:42 AM] 2022/05/25 00:02:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:02:46 AM] 2022/05/25 00:02:46 background imports cache refresh starting
+
+[Info  - 12:02:46 AM] 2022/05/25 00:02:46 background refresh finished after 109.936715ms
+
+[Error - 12:03:02 AM] 2022/05/25 00:03:02 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:03:02 AM] 2022/05/25 00:03:02 go/packages.Load
+	snapshot=276
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 12:03:02 AM] 2022/05/25 00:03:02 go/packages.Load
+	snapshot=276
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/u5ir.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/wvzJ.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 12:03:02 AM] 2022/05/25 00:03:02 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:03:18 AM] 2022/05/25 00:03:18 background imports cache refresh starting
+
+[Info  - 12:03:18 AM] 2022/05/25 00:03:18 background refresh finished after 85.065955ms
+
+[Error - 12:03:49 AM] 2022/05/25 00:03:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:03:50 AM] 2022/05/25 00:03:50 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:03:50 AM] 2022/05/25 00:03:50 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:03:53 AM] Request textDocument/codeAction failed.
+  Message: context canceled
+  Code: 0 
+[Error - 12:03:53 AM] 2022/05/25 00:03:53 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:04:13 AM] 2022/05/25 00:04:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:04:15 AM] 2022/05/25 00:04:15 background imports cache refresh starting
+
+[Info  - 12:04:15 AM] 2022/05/25 00:04:15 background refresh finished after 89.174093ms
+
+[Error - 12:04:17 AM] 2022/05/25 00:04:17 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:04:18 AM] 2022/05/25 00:04:18 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:04:26 AM] 2022/05/25 00:04:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:04:26 AM] 2022/05/25 00:04:26 go/packages.Load
+	snapshot=298
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 12:04:26 AM] 2022/05/25 00:04:26 go/packages.Load
+	snapshot=298
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/u5ir.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/wvzJ.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yDZK.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 12:04:26 AM] 2022/05/25 00:04:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:04:46 AM] 2022/05/25 00:04:46 background imports cache refresh starting
+
+[Info  - 12:04:46 AM] 2022/05/25 00:04:46 background refresh finished after 82.548592ms
+
+[Info  - 12:07:22 AM] 2022/05/25 00:07:22 background imports cache refresh starting
+
+[Info  - 12:07:22 AM] 2022/05/25 00:07:22 background refresh finished after 106.740644ms
+
+[Info  - 12:08:19 AM] 2022/05/25 00:08:19 background imports cache refresh starting
+
+[Info  - 12:08:19 AM] 2022/05/25 00:08:19 background refresh finished after 87.032717ms
+
+[Error - 12:08:26 AM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 12:08:32 AM] 2022/05/25 00:08:32 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:08:33 AM] 2022/05/25 00:08:33 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:08:35 AM] 2022/05/25 00:08:35 no completions found: this is a definition of func postt(c github.com/labstack/echo/v4.Context) error
+	position={96 10}
+
+[Error - 12:08:35 AM] 2022/05/25 00:08:35 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:08:36 AM] 2022/05/25 00:08:36 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:08:49 AM] 2022/05/25 00:08:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:08:49 AM] 2022/05/25 00:08:49 go/packages.Load
+	snapshot=304
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 12:08:49 AM] 2022/05/25 00:08:49 go/packages.Load
+	snapshot=304
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/IU5W.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/u5ir.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/wvzJ.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yDZK.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 12:08:49 AM] 2022/05/25 00:08:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:08:55 AM] 2022/05/25 00:08:55 background imports cache refresh starting
+
+[Info  - 12:08:55 AM] 2022/05/25 00:08:55 background refresh finished after 93.616737ms
+
+[Error - 12:11:01 AM] 2022/05/25 00:11:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:11:02 AM] 2022/05/25 00:11:02 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:11:04 AM] 2022/05/25 00:11:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:11:08 AM] 2022/05/25 00:11:08 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:11:08 AM] 2022/05/25 00:11:08 go/packages.Load
+	snapshot=321
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 12:11:08 AM] 2022/05/25 00:11:08 go/packages.Load
+	snapshot=321
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/6dTi.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/IU5W.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/o5AZ.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/u5ir.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/wvzJ.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yDZK.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 12:11:08 AM] 2022/05/25 00:11:08 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:11:24 AM] 2022/05/25 00:11:24 background imports cache refresh starting
+
+[Info  - 12:11:24 AM] 2022/05/25 00:11:24 background refresh finished after 113.614878ms
+
+[Info  - 12:23:13 AM] 2022/05/25 00:23:13 background imports cache refresh starting
+
+[Info  - 12:23:13 AM] 2022/05/25 00:23:13 background refresh finished after 83.862108ms
+
+[Info  - 12:33:08 AM] 2022/05/25 00:33:08 background imports cache refresh starting
+
+[Info  - 12:33:08 AM] 2022/05/25 00:33:08 background refresh finished after 81.612448ms
+
+[Info  - 8:26:14 PM] 2022/05/25 20:26:14 background imports cache refresh starting
+
+[Info  - 8:26:15 PM] 2022/05/25 20:26:15 background refresh finished after 472.517352ms
+
+[Info  - 8:27:23 PM] 2022/05/25 20:27:23 background imports cache refresh starting
+
+[Info  - 8:27:23 PM] 2022/05/25 20:27:23 background refresh finished after 90.376091ms
+
+[Info  - 8:28:01 PM] 2022/05/25 20:28:01 background imports cache refresh starting
+
+[Info  - 8:28:01 PM] 2022/05/25 20:28:01 background refresh finished after 78.299068ms
+

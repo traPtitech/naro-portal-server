@@ -1,0 +1,7 @@
+{
+  "files.autoSave": "onFocusChange",
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.remotePlatform": {
+    "naro": "linux"
+  }
+}

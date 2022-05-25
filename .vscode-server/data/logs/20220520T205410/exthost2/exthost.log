@@ -1,0 +1,686 @@
+[2022-05-20 21:01:12.111] [exthost] [info] Extension host with pid 373808 started
+[2022-05-20 21:01:12.133] [exthost] [info] Lock '/home/user11/.vscode-server/data/User/workspaceStorage/e855ec4d01c12330021077a90294a6c5/vscode.lock': Lock acquired.
+[2022-05-20 21:01:12.201] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-05-20 21:01:12.209] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+[2022-05-20 21:01:12.214] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-05-20 21:01:12.275] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-05-20 21:01:12.389] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-20 21:01:12.426] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-20 21:01:12.431] [exthost] [info] Eager extensions activated
+[2022-05-20 21:01:15.648] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+[2022-05-20 21:01:50.483] [exthost] [info] ExtensionService#_doActivateExtension golang.go, startup: false, activationEvent: 'onLanguage:go'
+[2022-05-20 21:03:40.560] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 21:03:40.561] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 21:07:11.755] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 21:07:11.755] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 21:15:10.653] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 21:15:10.656] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 21:19:00.967] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 21:19:00.968] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 21:27:50.206] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 21:27:50.208] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:04:13.133] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:04:13.139] [exthost] [error] Error: 73:1: expected operand, found '}'
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:06:46.862] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:06:46.866] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:08:22.089] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:08:22.094] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:09:22.925] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:09:22.925] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:09:40.373] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:09:40.373] [exthost] [error] Error: 78:8: expected ';', found i (and 1 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:10:16.630] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:10:16.631] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:10:52.721] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:10:52.722] [exthost] [error] Error: 78:3: expected statement, found 'else'
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:11:07.092] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:11:07.092] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:11:14.975] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:11:14.975] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:11:15.092] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:11:15.092] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:11:15.189] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:11:15.189] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:13:13.579] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:13:13.581] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:14:18.395] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:14:18.397] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:14:46.403] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:14:46.403] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:14:46.472] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:14:46.472] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:16:28.845] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:16:28.848] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:17:51.702] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:17:51.702] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:20:10.026] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:20:10.042] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:28:57.564] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:28:57.566] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:28:57.771] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:28:57.771] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:29:00.807] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:29:00.807] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:29:01.076] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:29:01.076] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:31:51.988] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:31:51.989] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:31:52.516] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:31:52.516] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:31:58.341] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:31:58.341] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 22:36:24.825] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 22:36:24.833] [exthost] [error] Error: 75:6: missing variable type or initialization
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:00:33.206] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:00:33.209] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:00:34.353] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:00:34.353] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:00:34.789] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:00:34.789] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:01:00.427] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:01:00.427] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:01:00.567] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:01:00.568] [exthost] [error] Error: no object found for ident jsonAnswer
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:02:10.498] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:02:10.499] [exthost] [error] Error: 119:15: expected operand, found '{' (and 1 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:02:39.831] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:02:39.832] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:03:30.309] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:03:30.310] [exthost] [error] Error: 114:22: expected operand, found '{' (and 2 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:03:32.385] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:03:32.385] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:04:06.022] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:04:06.022] [exthost] [error] Error: 114:22: expected operand, found '{' (and 6 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:35:18.507] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:35:18.507] [exthost] [error] Error: no object found for ident jsonData
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:35:29.415] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:35:29.415] [exthost] [error] Error: 123:22: expected operand, found '{' (and 6 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:35:48.722] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:35:48.723] [exthost] [error] Error: 122:22: expected operand, found '{' (and 6 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:36:59.965] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:36:59.965] [exthost] [error] Error: 122:22: expected operand, found '{' (and 6 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:37:20.616] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:37:20.617] [exthost] [error] Error: 127:22: expected operand, found '{' (and 4 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:37:50.370] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:37:50.371] [exthost] [error] Error: 127:22: expected operand, found '{' (and 4 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:43:07.540] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:43:07.541] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:57:30.011] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:57:30.012] [exthost] [error] Error: 119:10: illegal rune literal (and 2 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-20 23:59:35.838] [exthost] [error] [golang.go] provider FAILED
+[2022-05-20 23:59:35.839] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 00:04:56.236] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 00:04:56.236] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 00:04:57.064] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 00:04:57.064] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 00:04:57.161] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 00:04:57.162] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 00:04:57.581] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 00:04:57.581] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 00:04:57.692] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 00:04:57.692] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 14:41:07.755] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 14:41:07.756] [exthost] [error] Error: invalid pos
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 14:43:27.654] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 14:43:27.654] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 14:43:52.493] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 14:43:52.493] [exthost] [error] Error: no imported package for github.com/go-sql-driver/mysql
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 14:46:02.544] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 14:46:02.544] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 14:46:03.008] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 14:46:03.008] [exthost] [error] Error: no imported package for github.com/go-sql-driver/mysql
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 14:46:03.253] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 14:46:03.254] [exthost] [error] Error: no imported package for github.com/go-sql-driver/mysql
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:04:19.692] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:04:19.692] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:04:35.924] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:04:35.924] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:04:36.285] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:04:36.285] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:04:44.993] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:04:44.993] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:04:45.192] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:04:45.192] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:06:44.487] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:06:44.487] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:08:52.010] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:08:52.011] [exthost] [error] Error: 39:2: expected selector or type assertion, found 'if'
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:10:50.166] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:10:50.167] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:10:59.965] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:10:59.966] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:03.455] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:03.455] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:03.556] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:03.556] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:04.048] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:04.048] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:04.151] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:04.151] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:14.386] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:14.386] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:14.485] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:14.485] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:15.636] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:15.636] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:15.702] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:15.702] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:11:53.812] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:11:53.813] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:18:57.995] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:18:57.995] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:21:57.076] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:21:57.077] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:21:57.985] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:21:57.985] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:25:58.252] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:25:58.253] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:26:00.068] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:26:00.069] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:32:10.547] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:32:10.547] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:32:13.541] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:32:13.541] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:33:06.008] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:33:06.008] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:33:19.939] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:33:19.940] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:33:20.079] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:33:20.079] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:36:44.205] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:36:44.205] [exthost] [error] Error: no object found for ident echo
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 15:45:43.111] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 15:45:43.111] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:24:33.996] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:24:33.996] [exthost] [error] Error: 79:9: expected ';', found INTO
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:25:59.627] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:25:59.628] [exthost] [error] Error: 74:9: expected ';', found INTO
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:26:51.307] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:26:51.308] [exthost] [error] Error: 80:9: expected ';', found INTO
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:30:50.424] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:30:50.424] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:30:54.964] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:30:54.964] [exthost] [error] Error: 80:9: expected ';', found INTO
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:31:06.516] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:31:06.517] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:31:10.836] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:31:10.836] [exthost] [error] Error: 80:9: expected ';', found INTO (and 3 more errors)
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:35:11.794] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:35:11.794] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:36:50.958] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:36:50.958] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:37:23.101] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:37:23.101] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:37:24.279] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:37:24.279] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:37:41.139] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:37:41.140] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:38:34.975] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:38:34.976] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:38:35.350] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:38:35.350] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-21 16:38:43.515] [exthost] [error] [golang.go] provider FAILED
+[2022-05-21 16:38:43.516] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-22 15:26:13.626] [exthost] [error] [golang.go] provider FAILED
+[2022-05-22 15:26:13.629] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-22 15:26:13.723] [exthost] [error] [golang.go] provider FAILED
+[2022-05-22 15:26:13.723] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-22 15:26:14.047] [exthost] [error] [golang.go] provider FAILED
+[2022-05-22 15:26:14.047] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-22 15:26:16.148] [exthost] [error] [golang.go] provider FAILED
+[2022-05-22 15:26:16.148] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-22 15:36:31.727] [exthost] [error] [golang.go] provider FAILED
+[2022-05-22 15:36:31.727] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-22 15:37:01.204] [exthost] [error] [golang.go] provider FAILED
+[2022-05-22 15:37:01.204] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-23 07:12:09.159] [exthost] [info] Extension host terminating: renderer disconnected for too long (1)
+[2022-05-23 07:12:09.164] [exthost] [info] Lock '/home/user11/.vscode-server/data/User/workspaceStorage/e855ec4d01c12330021077a90294a6c5/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-05-23 07:12:09.220] [exthost] [info] Extension host with pid 373808 exiting with code 0

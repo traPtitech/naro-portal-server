@@ -1,0 +1,4 @@
+./codec.go
+./doc.go
+./io.go
+./schematypes.go

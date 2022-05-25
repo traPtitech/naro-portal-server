@@ -1,0 +1,81 @@
+[2022-05-24 23:20:44.211] [exthost] [info] Extension host with pid 1873361 started
+[2022-05-24 23:20:44.215] [exthost] [error] Error: EEXIST: file already exists, open '/home/user11/.vscode-server/data/User/workspaceStorage/e855ec4d01c12330021077a90294a6c5/vscode.lock'
+[2022-05-24 23:20:44.222] [exthost] [info] Lock '/home/user11/.vscode-server/data/User/workspaceStorage/e855ec4d01c12330021077a90294a6c5/vscode.lock': Could not acquire lock, checking if the file is stale.
+[2022-05-24 23:20:44.228] [exthost] [info] Lock '/home/user11/.vscode-server/data/User/workspaceStorage/e855ec4d01c12330021077a90294a6c5/vscode.lock': The lock does not look stale, elapsed: 40 ms, giving up.
+[2022-05-24 23:20:44.234] [exthost] [info] Lock '/home/user11/.vscode-server/data/User/workspaceStorage/e855ec4d01c12330021077a90294a6c5-1/vscode.lock': Lock acquired.
+[2022-05-24 23:20:44.338] [exthost] [info] ExtensionService#_doActivateExtension golang.go, startup: false, activationEvent: 'onLanguage:go'
+[2022-05-24 23:20:44.562] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-05-24 23:20:44.569] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-05-24 23:20:44.574] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-05-24 23:20:44.640] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-05-24 23:20:44.747] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-05-24 23:20:45.190] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-24 23:20:45.218] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-24 23:20:45.228] [exthost] [info] Eager extensions activated
+[2022-05-24 23:53:23.720] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:53:23.720] [exthost] [error] Error: 197:1: expected declaration, found getTwitter
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-24 23:53:53.953] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:53:53.954] [exthost] [error] Error: no object found for ident getCountry
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-24 23:53:56.837] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:53:56.838] [exthost] [error] Error: no object found for ident getCountry
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-24 23:53:57.137] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:53:57.137] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-24 23:55:38.709] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:55:38.709] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-24 23:59:46.124] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:59:46.125] [exthost] [error] Error: no object found for ident postTwitterHandler
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-24 23:59:46.249] [exthost] [error] [golang.go] provider FAILED
+[2022-05-24 23:59:46.249] [exthost] [error] Error: no object found for ident postTwitterHandler
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-25 00:02:19.726] [exthost] [error] [golang.go] provider FAILED
+[2022-05-25 00:02:19.726] [exthost] [error] Error: no object found for ident hashedPass
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-25 00:02:19.872] [exthost] [error] [golang.go] provider FAILED
+[2022-05-25 00:02:19.872] [exthost] [error] Error: no object found for ident Password
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-25 00:03:53.642] [exthost] [error] [golang.go] provider FAILED
+[2022-05-25 00:03:53.642] [exthost] [error] Error: context canceled
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-25 00:08:26.759] [exthost] [error] [golang.go] provider FAILED
+[2022-05-25 00:08:26.759] [exthost] [error] Error: no identifier found
+	at handleResponse (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4366:40)
+	at processMessageQueue (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4204:13)
+	at Immediate.<anonymous> (/home/user11/.vscode-server/extensions/golang.go-0.33.0/dist/goMain.js:4190:11)
+	at processImmediate (node:internal/timers:464:21)
+[2022-05-25 20:39:07.625] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000

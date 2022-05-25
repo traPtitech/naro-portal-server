@@ -1,0 +1,3 @@
+./op.go
+./opcodes.go
+./regs.go

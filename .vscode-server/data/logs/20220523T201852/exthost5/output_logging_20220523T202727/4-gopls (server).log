@@ -1,0 +1,100 @@
+[Info  - 8:27:29 PM] 2022/05/23 20:27:29 go env for /home/user11
+(root /home/user11)
+(go version go version go1.17.10 linux/amd64)
+(valid build configuration = true)
+(build flags: [])
+GOPROXY=https://proxy.golang.org,direct
+GOPATH=/home/user11/go
+GOCACHE=/home/user11/.cache/go-build
+GONOPROXY=
+GOSUMDB=sum.golang.org
+GOPRIVATE=
+GOMODCACHE=/home/user11/go/pkg/mod
+GOROOT=/usr/local/go
+GO111MODULE=
+GOFLAGS=
+GONOSUMDB=
+GOWORK=
+GOINSECURE=
+GOMOD=/home/user11/go.mod
+
+
+[Info  - 8:27:29 PM] 2022/05/23 20:27:29 go/packages.Load
+	snapshot=0
+	directory=/home/user11
+	query=[builtin naro-server/...]
+	packages=98
+
+[Info  - 8:27:30 PM] 2022/05/23 20:27:30 falling back to safe trimming due to type errors: [/usr/local/go/src/runtime/vdso_linux.go:55:38: invalid operation: division by zero /usr/local/go/src/runtime/vdso_linux.go:56:38: invalid operation: division by zero] or still-missing identifiers: map[memRecordCycle:true pageBits:true]
+	package="runtime"
+
+[Info  - 8:27:30 PM] 2022/05/23 20:27:30 falling back to safe trimming due to type errors: [/usr/local/go/src/net/cgo_linux.go:21:28: AI_CANONNAME not declared by package C /usr/local/go/src/net/cgo_linux.go:21:45: AI_V4MAPPED not declared by package C /usr/local/go/src/net/cgo_linux.go:21:61: AI_ALL not declared by package C] or still-missing identifiers: map[]
+	package="net"
+
+[Info  - 8:27:30 PM] 2022/05/23 20:27:30 discovered missing identifiers: map[options:true]
+	package="golang.org/x/text/unicode/bidi"
+
+[Info  - 8:27:30 PM] 2022/05/23 20:27:30 discovered missing identifiers: map[options:true]
+	package="vendor/golang.org/x/text/unicode/bidi"
+
+[Info  - 8:27:30 PM] 2022/05/23 20:27:30 discovered missing identifiers: map[cpuMask:true]
+	package="golang.org/x/sys/unix"
+
+[Info  - 8:27:30 PM] 2022/05/23 20:27:30 discovered missing identifiers: map[ipChecker:true]
+	package="github.com/labstack/echo/v4"
+
+[Error - 8:27:30 PM] 2022/05/23 20:27:30 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 8:27:37 PM] 2022/05/23 20:27:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 8:27:37 PM] 2022/05/23 20:27:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 8:28:06 PM] 2022/05/23 20:28:06 background imports cache refresh starting
+
+[Info  - 8:28:07 PM] 2022/05/23 20:28:07 background refresh finished after 424.549979ms
+
+[Info  - 8:29:14 PM] 2022/05/23 20:29:14 go/packages.Load
+	snapshot=3
+	directory=/home/user11
+	query=[file=/home/user11/go/src/rokkai/main.go]
+	packages=1
+
+[Info  - 8:29:14 PM] 2022/05/23 20:29:14 go/packages.Load
+	snapshot=3
+	package="naro-server/go/src/rokkai"
+	files=[/home/user11/go/src/rokkai/main.go]
+
+[Error - 8:29:15 PM] 2022/05/23 20:29:15 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 8:29:38 PM] 2022/05/23 20:29:38 background imports cache refresh starting
+
+[Info  - 8:29:38 PM] 2022/05/23 20:29:38 background refresh finished after 75.138618ms
+

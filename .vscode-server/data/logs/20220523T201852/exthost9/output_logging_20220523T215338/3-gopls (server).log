@@ -1,0 +1,3021 @@
+[Info  - 9:53:39 PM] 2022/05/23 21:53:39 go env for /home/user11
+(root /home/user11)
+(go version go version go1.17.10 linux/amd64)
+(valid build configuration = true)
+(build flags: [])
+GOROOT=/usr/local/go
+GONOSUMDB=
+GOPROXY=https://proxy.golang.org,direct
+GOMOD=/home/user11/go.mod
+GOWORK=
+GO111MODULE=
+GOSUMDB=sum.golang.org
+GONOPROXY=
+GOINSECURE=
+GOMODCACHE=/home/user11/go/pkg/mod
+GOCACHE=/home/user11/.cache/go-build
+GOFLAGS=
+GOPRIVATE=
+GOPATH=/home/user11/go
+
+
+[Info  - 9:53:39 PM] 2022/05/23 21:53:39 go/packages.Load
+	snapshot=0
+	directory=/home/user11
+	query=[builtin naro-server/...]
+	packages=99
+
+[Info  - 9:53:40 PM] 2022/05/23 21:53:40 falling back to safe trimming due to type errors: [/usr/local/go/src/runtime/vdso_linux.go:55:38: invalid operation: division by zero /usr/local/go/src/runtime/vdso_linux.go:56:38: invalid operation: division by zero] or still-missing identifiers: map[memRecordCycle:true pageBits:true]
+	package="runtime"
+
+[Info  - 9:53:40 PM] 2022/05/23 21:53:40 discovered missing identifiers: map[options:true]
+	package="vendor/golang.org/x/text/unicode/bidi"
+
+[Info  - 9:53:40 PM] 2022/05/23 21:53:40 discovered missing identifiers: map[options:true]
+	package="golang.org/x/text/unicode/bidi"
+
+[Info  - 9:53:40 PM] 2022/05/23 21:53:40 falling back to safe trimming due to type errors: [/usr/local/go/src/net/cgo_linux.go:21:28: AI_CANONNAME not declared by package C /usr/local/go/src/net/cgo_linux.go:21:45: AI_V4MAPPED not declared by package C /usr/local/go/src/net/cgo_linux.go:21:61: AI_ALL not declared by package C] or still-missing identifiers: map[]
+	package="net"
+
+[Info  - 9:53:40 PM] 2022/05/23 21:53:40 discovered missing identifiers: map[cpuMask:true]
+	package="golang.org/x/sys/unix"
+
+[Error - 9:53:40 PM] Request textDocument/codeAction failed.
+  Message: context canceled
+  Code: 0 
+[Info  - 9:53:40 PM] 2022/05/23 21:53:40 discovered missing identifiers: map[ipChecker:true]
+	package="github.com/labstack/echo/v4"
+
+[Error - 9:53:40 PM] 2022/05/23 21:53:40 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 9:53:41 PM] 2022/05/23 21:53:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 9:54:10 PM] 2022/05/23 21:54:10 background imports cache refresh starting
+
+[Info  - 9:54:10 PM] 2022/05/23 21:54:10 background refresh finished after 142.479696ms
+
+[Error - 9:55:03 PM] Request textDocument/codeAction failed.
+  Message: context canceled
+  Code: 0 
+[Error - 9:55:03 PM] Request textDocument/codeAction failed.
+  Message: context canceled
+  Code: 0 
+[Error - 9:55:04 PM] 2022/05/23 21:55:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 9:55:33 PM] 2022/05/23 21:55:33 background imports cache refresh starting
+
+[Info  - 9:55:34 PM] 2022/05/23 21:55:34 background refresh finished after 92.260761ms
+
+[Error - 9:56:01 PM] 2022/05/23 21:56:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 9:56:01 PM] 2022/05/23 21:56:01 reloadOrphanedFiles reloading
+	query=[file:///home/user11/.vscode-server/data/User/History/495fad60/7g5x.go]
+
+[Info  - 9:56:01 PM] 2022/05/23 21:56:01 go/packages.Load
+	snapshot=7
+	directory=/home/user11
+	query=[file=/home/user11/.vscode-server/data/User/History/495fad60/7g5x.go]
+	packages=1
+
+[Info  - 9:56:01 PM] 2022/05/23 21:56:01 go/packages.Load
+	snapshot=7
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+	files=[/home/user11/.vscode-server/data/User/History/495fad60/2F3N.go /home/user11/.vscode-server/data/User/History/495fad60/5SNt.go /home/user11/.vscode-server/data/User/History/495fad60/5nZF.go /home/user11/.vscode-server/data/User/History/495fad60/7Mbq.go /home/user11/.vscode-server/data/User/History/495fad60/7g5x.go /home/user11/.vscode-server/data/User/History/495fad60/7s1A.go /home/user11/.vscode-server/data/User/History/495fad60/7uG8.go /home/user11/.vscode-server/data/User/History/495fad60/8iYg.go /home/user11/.vscode-server/data/User/History/495fad60/AVg1.go /home/user11/.vscode-server/data/User/History/495fad60/Av7A.go /home/user11/.vscode-server/data/User/History/495fad60/Ayeo.go /home/user11/.vscode-server/data/User/History/495fad60/CmnJ.go /home/user11/.vscode-server/data/User/History/495fad60/ENSZ.go /home/user11/.vscode-server/data/User/History/495fad60/EfCJ.go /home/user11/.vscode-server/data/User/History/495fad60/FvVo.go /home/user11/.vscode-server/data/User/History/495fad60/GXUy.go /home/user11/.vscode-server/data/User/History/495fad60/GltK.go /home/user11/.vscode-server/data/User/History/495fad60/HaS5.go /home/user11/.vscode-server/data/User/History/495fad60/ISHp.go /home/user11/.vscode-server/data/User/History/495fad60/IoLP.go /home/user11/.vscode-server/data/User/History/495fad60/IsS2.go /home/user11/.vscode-server/data/User/History/495fad60/JYJC.go /home/user11/.vscode-server/data/User/History/495fad60/OMEo.go /home/user11/.vscode-server/data/User/History/495fad60/OgV4.go /home/user11/.vscode-server/data/User/History/495fad60/QDzi.go /home/user11/.vscode-server/data/User/History/495fad60/RTc3.go /home/user11/.vscode-server/data/User/History/495fad60/Rf6x.go /home/user11/.vscode-server/data/User/History/495fad60/SCls.go /home/user11/.vscode-server/data/User/History/495fad60/SgG2.go /home/user11/.vscode-server/data/User/History/495fad60/SyWr.go /home/user11/.vscode-server/data/User/History/495fad60/Te4E.go /home/user11/.vscode-server/data/User/History/495fad60/Xlsh.go /home/user11/.vscode-server/data/User/History/495fad60/Ycmv.go /home/user11/.vscode-server/data/User/History/495fad60/a4Ck.go /home/user11/.vscode-server/data/User/History/495fad60/c8mw.go /home/user11/.vscode-server/data/User/History/495fad60/cq9V.go /home/user11/.vscode-server/data/User/History/495fad60/dvrC.go /home/user11/.vscode-server/data/User/History/495fad60/g3Vt.go /home/user11/.vscode-server/data/User/History/495fad60/hHrv.go /home/user11/.vscode-server/data/User/History/495fad60/hloG.go /home/user11/.vscode-server/data/User/History/495fad60/j0kg.go /home/user11/.vscode-server/data/User/History/495fad60/keXp.go /home/user11/.vscode-server/data/User/History/495fad60/qBqz.go /home/user11/.vscode-server/data/User/History/495fad60/slvL.go /home/user11/.vscode-server/data/User/History/495fad60/uPzo.go /home/user11/.vscode-server/data/User/History/495fad60/uV1D.go /home/user11/.vscode-server/data/User/History/495fad60/usGo.go /home/user11/.vscode-server/data/User/History/495fad60/vP5N.go /home/user11/.vscode-server/data/User/History/495fad60/xAeS.go /home/user11/.vscode-server/data/User/History/495fad60/xkZx.go]
+
+[Error - 9:56:01 PM] 2022/05/23 21:56:01 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/495fad60
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+
+[Error - 9:56:01 PM] 2022/05/23 21:56:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 9:56:08 PM] 2022/05/23 21:56:08 background imports cache refresh starting
+
+[Info  - 9:56:08 PM] 2022/05/23 21:56:08 background refresh finished after 87.579242ms
+
+[Info  - 10:04:52 PM] 2022/05/23 22:04:52 background imports cache refresh starting
+
+[Info  - 10:04:52 PM] 2022/05/23 22:04:52 background refresh finished after 109.410932ms
+
+[Info  - 10:08:54 PM] 2022/05/23 22:08:54 background imports cache refresh starting
+
+[Info  - 10:08:54 PM] 2022/05/23 22:08:54 background refresh finished after 104.508096ms
+
+[Info  - 10:09:46 PM] 2022/05/23 22:09:46 background imports cache refresh starting
+
+[Info  - 10:09:46 PM] 2022/05/23 22:09:46 background refresh finished after 124.380153ms
+
+[Info  - 10:09:49 PM] 2022/05/23 22:09:49 go/packages.Load
+	snapshot=8
+	directory=/home/user11
+	query=[file=/home/user11/go/src/account/main.go]
+	packages=1
+
+[Info  - 10:09:49 PM] 2022/05/23 22:09:49 go/packages.Load
+	snapshot=8
+	package="naro-server/go/src/account"
+	files=[/home/user11/go/src/account/main.go]
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	directory=/home/user11
+	query=[file=/home/user11/go/src/account/main.go]
+	packages=1
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	package="naro-server/go/src/account"
+	files=[/home/user11/go/src/account/main.go]
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/495fad60 naro-server/go/src/go-server-db naro-server/go/src/hello-server naro-server/go/src/rokkai]
+	packages=4
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+	files=[/home/user11/.vscode-server/data/User/History/495fad60/2F3N.go /home/user11/.vscode-server/data/User/History/495fad60/5SNt.go /home/user11/.vscode-server/data/User/History/495fad60/5nZF.go /home/user11/.vscode-server/data/User/History/495fad60/7Mbq.go /home/user11/.vscode-server/data/User/History/495fad60/7g5x.go /home/user11/.vscode-server/data/User/History/495fad60/7s1A.go /home/user11/.vscode-server/data/User/History/495fad60/7uG8.go /home/user11/.vscode-server/data/User/History/495fad60/8iYg.go /home/user11/.vscode-server/data/User/History/495fad60/AVg1.go /home/user11/.vscode-server/data/User/History/495fad60/Av7A.go /home/user11/.vscode-server/data/User/History/495fad60/Ayeo.go /home/user11/.vscode-server/data/User/History/495fad60/CmnJ.go /home/user11/.vscode-server/data/User/History/495fad60/ENSZ.go /home/user11/.vscode-server/data/User/History/495fad60/EfCJ.go /home/user11/.vscode-server/data/User/History/495fad60/FvVo.go /home/user11/.vscode-server/data/User/History/495fad60/GXUy.go /home/user11/.vscode-server/data/User/History/495fad60/GltK.go /home/user11/.vscode-server/data/User/History/495fad60/HaS5.go /home/user11/.vscode-server/data/User/History/495fad60/ISHp.go /home/user11/.vscode-server/data/User/History/495fad60/IoLP.go /home/user11/.vscode-server/data/User/History/495fad60/IsS2.go /home/user11/.vscode-server/data/User/History/495fad60/JYJC.go /home/user11/.vscode-server/data/User/History/495fad60/OMEo.go /home/user11/.vscode-server/data/User/History/495fad60/OgV4.go /home/user11/.vscode-server/data/User/History/495fad60/QDzi.go /home/user11/.vscode-server/data/User/History/495fad60/RTc3.go /home/user11/.vscode-server/data/User/History/495fad60/Rf6x.go /home/user11/.vscode-server/data/User/History/495fad60/SCls.go /home/user11/.vscode-server/data/User/History/495fad60/SgG2.go /home/user11/.vscode-server/data/User/History/495fad60/SyWr.go /home/user11/.vscode-server/data/User/History/495fad60/Te4E.go /home/user11/.vscode-server/data/User/History/495fad60/Xlsh.go /home/user11/.vscode-server/data/User/History/495fad60/Ycmv.go /home/user11/.vscode-server/data/User/History/495fad60/a4Ck.go /home/user11/.vscode-server/data/User/History/495fad60/c8mw.go /home/user11/.vscode-server/data/User/History/495fad60/cq9V.go /home/user11/.vscode-server/data/User/History/495fad60/dvrC.go /home/user11/.vscode-server/data/User/History/495fad60/g3Vt.go /home/user11/.vscode-server/data/User/History/495fad60/hHrv.go /home/user11/.vscode-server/data/User/History/495fad60/hloG.go /home/user11/.vscode-server/data/User/History/495fad60/j0kg.go /home/user11/.vscode-server/data/User/History/495fad60/keXp.go /home/user11/.vscode-server/data/User/History/495fad60/qBqz.go /home/user11/.vscode-server/data/User/History/495fad60/slvL.go /home/user11/.vscode-server/data/User/History/495fad60/uPzo.go /home/user11/.vscode-server/data/User/History/495fad60/uV1D.go /home/user11/.vscode-server/data/User/History/495fad60/usGo.go /home/user11/.vscode-server/data/User/History/495fad60/vP5N.go /home/user11/.vscode-server/data/User/History/495fad60/xAeS.go /home/user11/.vscode-server/data/User/History/495fad60/xkZx.go]
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	package="naro-server/go/src/go-server-db"
+	files=[/home/user11/go/src/go-server-db/main.go]
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	package="naro-server/go/src/hello-server"
+	files=[/home/user11/go/src/hello-server/main.go]
+
+[Info  - 10:09:50 PM] 2022/05/23 22:09:50 go/packages.Load
+	snapshot=9
+	package="naro-server/go/src/rokkai"
+	files=[/home/user11/go/src/rokkai/main.go]
+
+[Error - 10:09:50 PM] 2022/05/23 22:09:50 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/495fad60
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+
+[Error - 10:09:50 PM] 2022/05/23 22:09:50 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:09:59 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 10:10:05 PM] 2022/05/23 22:10:05 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:10:06 PM] 2022/05/23 22:10:06 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:10:09 PM] 2022/05/23 22:10:09 reloadOrphanedFiles reloading
+	query=[file:///home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go]
+
+[Info  - 10:10:09 PM] 2022/05/23 22:10:09 go/packages.Load
+	snapshot=17
+	directory=/home/user11
+	query=[file=/home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go]
+	packages=1
+
+[Info  - 10:10:09 PM] 2022/05/23 22:10:09 go/packages.Load
+	snapshot=17
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go]
+
+[Error - 10:10:09 PM] 2022/05/23 22:10:09 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 10:10:10 PM] 2022/05/23 22:10:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:10:29 PM] 2022/05/23 22:10:29 background imports cache refresh starting
+
+[Info  - 10:10:29 PM] 2022/05/23 22:10:29 background refresh finished after 124.139447ms
+
+[Info  - 10:14:23 PM] 2022/05/23 22:14:23 background imports cache refresh starting
+
+[Info  - 10:14:23 PM] 2022/05/23 22:14:23 background refresh finished after 85.227309ms
+
+[Info  - 10:15:05 PM] 2022/05/23 22:15:05 background imports cache refresh starting
+
+[Info  - 10:15:05 PM] 2022/05/23 22:15:05 background refresh finished after 80.957681ms
+
+[Info  - 10:20:49 PM] 2022/05/23 22:20:49 background imports cache refresh starting
+
+[Info  - 10:20:49 PM] 2022/05/23 22:20:49 background refresh finished after 100.660328ms
+
+[Info  - 10:21:41 PM] 2022/05/23 22:21:41 background imports cache refresh starting
+
+[Info  - 10:21:41 PM] 2022/05/23 22:21:41 background refresh finished after 127.972264ms
+
+[Info  - 10:22:46 PM] 2022/05/23 22:22:46 background imports cache refresh starting
+
+[Info  - 10:22:46 PM] 2022/05/23 22:22:46 background refresh finished after 81.604223ms
+
+[Info  - 10:27:13 PM] 2022/05/23 22:27:13 background imports cache refresh starting
+
+[Info  - 10:27:13 PM] 2022/05/23 22:27:13 background refresh finished after 103.315451ms
+
+[Error - 10:49:26 PM] 2022/05/23 22:49:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:27 PM] 2022/05/23 22:49:27 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:27 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 10:49:28 PM] 2022/05/23 22:49:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:28 PM] 2022/05/23 22:49:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:33 PM] 2022/05/23 22:49:33 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:49:41 PM] 2022/05/23 22:49:41 go/packages.Load
+	snapshot=27
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 10:49:41 PM] 2022/05/23 22:49:41 go/packages.Load
+	snapshot=27
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go]
+
+[Error - 10:49:41 PM] 2022/05/23 22:49:41 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 10:49:41 PM] 2022/05/23 22:49:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:41 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 10:49:47 PM] 2022/05/23 22:49:47 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:48 PM] 2022/05/23 22:49:48 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:49 PM] 2022/05/23 22:49:49 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 10:49:50 PM] 2022/05/23 22:49:50 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:49:54 PM] 2022/05/23 22:49:54 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:49:57 PM] 2022/05/23 22:49:57 background imports cache refresh starting
+
+[Info  - 10:49:57 PM] 2022/05/23 22:49:57 background refresh finished after 116.630299ms
+
+[Info  - 10:50:00 PM] 2022/05/23 22:50:00 go/packages.Load
+	snapshot=37
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 10:50:00 PM] 2022/05/23 22:50:00 go/packages.Load
+	snapshot=37
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 10:50:00 PM] 2022/05/23 22:50:00 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 10:50:01 PM] 2022/05/23 22:50:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:55:52 PM] 2022/05/23 22:55:52 background imports cache refresh starting
+
+[Info  - 10:55:52 PM] 2022/05/23 22:55:52 background refresh finished after 97.068238ms
+
+[Error - 10:57:26 PM] 2022/05/23 22:57:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:57:27 PM] 2022/05/23 22:57:27 background imports cache refresh starting
+
+[Info  - 10:57:27 PM] 2022/05/23 22:57:27 background refresh finished after 79.701989ms
+
+[Error - 10:57:28 PM] 2022/05/23 22:57:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:57:29 PM] 2022/05/23 22:57:29 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:57:57 PM] 2022/05/23 22:57:57 background imports cache refresh starting
+
+[Info  - 10:57:57 PM] 2022/05/23 22:57:57 background refresh finished after 82.991251ms
+
+[Info  - 10:57:58 PM] 2022/05/23 22:57:58 go/packages.Load
+	snapshot=44
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 10:57:58 PM] 2022/05/23 22:57:58 go/packages.Load
+	snapshot=44
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 10:57:58 PM] 2022/05/23 22:57:58 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 10:57:58 PM] 2022/05/23 22:57:58 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:11 PM] 2022/05/23 22:58:11 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:12 PM] 2022/05/23 22:58:12 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:12 PM] 2022/05/23 22:58:12 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:65:7: expected '(', found getCityInfoHandler (and 2 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 10:58:13 PM] 2022/05/23 22:58:13 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:65:7: expected '(', found getCityInfoHandler (and 2 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 10:58:13 PM] 2022/05/23 22:58:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:13 PM] 2022/05/23 22:58:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:15 PM] 2022/05/23 22:58:15 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:22 PM] 2022/05/23 22:58:22 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:22 PM] 2022/05/23 22:58:22 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:25 PM] 2022/05/23 22:58:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:25 PM] 2022/05/23 22:58:25 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:164:2: expected ';', found 'func' (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 10:58:26 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 10:58:26 PM] 2022/05/23 22:58:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:34 PM] 2022/05/23 22:58:34 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:36 PM] 2022/05/23 22:58:36 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:58:40 PM] 2022/05/23 22:58:40 background imports cache refresh starting
+
+[Info  - 10:58:40 PM] 2022/05/23 22:58:40 background refresh finished after 92.606492ms
+
+[Error - 10:58:42 PM] 2022/05/23 22:58:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:44 PM] 2022/05/23 22:58:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:49 PM] 2022/05/23 22:58:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:49 PM] 2022/05/23 22:58:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:51 PM] 2022/05/23 22:58:51 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:55 PM] 2022/05/23 22:58:55 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:56 PM] 2022/05/23 22:58:56 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:57 PM] 2022/05/23 22:58:57 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 10:58:59 PM] 2022/05/23 22:58:59 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:59:03 PM] 2022/05/23 22:59:03 go/packages.Load
+	snapshot=87
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 10:59:03 PM] 2022/05/23 22:59:03 go/packages.Load
+	snapshot=87
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 10:59:03 PM] 2022/05/23 22:59:03 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 10:59:03 PM] 2022/05/23 22:59:03 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 10:59:10 PM] 2022/05/23 22:59:10 background imports cache refresh starting
+
+[Info  - 10:59:10 PM] 2022/05/23 22:59:10 background refresh finished after 124.919765ms
+
+[Error - 11:00:29 PM] 2022/05/23 23:00:29 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:31 PM] 2022/05/23 23:00:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:36 PM] 2022/05/23 23:00:36 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:37 PM] 2022/05/23 23:00:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:46 PM] 2022/05/23 23:00:46 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:54 PM] 2022/05/23 23:00:54 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:55 PM] 2022/05/23 23:00:55 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:57 PM] 2022/05/23 23:00:57 no completions found: this is a definition of func getc(c github.com/labstack/echo/v4.Context) error
+	position={165 9}
+
+[Info  - 11:00:57 PM] 2022/05/23 23:00:57 background imports cache refresh starting
+
+[Info  - 11:00:57 PM] 2022/05/23 23:00:57 background refresh finished after 80.216027ms
+
+[Error - 11:00:57 PM] 2022/05/23 23:00:57 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:00:58 PM] 2022/05/23 23:00:58 no completions found: this is a definition of func get(c github.com/labstack/echo/v4.Context) error
+	position={165 8}
+
+[Error - 11:00:59 PM] 2022/05/23 23:00:59 no completions found: this is a definition of func getCoun(c github.com/labstack/echo/v4.Context) error
+	position={165 12}
+
+[Error - 11:00:59 PM] 2022/05/23 23:00:59 no completions found: this is a definition of func getCount(c github.com/labstack/echo/v4.Context) error
+	position={165 13}
+
+[Error - 11:00:59 PM] 2022/05/23 23:00:59 no completions found: this is a definition of func getCountr(c github.com/labstack/echo/v4.Context) error
+	position={165 14}
+
+[Error - 11:00:59 PM] 2022/05/23 23:00:59 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:01:00 PM] 2022/05/23 23:01:00 no completions found: this is a definition of func getCountry(c github.com/labstack/echo/v4.Context) error
+	position={165 15}
+
+[Error - 11:01:00 PM] 2022/05/23 23:01:00 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:01:07 PM] 2022/05/23 23:01:07 no completions found: this is a definition of var co City
+	position={166 3}
+
+[Error - 11:01:07 PM] 2022/05/23 23:01:07 no completions found: this is a definition of var coun City
+	position={166 5}
+
+[Error - 11:01:08 PM] 2022/05/23 23:01:08 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:01:13 PM] 2022/05/23 23:01:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:01:24 PM] 2022/05/23 23:01:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:01:25 PM] 2022/05/23 23:01:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:01:27 PM] 2022/05/23 23:01:27 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:01:27 PM] 2022/05/23 23:01:27 background imports cache refresh starting
+
+[Info  - 11:01:28 PM] 2022/05/23 23:01:28 background refresh finished after 114.371693ms
+
+[Info  - 11:01:33 PM] 2022/05/23 23:01:33 go/packages.Load
+	snapshot=142
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:01:33 PM] 2022/05/23 23:01:33 go/packages.Load
+	snapshot=142
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:01:33 PM] 2022/05/23 23:01:33 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:01:33 PM] 2022/05/23 23:01:33 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:05:52 PM] 2022/05/23 23:05:52 background imports cache refresh starting
+
+[Info  - 11:05:52 PM] 2022/05/23 23:05:52 background refresh finished after 88.538442ms
+
+[Error - 11:07:11 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Info  - 11:07:41 PM] 2022/05/23 23:07:41 background imports cache refresh starting
+
+[Info  - 11:07:41 PM] 2022/05/23 23:07:41 background refresh finished after 99.635603ms
+
+[Error - 11:14:26 PM] 2022/05/23 23:14:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:14:27 PM] 2022/05/23 23:14:27 background imports cache refresh starting
+
+[Error - 11:14:27 PM] 2022/05/23 23:14:27 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:27 PM] 2022/05/23 23:14:27 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:29:1: expected declaration, found ty
+	file="/home/user11/go/src/account/main.go"
+
+[Info  - 11:14:27 PM] 2022/05/23 23:14:27 background refresh finished after 93.623615ms
+
+[Error - 11:14:28 PM] 2022/05/23 23:14:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:28 PM] 2022/05/23 23:14:28 no completions found: this is a definition of type C invalid type
+	position={28 6}
+
+[Error - 11:14:29 PM] 2022/05/23 23:14:29 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:29 PM] 2022/05/23 23:14:29 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:29:7: expected type, found newline
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:14:30 PM] 2022/05/23 23:14:30 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:30 PM] 2022/05/23 23:14:30 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:29:13: expected type, found newline
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:14:30 PM] 2022/05/23 23:14:30 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:31 PM] 2022/05/23 23:14:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:31 PM] 2022/05/23 23:14:31 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:29:13: expected type, found newline
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:14:32 PM] 2022/05/23 23:14:32 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:32 PM] 2022/05/23 23:14:32 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:31:1: expected '{', found 'type' (and 3 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:14:33 PM] 2022/05/23 23:14:33 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:34 PM] 2022/05/23 23:14:34 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:37 PM] 2022/05/23 23:14:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:42 PM] 2022/05/23 23:14:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:43 PM] 2022/05/23 23:14:43 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:14:46 PM] 2022/05/23 23:14:46 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:14:53 PM] 2022/05/23 23:14:53 go/packages.Load
+	snapshot=179
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:14:53 PM] 2022/05/23 23:14:53 go/packages.Load
+	snapshot=179
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:14:53 PM] 2022/05/23 23:14:53 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:14:53 PM] 2022/05/23 23:14:53 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:14:58 PM] 2022/05/23 23:14:58 background imports cache refresh starting
+
+[Info  - 11:14:58 PM] 2022/05/23 23:14:58 background refresh finished after 128.022718ms
+
+[Error - 11:15:07 PM] 2022/05/23 23:15:07 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:15:08 PM] 2022/05/23 23:15:08 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:15:10 PM] 2022/05/23 23:15:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:15:12 PM] 2022/05/23 23:15:12 go/packages.Load
+	snapshot=190
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:15:12 PM] 2022/05/23 23:15:12 go/packages.Load
+	snapshot=190
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:15:12 PM] 2022/05/23 23:15:12 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:15:12 PM] 2022/05/23 23:15:12 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:15:27 PM] 2022/05/23 23:15:27 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:15:28 PM] 2022/05/23 23:15:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:15:29 PM] 2022/05/23 23:15:29 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:15:30 PM] 2022/05/23 23:15:30 background imports cache refresh starting
+
+[Info  - 11:15:31 PM] 2022/05/23 23:15:31 background refresh finished after 124.497512ms
+
+[Info  - 11:15:31 PM] 2022/05/23 23:15:31 go/packages.Load
+	snapshot=201
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:15:31 PM] 2022/05/23 23:15:31 go/packages.Load
+	snapshot=201
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:15:31 PM] 2022/05/23 23:15:31 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:15:31 PM] 2022/05/23 23:15:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:15:51 PM] 2022/05/23 23:15:51 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:16:02 PM] 2022/05/23 23:16:02 background imports cache refresh starting
+
+[Info  - 11:16:02 PM] 2022/05/23 23:16:02 background refresh finished after 75.537425ms
+
+[Error - 11:16:04 PM] 2022/05/23 23:16:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:16:07 PM] 2022/05/23 23:16:07 go/packages.Load
+	snapshot=205
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:16:07 PM] 2022/05/23 23:16:07 go/packages.Load
+	snapshot=205
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:16:07 PM] 2022/05/23 23:16:07 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:16:07 PM] 2022/05/23 23:16:07 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:16:21 PM] 2022/05/23 23:16:21 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:16:21 PM] 2022/05/23 23:16:21 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:16:30 PM] 2022/05/23 23:16:30 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:16:31 PM] 2022/05/23 23:16:31 go/packages.Load
+	snapshot=211
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:16:31 PM] 2022/05/23 23:16:31 go/packages.Load
+	snapshot=211
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:16:31 PM] 2022/05/23 23:16:31 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:16:31 PM] 2022/05/23 23:16:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:16:33 PM] 2022/05/23 23:16:33 background imports cache refresh starting
+
+[Info  - 11:16:33 PM] 2022/05/23 23:16:33 background refresh finished after 92.110938ms
+
+[Error - 11:17:14 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:17:14 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:17:35 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:17:35 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Info  - 11:17:44 PM] 2022/05/23 23:17:44 background imports cache refresh starting
+
+[Info  - 11:17:44 PM] 2022/05/23 23:17:44 background refresh finished after 126.633678ms
+
+[Info  - 11:19:33 PM] 2022/05/23 23:19:33 background imports cache refresh starting
+
+[Info  - 11:19:33 PM] 2022/05/23 23:19:33 background refresh finished after 87.071655ms
+
+[Error - 11:26:03 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:28:31 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Info  - 11:29:01 PM] 2022/05/23 23:29:01 background imports cache refresh starting
+
+[Info  - 11:29:02 PM] 2022/05/23 23:29:02 background refresh finished after 103.686015ms
+
+[Error - 11:29:21 PM] 2022/05/23 23:29:21 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:29:21 PM] 2022/05/23 23:29:21 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:29:22 PM] 2022/05/23 23:29:22 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:29:23 PM] 2022/05/23 23:29:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:29:25 PM] 2022/05/23 23:29:25 go/packages.Load
+	snapshot=220
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:29:25 PM] 2022/05/23 23:29:25 go/packages.Load
+	snapshot=220
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:29:25 PM] 2022/05/23 23:29:25 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:29:25 PM] 2022/05/23 23:29:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:29:45 PM] 2022/05/23 23:29:45 background imports cache refresh starting
+
+[Info  - 11:29:45 PM] 2022/05/23 23:29:45 background refresh finished after 134.050879ms
+
+[Info  - 11:34:48 PM] 2022/05/23 23:34:48 background imports cache refresh starting
+
+[Info  - 11:34:48 PM] 2022/05/23 23:34:48 background refresh finished after 96.362538ms
+
+[Error - 11:37:38 PM] 2022/05/23 23:37:38 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/495fad60
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+
+[Error - 11:37:38 PM] 2022/05/23 23:37:38 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:37:38 PM] 2022/05/23 23:37:38 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:39 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:37:39 PM] 2022/05/23 23:37:39 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:39 PM] 2022/05/23 23:37:39 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:22: expected ';', found country
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:39 PM] 2022/05/23 23:37:39 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/495fad60
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+
+[Error - 11:37:40 PM] 2022/05/23 23:37:40 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/c93ec6c
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+
+[Error - 11:37:40 PM] 2022/05/23 23:37:40 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:40 PM] 2022/05/23 23:37:40 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:22: expected ';', found country
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:41 PM] 2022/05/23 23:37:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:41 PM] 2022/05/23 23:37:41 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:11: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:42 PM] 2022/05/23 23:37:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:42 PM] 2022/05/23 23:37:42 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:22: expected ';', found country
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:44 PM] 2022/05/23 23:37:44 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:22: expected ';', found country
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:44 PM] 2022/05/23 23:37:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:44 PM] 2022/05/23 23:37:44 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:11: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:47 PM] 2022/05/23 23:37:47 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:11: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:47 PM] 2022/05/23 23:37:47 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:47 PM] 2022/05/23 23:37:47 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:12: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:48 PM] 2022/05/23 23:37:48 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:48 PM] 2022/05/23 23:37:48 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:48 PM] 2022/05/23 23:37:48 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:49 PM] 2022/05/23 23:37:49 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:51 PM] 2022/05/23 23:37:51 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:51 PM] 2022/05/23 23:37:51 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:52 PM] 2022/05/23 23:37:52 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:55 PM] 2022/05/23 23:37:55 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:55 PM] 2022/05/23 23:37:55 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:21: expected ']', found newline
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:55 PM] 2022/05/23 23:37:55 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:21: expected ']', found newline
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:56 PM] 2022/05/23 23:37:56 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:37:56 PM] 2022/05/23 23:37:56 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:57 PM] 2022/05/23 23:37:57 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:37:58 PM] 2022/05/23 23:37:58 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:00 PM] Request textDocument/formatting failed.
+  Message: 171:22: expected type, found newline
+  Code: 0 
+[Info  - 11:38:01 PM] 2022/05/23 23:38:01 go/packages.Load
+	snapshot=236
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:38:01 PM] 2022/05/23 23:38:01 go/packages.Load
+	snapshot=236
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:38:01 PM] 2022/05/23 23:38:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:38:07 PM] 2022/05/23 23:38:07 background imports cache refresh starting
+
+[Info  - 11:38:07 PM] 2022/05/23 23:38:07 background refresh finished after 96.45894ms
+
+[Error - 11:38:22 PM] 2022/05/23 23:38:22 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:23 PM] 2022/05/23 23:38:23 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:23 PM] 2022/05/23 23:38:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:38:23 PM] 2022/05/23 23:38:23 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:21: expected ']', found newline
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:23 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:38:23 PM] 2022/05/23 23:38:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:38:23 PM] 2022/05/23 23:38:23 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:24 PM] 2022/05/23 23:38:24 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:25 PM] 2022/05/23 23:38:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:38:25 PM] 2022/05/23 23:38:25 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:2: expected declaration, found db
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:38:26 PM] 2022/05/23 23:38:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:38:31 PM] 2022/05/23 23:38:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:38:32 PM] 2022/05/23 23:38:32 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:38:41 PM] 2022/05/23 23:38:41 go/packages.Load
+	snapshot=247
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:38:41 PM] 2022/05/23 23:38:41 go/packages.Load
+	snapshot=247
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:38:41 PM] 2022/05/23 23:38:41 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:38:56 PM] 2022/05/23 23:38:56 background imports cache refresh starting
+
+[Info  - 11:38:56 PM] 2022/05/23 23:38:56 background refresh finished after 83.25524ms
+
+[Error - 11:39:21 PM] 2022/05/23 23:39:21 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:39:22 PM] 2022/05/23 23:39:22 no signature help: cannot find an enclosing function
+	position={172 8}
+
+[Error - 11:39:22 PM] 2022/05/23 23:39:22 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:39:24 PM] 2022/05/23 23:39:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:39:29 PM] 2022/05/23 23:39:29 go/packages.Load
+	snapshot=264
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:39:29 PM] 2022/05/23 23:39:29 go/packages.Load
+	snapshot=264
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:39:29 PM] 2022/05/23 23:39:29 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:39:44 PM] 2022/05/23 23:39:44 background imports cache refresh starting
+
+[Info  - 11:39:44 PM] 2022/05/23 23:39:44 background refresh finished after 89.881596ms
+
+[Error - 11:40:38 PM] 2022/05/23 23:40:38 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:40:44 PM] 2022/05/23 23:40:44 go/packages.Load
+	snapshot=268
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:40:44 PM] 2022/05/23 23:40:44 go/packages.Load
+	snapshot=268
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:40:44 PM] 2022/05/23 23:40:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:41:04 PM] 2022/05/23 23:41:04 background imports cache refresh starting
+
+[Info  - 11:41:05 PM] 2022/05/23 23:41:05 background refresh finished after 133.105689ms
+
+[Error - 11:41:09 PM] 2022/05/23 23:41:09 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:41:10 PM] 2022/05/23 23:41:10 go/packages.Load
+	snapshot=272
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:41:10 PM] 2022/05/23 23:41:10 go/packages.Load
+	snapshot=272
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:41:11 PM] 2022/05/23 23:41:11 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:22 PM] 2022/05/23 23:41:22 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:41:22 PM] 2022/05/23 23:41:22 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:22 PM] 2022/05/23 23:41:22 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:46: missing ',' before newline in composite literal (and 11 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:41:23 PM] 2022/05/23 23:41:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:25 PM] 2022/05/23 23:41:25 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:25 PM] 2022/05/23 23:41:25 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:21: expected operand, found ']'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:41:26 PM] 2022/05/23 23:41:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:26 PM] 2022/05/23 23:41:26 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:46: expected ']', found newline (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:41:26 PM] 2022/05/23 23:41:26 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:27 PM] 2022/05/23 23:41:27 no signature help: cannot find an enclosing function
+	position={170 21}
+
+[Error - 11:41:27 PM] 2022/05/23 23:41:27 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:27 PM] 2022/05/23 23:41:27 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:41:28 PM] 2022/05/23 23:41:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:29 PM] 2022/05/23 23:41:29 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:29 PM] 2022/05/23 23:41:29 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:41:29 PM] 2022/05/23 23:41:29 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:41:30 PM] 2022/05/23 23:41:30 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:30 PM] 2022/05/23 23:41:30 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:46: missing ',' before newline in composite literal (and 11 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:41:30 PM] 2022/05/23 23:41:30 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:46: missing ',' before newline in composite literal (and 11 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:41:30 PM] 2022/05/23 23:41:30 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:46: missing ',' before newline in composite literal (and 11 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:41:31 PM] 2022/05/23 23:41:31 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:41:33 PM] 2022/05/23 23:41:33 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:41:35 PM] 2022/05/23 23:41:35 go/packages.Load
+	snapshot=292
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:41:35 PM] 2022/05/23 23:41:35 go/packages.Load
+	snapshot=292
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:41:35 PM] 2022/05/23 23:41:35 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:41:37 PM] 2022/05/23 23:41:37 background imports cache refresh starting
+
+[Info  - 11:41:37 PM] 2022/05/23 23:41:37 background refresh finished after 128.728065ms
+
+[Error - 11:43:01 PM] Request textDocument/definition failed.
+  Message: no object found for ident r
+  Code: 0 
+[Error - 11:43:01 PM] 2022/05/23 23:43:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:01 PM] Request textDocument/definition failed.
+  Message: no object found for ident country
+  Code: 0 
+[Error - 11:43:01 PM] Request textDocument/definition failed.
+  Message: no object found for ident country
+  Code: 0 
+[Error - 11:43:01 PM] 2022/05/23 23:43:01 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/495fad60
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+
+[Error - 11:43:01 PM] 2022/05/23 23:43:01 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:04 PM] 2022/05/23 23:43:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:05 PM] 2022/05/23 23:43:05 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:05 PM] 2022/05/23 23:43:05 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:06 PM] 2022/05/23 23:43:06 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:09 PM] 2022/05/23 23:43:09 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:09 PM] 2022/05/23 23:43:09 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:10 PM] 2022/05/23 23:43:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:11 PM] 2022/05/23 23:43:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:13 PM] 2022/05/23 23:43:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:43:17 PM] 2022/05/23 23:43:17 go/packages.Load
+	snapshot=319
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:43:17 PM] 2022/05/23 23:43:17 go/packages.Load
+	snapshot=319
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:43:17 PM] 2022/05/23 23:43:17 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:43:29 PM] 2022/05/23 23:43:29 background imports cache refresh starting
+
+[Info  - 11:43:29 PM] 2022/05/23 23:43:29 background refresh finished after 78.173259ms
+
+[Error - 11:43:35 PM] 2022/05/23 23:43:35 unable to compute positions for type errors: invalid pos
+	package="naro-server/go/src/account"
+
+[Error - 11:43:35 PM] 2022/05/23 23:43:35 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 unable to compute positions for type errors: invalid pos
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 unable to compute positions for type errors: invalid pos
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:46: missing ',' before newline in argument list (and 21 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 unable to compute positions for type errors: invalid pos
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:27: missing ',' before newline in argument list (and 22 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:36 PM] 2022/05/23 23:43:36 DocumentSymbols failed: invalid pos
+	URI=file:///home/user11/go/src/account/main.go
+
+[Error - 11:43:37 PM] 2022/05/23 23:43:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:40 PM] 2022/05/23 23:43:40 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:27: missing ',' before newline in argument list (and 22 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 unable to compute positions for type errors: invalid pos
+	package="naro-server/go/src/account"
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:27: missing ',' before newline in argument list (and 22 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:42 PM] 2022/05/23 23:43:42 DocumentSymbols failed: invalid pos
+	URI=file:///home/user11/go/src/account/main.go
+
+[Error - 11:43:43 PM] 2022/05/23 23:43:43 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:44 PM] 2022/05/23 23:43:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:44 PM] 2022/05/23 23:43:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:44 PM] 2022/05/23 23:43:44 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:45 PM] 2022/05/23 23:43:45 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:43:49 PM] 2022/05/23 23:43:49 go/packages.Load
+	snapshot=337
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:43:49 PM] 2022/05/23 23:43:49 go/packages.Load
+	snapshot=337
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:43:49 PM] 2022/05/23 23:43:49 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:51 PM] 2022/05/23 23:43:51 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:43:52 PM] 2022/05/23 23:43:52 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:43:52 PM] 2022/05/23 23:43:52 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:53 PM] 2022/05/23 23:43:53 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:53 PM] 2022/05/23 23:43:53 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:54 PM] 2022/05/23 23:43:54 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:43:56 PM] Request textDocument/formatting failed.
+  Message: 171:13: expected expression
+  Code: 0 
+[Info  - 11:43:57 PM] 2022/05/23 23:43:57 go/packages.Load
+	snapshot=341
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:43:57 PM] 2022/05/23 23:43:57 go/packages.Load
+	snapshot=341
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:43:57 PM] 2022/05/23 23:43:57 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:44:04 PM] 2022/05/23 23:44:04 background imports cache refresh starting
+
+[Info  - 11:44:04 PM] 2022/05/23 23:44:04 background refresh finished after 111.996418ms
+
+[Error - 11:46:13 PM] 2022/05/23 23:46:13 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:46:14 PM] 2022/05/23 23:46:14 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:46:15 PM] 2022/05/23 23:46:15 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:48:50 PM] 2022/05/23 23:48:50 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:48:51 PM] 2022/05/23 23:48:51 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:48:56 PM] 2022/05/23 23:48:56 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:48:59 PM] 2022/05/23 23:48:59 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:49:00 PM] 2022/05/23 23:49:00 unable to compute positions for type errors: no parsed file for  in naro-server/go/src/account
+	package="naro-server/go/src/account"
+
+[Error - 11:49:00 PM] 2022/05/23 23:49:00 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:49:02 PM] 2022/05/23 23:49:02 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:13: expected operand, found '{' (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:49:02 PM] 2022/05/23 23:49:02 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:49:04 PM] 2022/05/23 23:49:04 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:49:10 PM] 2022/05/23 23:49:10 go/packages.Load
+	snapshot=357
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:49:10 PM] 2022/05/23 23:49:10 go/packages.Load
+	snapshot=357
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:49:10 PM] 2022/05/23 23:49:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:49:21 PM] 2022/05/23 23:49:21 background imports cache refresh starting
+
+[Info  - 11:49:21 PM] 2022/05/23 23:49:21 background refresh finished after 81.613358ms
+
+[Error - 11:50:38 PM] 2022/05/23 23:50:38 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:39 PM] 2022/05/23 23:50:39 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:40 PM] 2022/05/23 23:50:40 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:40 PM] 2022/05/23 23:50:40 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:50:42 PM] 2022/05/23 23:50:42 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:50:42 PM] 2022/05/23 23:50:42 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:46 PM] Request textDocument/formatting failed.
+  Message: 171:6: missing variable type or initialization
+  Code: 0 
+[Info  - 11:50:47 PM] 2022/05/23 23:50:47 go/packages.Load
+	snapshot=366
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:50:47 PM] 2022/05/23 23:50:47 go/packages.Load
+	snapshot=366
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:50:47 PM] 2022/05/23 23:50:47 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:52 PM] 2022/05/23 23:50:52 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:53 PM] 2022/05/23 23:50:53 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:50:56 PM] 2022/05/23 23:50:56 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:51:08 PM] 2022/05/23 23:51:08 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:51:08 PM] 2022/05/23 23:51:08 background imports cache refresh starting
+
+[Info  - 11:51:09 PM] 2022/05/23 23:51:09 background refresh finished after 171.215804ms
+
+[Info  - 11:51:09 PM] 2022/05/23 23:51:09 go/packages.Load
+	snapshot=375
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:51:09 PM] 2022/05/23 23:51:09 go/packages.Load
+	snapshot=375
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:51:09 PM] 2022/05/23 23:51:09 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:51:19 PM] 2022/05/23 23:51:19 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:51:19 PM] 2022/05/23 23:51:19 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:23: expected ';', found '{'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:51:22 PM] 2022/05/23 23:51:22 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:23: expected ';', found '{'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:51:22 PM] Request textDocument/codeAction failed.
+  Message: context canceled
+  Code: 0 
+[Error - 11:51:22 PM] 2022/05/23 23:51:22 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:23: expected ';', found '{'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:51:23 PM] 2022/05/23 23:51:23 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:51:23 PM] 2022/05/23 23:51:23 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:21: expected ';', found '{'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:51:23 PM] 2022/05/23 23:51:23 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:21: expected ';', found '{'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:51:24 PM] 2022/05/23 23:51:24 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:51:28 PM] 2022/05/23 23:51:28 go/packages.Load
+	snapshot=383
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:51:28 PM] 2022/05/23 23:51:28 go/packages.Load
+	snapshot=383
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:51:28 PM] 2022/05/23 23:51:28 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:51:48 PM] 2022/05/23 23:51:48 background imports cache refresh starting
+
+[Info  - 11:51:48 PM] 2022/05/23 23:51:48 background refresh finished after 111.808836ms
+
+[Error - 11:53:37 PM] 2022/05/23 23:53:37 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:39 PM] 2022/05/23 23:53:39 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:39 PM] 2022/05/23 23:53:39 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:53:40 PM] 2022/05/23 23:53:40 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:41 PM] 2022/05/23 23:53:41 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:41 PM] 2022/05/23 23:53:41 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:41 PM] 2022/05/23 23:53:41 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:42 PM] 2022/05/23 23:53:42 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:171:6: missing variable type or initialization (and 1 more errors)
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:53:43 PM] 2022/05/23 23:53:43 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:53:45 PM] 2022/05/23 23:53:45 go/packages.Load
+	snapshot=396
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:53:45 PM] 2022/05/23 23:53:45 go/packages.Load
+	snapshot=396
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:53:45 PM] 2022/05/23 23:53:45 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:54:05 PM] 2022/05/23 23:54:05 background imports cache refresh starting
+
+[Info  - 11:54:05 PM] 2022/05/23 23:54:05 background refresh finished after 77.960323ms
+
+[Error - 11:54:06 PM] 2022/05/23 23:54:06 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:10: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:54:06 PM] 2022/05/23 23:54:06 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:07 PM] 2022/05/23 23:54:07 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:10: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:54:08 PM] 2022/05/23 23:54:08 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:10: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:54:09 PM] 2022/05/23 23:54:09 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:10: expected expression
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 11:54:10 PM] 2022/05/23 23:54:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:12 PM] 2022/05/23 23:54:12 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:14 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:54:14 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:54:14 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Error - 11:54:14 PM] 2022/05/23 23:54:14 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 11:54:19 PM] 2022/05/23 23:54:19 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:54:19 PM] 2022/05/23 23:54:19 go/packages.Load
+	snapshot=405
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 11:54:19 PM] 2022/05/23 23:54:19 go/packages.Load
+	snapshot=405
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 11:54:19 PM] 2022/05/23 23:54:19 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 11:54:39 PM] 2022/05/23 23:54:39 background imports cache refresh starting
+
+[Info  - 11:54:40 PM] 2022/05/23 23:54:40 background refresh finished after 124.051092ms
+
+[Error - 12:08:00 AM] 2022/05/24 00:08:00 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:08:00 AM] 2022/05/24 00:08:00 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:08:01 AM] 2022/05/24 00:08:01 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:08:01 AM] 2022/05/24 00:08:01 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:08:05 AM] 2022/05/24 00:08:05 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:08:09 AM] Request textDocument/formatting failed.
+  Message: 180:5: expected selector or type assertion, found 'select'
+  Code: 0 
+[Info  - 12:08:10 AM] 2022/05/24 00:08:10 go/packages.Load
+	snapshot=408
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 12:08:10 AM] 2022/05/24 00:08:10 go/packages.Load
+	snapshot=408
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 12:08:10 AM] 2022/05/24 00:08:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:08:30 AM] 2022/05/24 00:08:30 background imports cache refresh starting
+
+[Info  - 12:08:30 AM] 2022/05/24 00:08:30 background refresh finished after 93.714098ms
+
+[Error - 12:08:38 AM] 2022/05/24 00:08:38 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:00 AM] 2022/05/24 00:09:00 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:01 AM] 2022/05/24 00:09:01 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:05 AM] 2022/05/24 00:09:05 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:180:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:06 AM] 2022/05/24 00:09:06 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:09:10 AM] 2022/05/24 00:09:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:09:10 AM] 2022/05/24 00:09:10 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 12:09:10 AM] 2022/05/24 00:09:10 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:11 AM] 2022/05/24 00:09:11 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:12 AM] 2022/05/24 00:09:12 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:12 AM] 2022/05/24 00:09:12 imports fixes: AllImportsFixes: /home/user11/go/src/account/main.go:172:5: expected selector or type assertion, found 'select'
+	file="/home/user11/go/src/account/main.go"
+
+[Error - 12:09:13 AM] 2022/05/24 00:09:13 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:09:15 AM] 2022/05/24 00:09:15 go/packages.Load
+	snapshot=422
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/c93ec6c]
+	packages=1
+
+[Info  - 12:09:15 AM] 2022/05/24 00:09:15 go/packages.Load
+	snapshot=422
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Error - 12:09:16 AM] 2022/05/24 00:09:16 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 12:09:36 AM] 2022/05/24 00:09:36 background imports cache refresh starting
+
+[Info  - 12:09:36 AM] 2022/05/24 00:09:36 background refresh finished after 92.783845ms
+
+[Info  - 12:10:42 AM] 2022/05/24 00:10:42 background imports cache refresh starting
+
+[Info  - 12:10:42 AM] 2022/05/24 00:10:42 background refresh finished after 132.957497ms
+
+[Info  - 8:39:08 PM] 2022/05/24 20:39:08 background imports cache refresh starting
+
+[Info  - 8:39:08 PM] 2022/05/24 20:39:08 background refresh finished after 111.901795ms
+
+[Info  - 9:05:58 PM] 2022/05/24 21:05:58 background imports cache refresh starting
+
+[Info  - 9:05:58 PM] 2022/05/24 21:05:58 background refresh finished after 92.681879ms
+
+[Info  - 9:07:10 PM] 2022/05/24 21:07:10 background imports cache refresh starting
+
+[Info  - 9:07:10 PM] 2022/05/24 21:07:10 background refresh finished after 85.695262ms
+
+[Error - 9:11:26 PM] Request textDocument/definition failed.
+  Message: no identifier found
+  Code: 0 
+[Info  - 9:11:51 PM] 2022/05/24 21:11:51 background imports cache refresh starting
+
+[Info  - 9:11:51 PM] 2022/05/24 21:11:51 background refresh finished after 84.778184ms
+
+[Error - 9:11:55 PM] 2022/05/24 21:11:55 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 9:11:56 PM] 2022/05/24 21:11:56 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	directory=/home/user11
+	query=[file=/home/user11/go/src/go-server-db/main.go]
+	packages=1
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	package="naro-server/go/src/go-server-db"
+	files=[/home/user11/go/src/go-server-db/main.go]
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	directory=/home/user11
+	query=[naro-server/.vscode-server/data/User/History/495fad60 naro-server/.vscode-server/data/User/History/c93ec6c naro-server/go/src/account naro-server/go/src/hello-server naro-server/go/src/rokkai]
+	packages=5
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+	files=[/home/user11/.vscode-server/data/User/History/495fad60/2F3N.go /home/user11/.vscode-server/data/User/History/495fad60/5SNt.go /home/user11/.vscode-server/data/User/History/495fad60/5nZF.go /home/user11/.vscode-server/data/User/History/495fad60/7Mbq.go /home/user11/.vscode-server/data/User/History/495fad60/7g5x.go /home/user11/.vscode-server/data/User/History/495fad60/7s1A.go /home/user11/.vscode-server/data/User/History/495fad60/7uG8.go /home/user11/.vscode-server/data/User/History/495fad60/8iYg.go /home/user11/.vscode-server/data/User/History/495fad60/AVg1.go /home/user11/.vscode-server/data/User/History/495fad60/Av7A.go /home/user11/.vscode-server/data/User/History/495fad60/Ayeo.go /home/user11/.vscode-server/data/User/History/495fad60/CmnJ.go /home/user11/.vscode-server/data/User/History/495fad60/ENSZ.go /home/user11/.vscode-server/data/User/History/495fad60/EfCJ.go /home/user11/.vscode-server/data/User/History/495fad60/FvVo.go /home/user11/.vscode-server/data/User/History/495fad60/GXUy.go /home/user11/.vscode-server/data/User/History/495fad60/GltK.go /home/user11/.vscode-server/data/User/History/495fad60/HaS5.go /home/user11/.vscode-server/data/User/History/495fad60/ISHp.go /home/user11/.vscode-server/data/User/History/495fad60/IoLP.go /home/user11/.vscode-server/data/User/History/495fad60/IsS2.go /home/user11/.vscode-server/data/User/History/495fad60/JYJC.go /home/user11/.vscode-server/data/User/History/495fad60/JoTs.go /home/user11/.vscode-server/data/User/History/495fad60/OMEo.go /home/user11/.vscode-server/data/User/History/495fad60/OgV4.go /home/user11/.vscode-server/data/User/History/495fad60/QDzi.go /home/user11/.vscode-server/data/User/History/495fad60/RTc3.go /home/user11/.vscode-server/data/User/History/495fad60/Rf6x.go /home/user11/.vscode-server/data/User/History/495fad60/SCls.go /home/user11/.vscode-server/data/User/History/495fad60/SgG2.go /home/user11/.vscode-server/data/User/History/495fad60/SyWr.go /home/user11/.vscode-server/data/User/History/495fad60/Te4E.go /home/user11/.vscode-server/data/User/History/495fad60/Xlsh.go /home/user11/.vscode-server/data/User/History/495fad60/Ycmv.go /home/user11/.vscode-server/data/User/History/495fad60/a4Ck.go /home/user11/.vscode-server/data/User/History/495fad60/c8mw.go /home/user11/.vscode-server/data/User/History/495fad60/cq9V.go /home/user11/.vscode-server/data/User/History/495fad60/dvrC.go /home/user11/.vscode-server/data/User/History/495fad60/g3Vt.go /home/user11/.vscode-server/data/User/History/495fad60/hHrv.go /home/user11/.vscode-server/data/User/History/495fad60/hloG.go /home/user11/.vscode-server/data/User/History/495fad60/j0kg.go /home/user11/.vscode-server/data/User/History/495fad60/keXp.go /home/user11/.vscode-server/data/User/History/495fad60/qBqz.go /home/user11/.vscode-server/data/User/History/495fad60/slvL.go /home/user11/.vscode-server/data/User/History/495fad60/uPzo.go /home/user11/.vscode-server/data/User/History/495fad60/usGo.go /home/user11/.vscode-server/data/User/History/495fad60/vP5N.go /home/user11/.vscode-server/data/User/History/495fad60/xAeS.go /home/user11/.vscode-server/data/User/History/495fad60/xkZx.go]
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	package="naro-server/.vscode-server/data/User/History/c93ec6c"
+	files=[/home/user11/.vscode-server/data/User/History/c93ec6c/0LWF.go /home/user11/.vscode-server/data/User/History/c93ec6c/3zkE.go /home/user11/.vscode-server/data/User/History/c93ec6c/4XpB.go /home/user11/.vscode-server/data/User/History/c93ec6c/5hxM.go /home/user11/.vscode-server/data/User/History/c93ec6c/6Vzv.go /home/user11/.vscode-server/data/User/History/c93ec6c/705x.go /home/user11/.vscode-server/data/User/History/c93ec6c/74EW.go /home/user11/.vscode-server/data/User/History/c93ec6c/87vo.go /home/user11/.vscode-server/data/User/History/c93ec6c/A70K.go /home/user11/.vscode-server/data/User/History/c93ec6c/APYx.go /home/user11/.vscode-server/data/User/History/c93ec6c/BBlp.go /home/user11/.vscode-server/data/User/History/c93ec6c/BLYP.go /home/user11/.vscode-server/data/User/History/c93ec6c/BnAK.go /home/user11/.vscode-server/data/User/History/c93ec6c/CO6r.go /home/user11/.vscode-server/data/User/History/c93ec6c/Cp1h.go /home/user11/.vscode-server/data/User/History/c93ec6c/J9qC.go /home/user11/.vscode-server/data/User/History/c93ec6c/Jbs1.go /home/user11/.vscode-server/data/User/History/c93ec6c/JwGA.go /home/user11/.vscode-server/data/User/History/c93ec6c/Kvmz.go /home/user11/.vscode-server/data/User/History/c93ec6c/OK3Z.go /home/user11/.vscode-server/data/User/History/c93ec6c/SpVv.go /home/user11/.vscode-server/data/User/History/c93ec6c/TY3Y.go /home/user11/.vscode-server/data/User/History/c93ec6c/YYzi.go /home/user11/.vscode-server/data/User/History/c93ec6c/eUCm.go /home/user11/.vscode-server/data/User/History/c93ec6c/eY5Q.go /home/user11/.vscode-server/data/User/History/c93ec6c/h2x7.go /home/user11/.vscode-server/data/User/History/c93ec6c/lAsX.go /home/user11/.vscode-server/data/User/History/c93ec6c/mdkb.go /home/user11/.vscode-server/data/User/History/c93ec6c/mwuA.go /home/user11/.vscode-server/data/User/History/c93ec6c/nAsY.go /home/user11/.vscode-server/data/User/History/c93ec6c/nBde.go /home/user11/.vscode-server/data/User/History/c93ec6c/or5l.go /home/user11/.vscode-server/data/User/History/c93ec6c/s0vD.go /home/user11/.vscode-server/data/User/History/c93ec6c/sp3t.go /home/user11/.vscode-server/data/User/History/c93ec6c/wOxO.go /home/user11/.vscode-server/data/User/History/c93ec6c/xHRo.go /home/user11/.vscode-server/data/User/History/c93ec6c/xqkG.go /home/user11/.vscode-server/data/User/History/c93ec6c/yTfY.go]
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	package="naro-server/go/src/account"
+	files=[/home/user11/go/src/account/main.go]
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	package="naro-server/go/src/hello-server"
+	files=[/home/user11/go/src/hello-server/main.go]
+
+[Info  - 9:12:00 PM] 2022/05/24 21:12:00 go/packages.Load
+	snapshot=428
+	package="naro-server/go/src/rokkai"
+	files=[/home/user11/go/src/rokkai/main.go]
+
+[Error - 9:12:00 PM] 2022/05/24 21:12:00 unable to compute positions for type errors: no parsed file for  in naro-server/.vscode-server/data/User/History/495fad60
+	package="naro-server/.vscode-server/data/User/History/495fad60"
+
+[Error - 9:12:00 PM] 2022/05/24 21:12:00 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 9:12:05 PM] 2022/05/24 21:12:05 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Error - 9:12:05 PM] 2022/05/24 21:12:05 tidy: diagnosing file:///home/user11/go.mod: err: exit status 1: stderr: go mod tidy: error loading go 1.16 module graph: github.com/labstack/echo-contrib@v0.12.0 requires
+	github.com/appleboy/gofight/v2@v2.1.2: module lookup disabled by GOPROXY=off
+
+If reproducibility with go 1.16 is not needed:
+	go mod tidy -compat=1.17
+For other options, see:
+	https://golang.org/doc/modules/pruning
+
+
+[Info  - 9:12:24 PM] 2022/05/24 21:12:24 background imports cache refresh starting
+
+[Info  - 9:12:24 PM] 2022/05/24 21:12:24 background refresh finished after 92.833333ms
+
+[Info  - 9:42:38 PM] 2022/05/24 21:42:38 background imports cache refresh starting
+
+[Info  - 9:42:38 PM] 2022/05/24 21:42:38 background refresh finished after 84.197512ms
+
+[Info  - 9:52:31 PM] 2022/05/24 21:52:31 background imports cache refresh starting
+
+[Info  - 9:52:31 PM] 2022/05/24 21:52:31 background refresh finished after 100.214304ms
+
+[Info  - 10:06:49 PM] 2022/05/24 22:06:49 background imports cache refresh starting
+
+[Info  - 10:06:49 PM] 2022/05/24 22:06:49 background refresh finished after 101.688191ms
+
+[Info  - 10:11:52 PM] 2022/05/24 22:11:52 background imports cache refresh starting
+
+[Info  - 10:11:52 PM] 2022/05/24 22:11:52 background refresh finished after 95.784854ms
+
+[Info  - 10:54:39 PM] 2022/05/24 22:54:39 background imports cache refresh starting
+
+[Info  - 10:54:39 PM] 2022/05/24 22:54:39 background refresh finished after 70.813117ms
+
+[Info  - 10:56:42 PM] 2022/05/24 22:56:42 background imports cache refresh starting
+
+[Info  - 10:56:42 PM] 2022/05/24 22:56:42 background refresh finished after 101.011594ms
+
+[Info  - 11:00:04 PM] 2022/05/24 23:00:04 background imports cache refresh starting
+
+[Info  - 11:00:04 PM] 2022/05/24 23:00:04 background refresh finished after 92.834394ms
+

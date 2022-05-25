@@ -1,0 +1,12 @@
+[2022-05-23 20:21:15.530] [exthost] [info] Extension host with pid 2123298 started
+[2022-05-23 20:21:15.573] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-05-23 20:21:15.580] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-05-23 20:21:15.585] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-05-23 20:21:15.632] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-05-23 20:21:15.706] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-05-23 20:21:15.777] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-23 20:21:15.796] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-23 20:21:15.801] [exthost] [info] Eager extensions activated
+[2022-05-23 20:21:29.074] [exthost] [info] ExtensionService#_doActivateExtension golang.go, startup: false, activationEvent: 'onLanguage:go'
+[2022-05-23 20:21:55.424] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-05-23 20:21:55.442] [exthost] [info] Extension host with pid 2123298 exiting with code 0
