@@ -13,21 +13,23 @@ import (
 )
 
 type Me struct {
-	Username string `json:"username,omitempty"  db:"username"`
+	UserName string `json:"username,omitempty"  db:"UserName"`
+	UserID   string `json:"userID,omitempty"  db:"UserID"`
 }
 type LoginRequestBody struct {
-	Username string `json:"username,omitempty" form:"username"`
-	Password string `json:"password,omitempty" form:"password"`
+	UserName string `json:"username,omitempty" form:"UserName"`
+	Password string `json:"password,omitempty" form:"Password"`
 }
 
 type User struct {
-	Username   string `json:"username,omitempty"  db:"Username"`
+	UserName   string `json:"username,omitempty"  db:"UserName"`
+	UserID     string `json:"userID,omitempty"  db:"UserID"`
 	HashedPass string `json:"-"  db:"HashedPass"`
 }
 
 func GetUserNameHandler() echo.HandlerFunc {
 	return func(c echo.Context) error {
-		userName := c.Get("userName").(string)
+		userName := c.Get("UserName").(string)
 		return c.String(http.StatusOK, userName)
 	}
 }
@@ -38,7 +40,7 @@ func PostSignUpHandler(db *sqlx.DB) echo.HandlerFunc {
 		c.Bind(&req)
 
 		// もう少し真面目にバリデーションするべき
-		if req.Password == "" || req.Username == "" {
+		if req.Password == "" || req.UserName == "" {
 			// エラーは真面目に返すべき
 			return c.String(http.StatusBadRequest, "項目が空です")
 		}
@@ -51,7 +53,7 @@ func PostSignUpHandler(db *sqlx.DB) echo.HandlerFunc {
 		// ユーザーの存在チェック
 		var count int
 
-		err = db.Get(&count, "SELECT COUNT(*) FROM users WHERE Username=?", req.Username)
+		err = db.Get(&count, "SELECT COUNT(*) FROM users WHERE UserName=?", req.UserName)
 		if err != nil {
 			return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 		}
@@ -60,7 +62,13 @@ func PostSignUpHandler(db *sqlx.DB) echo.HandlerFunc {
 			return c.String(http.StatusConflict, "ユーザーが既に存在しています")
 		}
 
-		_, err = db.Exec("INSERT INTO users (Username, HashedPass) VALUES (?, ?)", req.Username, hashedPass)
+		_, err = db.Exec("INSERT INTO users (UserName, HashedPass) VALUES (?, ?)", req.UserName, hashedPass)
+		if err != nil {
+			return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+		}
+
+		user := User{}
+		err = db.Get(&user, "SELECT * FROM users WHERE UserName=?", req.UserName)
 		if err != nil {
 			return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
 		}
@@ -70,7 +78,9 @@ func PostSignUpHandler(db *sqlx.DB) echo.HandlerFunc {
 			fmt.Println(err)
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
-		sess.Values["userName"] = req.Username
+
+		sess.Values["UserName"] = user.UserName
+		sess.Values["UserID"] = user.UserID
 		sess.Save(c.Request(), c.Response())
 
 		return c.NoContent(http.StatusCreated)
@@ -83,9 +93,9 @@ func PostLoginHandler(db *sqlx.DB) echo.HandlerFunc {
 		c.Bind(&req)
 
 		user := User{}
-		err := db.Get(&user, "SELECT * FROM users WHERE username=?", req.Username)
+		err := db.Get(&user, "SELECT * FROM users WHERE UserName=?", req.UserName)
 		if err != nil {
-			return c.String(http.StatusInternalServerError, fmt.Sprintf("db error: %v", err))
+			return c.String(http.StatusInternalServerError, fmt.Sprintf("db errror: %v", err))
 		}
 
 		err = bcrypt.CompareHashAndPassword([]byte(user.HashedPass), []byte(req.Password))
@@ -102,10 +112,11 @@ func PostLoginHandler(db *sqlx.DB) echo.HandlerFunc {
 			fmt.Println(err)
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
-		sess.Values["userName"] = req.Username
+		sess.Values["UserName"] = req.UserName
+		sess.Values["UserID"] = user.UserID
 		sess.Save(c.Request(), c.Response())
 
-		return c.NoContent(http.StatusOK)
+		return c.String(http.StatusOK, "login")
 	}
 }
 
@@ -117,10 +128,11 @@ func CheckLogin(next echo.HandlerFunc) echo.HandlerFunc {
 			return c.String(http.StatusInternalServerError, "something wrong in getting session")
 		}
 
-		if sess.Values["userName"] == nil {
+		if sess.Values["UserName"] == nil || sess.Values["UserID"] == nil {
 			return c.String(http.StatusForbidden, "please login")
 		}
-		c.Set("userName", sess.Values["userName"].(string))
+		c.Set("UserName", sess.Values["UserName"].(string))
+		c.Set("UserID", sess.Values["UserID"].(string))
 
 		return next(c)
 	}
@@ -130,14 +142,16 @@ func GetWhoAmIHandler(db *sqlx.DB) echo.HandlerFunc {
 		sess, _ := session.Get("sessions", c)
 
 		return c.JSON(http.StatusOK, Me{
-			Username: sess.Values["userName"].(string),
+			UserName: sess.Values["UserName"].(string),
+			UserID:   sess.Values["UserID"].(string),
 		})
 	}
 }
 func LogoutHandler(db *sqlx.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		sess, _ := session.Get("sessions", c)
-		sess.Values["userName"] = nil
+		sess.Values["UserName"] = nil
+		sess.Values["UserID"] = nil
 		sess.Save(c.Request(), c.Response())
 		return c.String(http.StatusOK, "logout")
 	}

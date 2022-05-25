@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"naro-server/go/src/golang-with-world-database/packages/handler"
+	"naro-server/go/src/naro-server/packages/handler"
 	"net/http"
 	"os"
 
@@ -64,6 +64,8 @@ func main() {
 	e.POST("/login", handler.PostLoginHandler(db))
 	e.POST("/signup", handler.PostSignUpHandler(db))
 	e.GET("/logout", handler.LogoutHandler(db))
+	e.GET("/postList", handler.GetPostListHandler(db))
+	e.GET("/post/:postID", handler.GetPostHandler(db))
 
 	withLogin := e.Group("")
 	withLogin.Use(handler.CheckLogin)
@@ -82,6 +84,7 @@ func main() {
 	withLogin.GET("/getUserName", handler.GetUserNameHandler())
 	withLogin.GET("/delete/:cityID", handler.DeleteCityInfoHandler(db))
 	withLogin.POST("/addCity", handler.AddCityHandler(db))
+	withLogin.POST("/post", handler.AddPostHandler(db))
 	e.Logger.Fatal(e.Start(":10101"))
 
 	//cityState := `INSERT INTO city(ID, Name, CountryCode, District, Population) VALUES (5001,'traP','JPN','titech',10000000)`
