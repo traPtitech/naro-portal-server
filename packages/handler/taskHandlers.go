@@ -24,7 +24,7 @@ func AddTaskHandler(db *sqlx.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		task := &Task{}
 		err := c.Bind(task)
-		traQID := c.Get("userName").(string)
+		traQID := c.Get("UserName").(string)
 		if traQID != c.Param("traQID") {
 			return echo.NewHTTPError(http.StatusBadRequest, "Do not much traQID")
 		}
@@ -55,7 +55,7 @@ func PutTaskHandler(db *sqlx.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		task := &Task{}
 		err := c.Bind(task)
-		traQID := c.Get("userName").(string)
+		traQID := c.Get("UserName").(string)
 		if traQID != c.Param("traQID") {
 			return echo.NewHTTPError(http.StatusBadRequest, "Do not much traQID")
 		}
@@ -84,7 +84,7 @@ func PutTaskHandler(db *sqlx.DB) echo.HandlerFunc {
 
 func DeleteAllTasksHandler(db *sqlx.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
-		traQID := c.Get("userName").(string)
+		traQID := c.Get("UserName").(string)
 		if traQID != c.Param("traQID") {
 			return echo.NewHTTPError(http.StatusBadRequest, "Do not much traQID")
 		}
@@ -100,7 +100,7 @@ func DeleteAllTasksHandler(db *sqlx.DB) echo.HandlerFunc {
 
 func DeleteTaskHandler(db *sqlx.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
-		traQID := c.Get("userName").(string)
+		traQID := c.Get("UserName").(string)
 		if traQID != c.Param("traQID") {
 			return echo.NewHTTPError(http.StatusBadRequest, "Do not much traQID")
 		}
@@ -119,7 +119,7 @@ func DeleteTaskHandler(db *sqlx.DB) echo.HandlerFunc {
 func GetTaskHandler(db *sqlx.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		tasks := []Task{}
-		traQID := c.Get("userName").(string)
+		traQID := c.Get("UserName").(string)
 		if traQID != c.Param("traQID") {
 			return echo.NewHTTPError(http.StatusBadRequest, "Do not much traQID")
 		}

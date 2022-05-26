@@ -84,7 +84,9 @@ func main() {
 	withLogin.GET("/getUserName", handler.GetUserNameHandler())
 	withLogin.GET("/delete/:cityID", handler.DeleteCityInfoHandler(db))
 	withLogin.POST("/addCity", handler.AddCityHandler(db))
+
 	withLogin.POST("/post", handler.AddPostHandler(db))
+
 	e.Logger.Fatal(e.Start(":10101"))
 
 	//cityState := `INSERT INTO city(ID, Name, CountryCode, District, Population) VALUES (5001,'traP','JPN','titech',10000000)`

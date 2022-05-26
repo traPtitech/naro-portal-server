@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+	"time"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo-contrib/session"
@@ -13,13 +14,13 @@ import (
 )
 
 type Post struct {
-	PostTime    string `json:"postTime,omitempty" db:"PostTime"`
-	UserName    string `json:"userName,omitempty" db:"UserName"`
-	UserID      string `json:"userID,omitempty" db:"UserID"`
-	Body        string `json:"body,omitempty" db:"Body"`
-	LikeCount   string `json:"likeCount,omitempty" db:"LikeCount"`
-	RepostCount string `json:"repostCount,omitempty" db:"RepostCount"`
-	ID          int    `json:"id,omitempty" db:"ID"`
+	PostTime    time.Time `json:"postTime,omitempty" db:"PostTime"`
+	UserName    string    `json:"userName,omitempty" db:"UserName"`
+	UserID      string    `json:"userID,omitempty" db:"UserID"`
+	Body        string    `json:"body,omitempty" db:"Body"`
+	LikeCount   string    `json:"likeCount,omitempty" db:"LikeCount"`
+	RepostCount string    `json:"repostCount,omitempty" db:"RepostCount"`
+	ID          int       `json:"id,omitempty" db:"ID"`
 }
 type PostRequest struct {
 	Body string `json:"body,omitempty" db:"Body"`
