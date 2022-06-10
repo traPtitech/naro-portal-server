@@ -82,3 +82,28 @@ func GetPostHandler(db *sqlx.DB) echo.HandlerFunc {
 		return c.JSON(http.StatusOK, post)
 	}
 }
+
+func ToggleIsLikedHandler(db *sqlx.DB) echo.HandlerFunc {
+	return func(c echo.Context) error {
+		sess, err := session.Get("sessions", c)
+		if err != nil {
+			fmt.Println(err)
+			return c.String(http.StatusInternalServerError, "something wrong in getting session")
+		}
+
+		postID := c.Param("postID")
+		userID := sess.Values["UserID"]
+		post := Post{}
+		_, atoiErr := strconv.Atoi(postID)
+		if atoiErr != nil {
+			return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf("IDをURLの末尾に入れてください"))
+		}
+		if err := db.Get(&post, "INSERT INTO isliked(PostID, UserID) VALUES (?,?)", postID, userID); errors.Is(err, sql.ErrNoRows) {
+			return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf("No Such City Name=%s", postID))
+		} else if err != nil {
+			return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf(err.Error()))
+		}
+
+		return c.JSON(http.StatusOK, post)
+	}
+}

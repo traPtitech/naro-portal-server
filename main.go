@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	"log"
-	"naro-server/go/src/naro-server/packages/handler"
 	"net/http"
 	"os"
+
+	"naro-server/packages/handler"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
