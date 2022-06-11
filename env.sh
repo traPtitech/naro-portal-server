@@ -1,0 +1,5 @@
+export DB_USERNAME="xxx"
+export DB_PASSWORD="xxx"
+export DB_HOSTNAME="localhost"
+export DB_PORT="3306"
+export DB_DATABASE="xxx"
